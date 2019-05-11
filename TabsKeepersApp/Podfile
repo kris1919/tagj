@@ -1,0 +1,10 @@
+platform :ios, '9.0'
+
+target 'TabsKeepersApp' do
+
+pod 'FDFullscreenPopGesture'
+pod 'Masonry'
+pod 'YYModel'
+pod 'SDWebImage'
+
+end
