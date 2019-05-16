@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeAdModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeAdvertiseCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *adImageView;
+
+@property (nonatomic ,strong)HomeAdModel *model;
 
 @end
 

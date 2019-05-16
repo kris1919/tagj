@@ -14,7 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic ,copy)NSString *imagePath;
 
-@property (nonatomic ,copy)void(^deleteImageBlock)(void);
+@property (nonatomic ,assign)BOOL closeBtnHidden;
+
+@property (nonatomic ,strong)NSIndexPath *indexPath;
+
+@property (nonatomic ,copy)void(^deleteImageBlock)(NSInteger idnex);
 
 @end
 

@@ -7,9 +7,11 @@
 //
 
 #import "PhotoCollectionCell.h"
+#import <UIImageView+WebCache.h>
 
 @interface PhotoCollectionCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *picView;
+@property (weak, nonatomic) IBOutlet UIButton *closeBtn;
 
 @end
 
@@ -17,20 +19,26 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
-    
-    self.picView.backgroundColor = [UIColor lightGrayColor];
+    // Initialization code    
 }
 
 -(void)setImagePath:(NSString *)imagePath{
     if (imagePath) {
-        self.picView.image = [UIImage imageNamed:imagePath];
+        if ([imagePath containsString:@"http"]) {
+            [self.picView sd_setImageWithURL:[NSURL URLWithString:imagePath]];
+        }else{
+            self.picView.image = [UIImage imageNamed:imagePath];
+        }
     }
+}
+
+-(void)setCloseBtnHidden:(BOOL)closeBtnHidden{
+    self.closeBtn.hidden = closeBtnHidden;
 }
 
 - (IBAction)closeBtnAction:(UIButton *)sender {
     if (self.deleteImageBlock) {
-        self.deleteImageBlock();
+        self.deleteImageBlock(self.indexPath.row);
     }
 }
 

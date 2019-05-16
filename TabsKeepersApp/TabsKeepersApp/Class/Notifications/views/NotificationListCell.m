@@ -7,14 +7,35 @@
 //
 
 #import "NotificationListCell.h"
+#import <UIImageView+WebCache.h>
+
+@interface NotificationListCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *iconView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+
+@end
 
 @implementation NotificationListCell
+
+-(void)setModel:(HouseNotificationModel *)model{
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:model.img]];
+    self.titleLabel.text = model.title;
+    self.nameLabel.text = model.zuozhe;
+    self.timeLabel.text = model.pudate;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.backgroundColor = [UIColor clearColor];
+    
+    self.iconView.layer.cornerRadius = 8;
+    self.iconView.clipsToBounds = YES;
+    
+    self.timeLabel.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

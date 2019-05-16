@@ -44,6 +44,10 @@
     self.keyLabel.text = keyString;
 }
 -(void)setValueString:(NSString *)valueString{
+    if (valueString.length == 0) {
+        self.valueLabel.attributedText = nil;
+        return;
+    }
     NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
     style.lineSpacing = 8;
     NSMutableAttributedString *aString = [[NSMutableAttributedString alloc] initWithString:valueString attributes:@{NSParagraphStyleAttributeName:style}];

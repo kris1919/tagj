@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeNotificationCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *notiLabel;
+
 @end
 
 NS_ASSUME_NONNULL_END

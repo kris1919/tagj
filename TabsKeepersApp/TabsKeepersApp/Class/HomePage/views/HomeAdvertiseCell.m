@@ -7,6 +7,7 @@
 //
 
 #import "HomeAdvertiseCell.h"
+#import <UIImageView+WebCache.h>
 
 @implementation HomeAdvertiseCell
 
@@ -15,17 +16,12 @@
     // Initialization code
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.adImageView.clipsToBounds = YES;
-    
-    self.adImageView.image = [UIImage imageNamed:@"行驶证.jpeg"];
-    
-    UIImageView *imageView = self.adImageView;
-    UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, NO, 1.0);
-    [[UIBezierPath bezierPathWithRoundedRect:imageView.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(8, 8)] addClip];
-    [imageView drawRect:imageView.bounds];
-    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    self.adImageView.layer.cornerRadius = 5;
 }
 
+-(void)setModel:(HomeAdModel *)model{
+    [self.adImageView sd_setImageWithURL:[NSURL URLWithString:model.img]];
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

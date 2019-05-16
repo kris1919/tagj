@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="94" id="KGk-i7-Jjw" customClass="NormalNotiCell">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="93.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_bill_ling" translatesAutoresizingMaskIntoConstraints="NO" id="iDO-Cd-MNf">
+                        <rect key="frame" x="16" y="16" width="61.5" height="61.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="iDO-Cd-MNf" secondAttribute="height" id="smV-62-3e7"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlL-fc-CCd">
+                        <rect key="frame" x="92.5" y="18" width="39" height="21"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r59-0E-JXt">
+                        <rect key="frame" x="358.5" y="25" width="25.5" height="14"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="10"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTr-06-aM3">
+                        <rect key="frame" x="92.5" y="58.5" width="291.5" height="17"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="12"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_bill_red" translatesAutoresizingMaskIntoConstraints="NO" id="uyY-OH-jWb">
+                        <rect key="frame" x="64.5" y="19" width="10" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="C7s-8r-5VJ"/>
+                            <constraint firstAttribute="height" constant="10" id="cEr-yZ-R7V"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="iDO-Cd-MNf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="55C-LD-mpw"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="r59-0E-JXt" secondAttribute="trailing" constant="10" id="6V2-3x-u5X"/>
+                    <constraint firstItem="DlL-fc-CCd" firstAttribute="top" secondItem="iDO-Cd-MNf" secondAttribute="top" constant="2" id="I1a-fi-VAn"/>
+                    <constraint firstItem="uyY-OH-jWb" firstAttribute="leading" secondItem="iDO-Cd-MNf" secondAttribute="trailingMargin" constant="-5" id="Iy4-kO-XyZ"/>
+                    <constraint firstItem="uyY-OH-jWb" firstAttribute="top" secondItem="iDO-Cd-MNf" secondAttribute="topMargin" constant="-5" id="QZh-S2-A0z"/>
+                    <constraint firstItem="DlL-fc-CCd" firstAttribute="leading" secondItem="iDO-Cd-MNf" secondAttribute="trailing" constant="15" id="UAw-QE-v5C"/>
+                    <constraint firstItem="iDO-Cd-MNf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WtH-Oj-WSb"/>
+                    <constraint firstItem="yTr-06-aM3" firstAttribute="bottom" secondItem="iDO-Cd-MNf" secondAttribute="bottom" constant="-2" id="XTM-rb-M9d"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="yTr-06-aM3" secondAttribute="trailing" constant="10" id="YUk-Sk-Xf6"/>
+                    <constraint firstItem="yTr-06-aM3" firstAttribute="leading" secondItem="DlL-fc-CCd" secondAttribute="leading" id="e18-zP-zmf"/>
+                    <constraint firstItem="r59-0E-JXt" firstAttribute="bottom" secondItem="DlL-fc-CCd" secondAttribute="bottom" id="nW5-hn-z71"/>
+                    <constraint firstItem="iDO-Cd-MNf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="uKy-AW-yOV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="iconRedView" destination="uyY-OH-jWb" id="IT5-fI-rGn"/>
+                <outlet property="momoLabel" destination="yTr-06-aM3" id="3OI-fJ-E7k"/>
+                <outlet property="nameLabel" destination="DlL-fc-CCd" id="aVa-WM-N06"/>
+                <outlet property="timeLabel" destination="r59-0E-JXt" id="2iU-ej-MeE"/>
+            </connections>
+            <point key="canvasLocation" x="105.59999999999999" y="106.14692653673164"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_bill_ling" width="49" height="49"/>
+        <image name="icon_bill_red" width="10" height="10"/>
+    </resources>
+</document>

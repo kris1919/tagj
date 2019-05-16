@@ -46,6 +46,7 @@
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <size key="customSize" width="134" height="108"/>
             <connections>
+                <outlet property="closeBtn" destination="SW0-hs-4AC" id="jEg-l9-ucv"/>
                 <outlet property="picView" destination="Bl1-BR-iYL" id="RzE-sf-V8f"/>
             </connections>
             <point key="canvasLocation" x="70.400000000000006" y="107.0464767616192"/>

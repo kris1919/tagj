@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TKRegisterViewController : TKBaseViewController
 
+@property (nonatomic ,copy)void (^resetPwdSuccess)(NSString *phone,NSString *pwd);
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -11,10 +11,18 @@
 #import <Masonry.h>
 #import "NotificationListCell.h"
 #import "UIColor+Theme.h"
-#import "NotificationDetailViewController.h"
+#import "TKRefreshHeader.h"
+#import "TKRefreshFooter.h"
+#import "TKCycleData.h"
+#import "MCNetworking.h"
+#import <YYModel.h>
+#import "HouseNotificationModel.h"
+#import "ServiceProtocalViewController.h"
 
 @interface NotificationViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong)TKTableView *tableView;
+@property (nonatomic ,assign)NSInteger currentPage;
+@property (nonatomic ,strong)NSMutableArray *dataArr;
 
 @end
 
@@ -23,10 +31,71 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.mc_navigationBar.title = @"小区公告";
+    self.dataArr = [NSMutableArray arrayWithCapacity:0];
+    self.currentPage = 1;
     // Do any additional setup after loading the view.
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsMake(kNavigationBar_Height, 0, kTabBar_Height, 0));
     }];
+    WS(weakSelf);
+    self.tableView.mj_header = [TKRefreshHeader headerWithRefreshingBlock:^{
+        weakSelf.currentPage = 1;
+        [weakSelf.dataArr removeAllObjects];
+        [weakSelf requestData];
+    }];
+    self.tableView.mj_footer = [TKRefreshFooter footerWithRefreshingBlock:^{
+        weakSelf.currentPage++;
+        [weakSelf requestData];
+    }];
+    
+    [self.tableView.mj_header beginRefreshing];
+}
+
+//- (NSArray *)testArr{
+//    return @[@{
+//        @"newsId": @"1",
+//        @"title": @"物业缴费通知",
+//        @"img": @"http://wuye.gugangkf.cn/Upload/1.jpg",
+//        @"zuozhe": @"物业管理处",
+//        @"pudate": @"2019-01-05 15:47:25",
+//        @"url": @"http://wuye.gugangkf.cn/json/news.aspx?id=1"
+//    },
+//            @{
+//                @"newsId": @"2",
+//                @"title": @"小区防火注意事项",
+//                @"img": @"http://wuye.gugangkf.cn/Upload/2.jpg",
+//                @"zuozhe": @"物业管理处",
+//                @"pudate": @"2019-01-05 15:47:25",
+//                @"url": @"http://wuye.gugangkf.cn/json/news.aspx?id=2"
+//            }
+//             ];
+//}
+
+- (void)requestData{
+    TKUserModel *userModel = [TKCycleData shareInstance].userModel;
+    NSString *urlStr =[kTKApiConstantDomin stringByAppendingString:kTKApiConstantNotification];
+    NSDictionary *param = @{@"customId":userModel.customId,
+                            @"page":@(self.currentPage)
+                            };
+    WS(weakSelf);
+    [MCNetworking POSTWithUrl:urlStr parameter:param success:^(NSDictionary * _Nonnull responseDic) {
+        NSDictionary *resDic = [responseDic objectForKey:kTKResponseResultData];
+        NSArray *listArr = [resDic objectForKey:@"list"];
+        for (NSDictionary *d in listArr) {
+            HouseNotificationModel *model = [HouseNotificationModel yy_modelWithJSON:d];
+            [weakSelf.dataArr addObject:model];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.tableView.mj_header endRefreshing];
+            [weakSelf.tableView.mj_footer endRefreshing];
+            [weakSelf.tableView reloadData];
+        });
+    } failure:^(NSString * _Nonnull errorMsg) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.tableView.mj_header endRefreshing];
+            [weakSelf.tableView.mj_footer endRefreshing];
+        });
+    } showHUD:NO view:self.view];
 }
 
 #pragma mark - tableView delegate
@@ -34,10 +103,12 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.dataArr.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NotificationListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NotificationListCell" forIndexPath:indexPath];
+    HouseNotificationModel *model = [self.dataArr objectAtIndex:indexPath.section];
+    cell.model = model;
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -56,8 +127,11 @@
     return nil;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NotificationDetailViewController *detailVC = [TKUtils viewControllerWithStory:@"Main" storyId:@"NotificationDetailViewController"];
-    [self.navigationController pushViewController:detailVC animated:YES];
+    ServiceProtocalViewController *pageVC = [[ServiceProtocalViewController alloc] init];
+    HouseNotificationModel *model = [self.dataArr objectAtIndex:indexPath.section];
+    pageVC.urlStr = model.url;
+    pageVC.mc_navigationBar.title = @"小区公告";
+    [self.navigationController pushViewController:pageVC animated:YES];
 }
 
 -(TKTableView *)tableView{

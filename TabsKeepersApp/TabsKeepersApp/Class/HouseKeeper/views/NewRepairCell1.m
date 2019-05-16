@@ -8,12 +8,32 @@
 
 #import "NewRepairCell1.h"
 
+@interface NewRepairCell1 ()<UITextViewDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *baoxiuBtn;
+@property (weak, nonatomic) IBOutlet UITextView *inputView;
+
+@end
+
 @implementation NewRepairCell1
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.inputView.delegate = self;
+}
+- (IBAction)baoxiuBtnClicked:(id)sender {
+    if (self.selectBtnClicked) {
+        self.selectBtnClicked();
+    }
+}
+-(void)setSelectStr:(NSString *)selectStr{
+    [self.baoxiuBtn setTitle:selectStr forState:UIControlStateNormal];
+}
+-(void)textViewDidEndEditing:(UITextView *)textView{
+    if (self.textViewDidEndEditing) {
+        self.textViewDidEndEditing(textView.text);
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

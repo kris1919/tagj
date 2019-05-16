@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NewRepairCell1 : UITableViewCell
 
+@property (nonatomic ,copy)void (^selectBtnClicked)(void);
+
+@property (nonatomic ,copy)void (^textViewDidEndEditing)(NSString *text);
+
+@property (nonatomic ,copy)NSString *selectStr;
+
 @end
 
 NS_ASSUME_NONNULL_END

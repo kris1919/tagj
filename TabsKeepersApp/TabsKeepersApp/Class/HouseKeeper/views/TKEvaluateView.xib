@@ -36,7 +36,7 @@
                         <action selector="closeBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="gN1-4Z-zWd"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWc-8U-wrl">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWc-8U-wrl">
                     <rect key="frame" x="125.5" y="72.5" width="69" height="65"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="65" id="bSN-ma-Jqa"/>
@@ -48,7 +48,7 @@
                         <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1L-l5-7XU">
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1L-l5-7XU">
                     <rect key="frame" x="219.5" y="72.5" width="69" height="65"/>
                     <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="12"/>
                     <inset key="titleEdgeInsets" minX="-36" minY="0.0" maxX="0.0" maxY="-52"/>
@@ -76,7 +76,7 @@
                         <action selector="submitBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="aYy-66-Rif"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kce-lW-WjS">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kce-lW-WjS">
                     <rect key="frame" x="31.5" y="72.5" width="69" height="65"/>
                     <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="12"/>
                     <inset key="titleEdgeInsets" minX="-30" minY="0.0" maxX="0.0" maxY="-52"/>

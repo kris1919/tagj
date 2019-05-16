@@ -8,6 +8,9 @@
 
 #import "TKRegisterViewController.h"
 #import "PLCountBtn.h"
+#import "NSString+Judge.h"
+#import "MCHUD.h"
+#import "MCNetworking.h"
 
 @interface TKRegisterViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topContraint;
@@ -61,6 +64,57 @@
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
+}
+- (IBAction)countBtnAction:(PLCountBtn *)sender {
+    if ([self.phoneTf.text isPhoneNum] || self.phoneTf.text.length == 0) {
+        [MCHUD showTips:@"请输入正确的手机号码" view:self.view];
+        return;
+    }
+    NSString *urlStr = [kTKApiConstantDomin stringByAppendingString:kTKApiConstantGetPhoneMsgCode];
+    NSDictionary *param = @{@"phone":self.phoneTf.text};
+    WS(weakSelf);
+    [MCNetworking POSTWithUrl:urlStr parameter:param success:^(NSDictionary * _Nonnull responseDic) {
+        [weakSelf.getCodeBtn startCount];
+    } failure:^(NSString * _Nonnull errorMsg) {
+        [MCHUD showTips:errorMsg view:self.view];
+    } showHUD:YES view:self.view];
+}
+- (IBAction)resetBtnAction:(UIButton *)sender {
+    if ([self.phoneTf.text isPhoneNum] || self.phoneTf.text.length == 0) {
+        [MCHUD showTips:@"请输入正确的手机号码" view:self.view];
+        return;
+    }
+    if (self.codeTf.text.length == 0) {
+        [MCHUD showTips:@"请输入验证码" view:self.view];
+        return;
+    }
+    if (self.pwdTf1.text.length == 0) {
+        [MCHUD showTips:@"请输入密码" view:self.view];
+        return;
+    }
+    if (self.pwdTf2.text.length == 0) {
+        [MCHUD showTips:@"请再次输入密码" view:self.view];
+        return;
+    }
+    if (![self.pwdTf1.text isEqualToString:self.pwdTf2.text]) {
+        [MCHUD showTips:@"2次输入的密码不一致" view:self.view];
+        return;
+    }
+    NSString *urlStr = [kTKApiConstantDomin stringByAppendingString:kTKApiConstantResetPwd];
+    NSDictionary *param = @{
+                            @"phone":self.phoneTf.text,
+                            @"yzm":self.codeTf.text,
+                            @"password":self.pwdTf1.text
+                            };
+    WS(weakSelf);
+    [MCNetworking POSTWithUrl:urlStr parameter:param success:^(NSDictionary * _Nonnull responseDic) {
+        if (weakSelf.resetPwdSuccess) {
+            weakSelf.resetPwdSuccess(weakSelf.phoneTf.text,weakSelf.pwdTf1.text);
+        }
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    } failure:^(NSString * _Nonnull errorMsg) {
+        
+    } showHUD:YES view:self.view];
 }
 /*
 #pragma mark - Navigation

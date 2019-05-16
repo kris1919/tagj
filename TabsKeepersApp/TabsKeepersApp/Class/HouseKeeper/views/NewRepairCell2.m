@@ -21,7 +21,9 @@
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {        
+    if (self) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.contentView).offset(10);
             make.left.mas_equalTo(self.contentView).offset(16);
@@ -36,16 +38,41 @@
     return self;
 }
 
+-(void)setImgs:(NSMutableArray *)imgs{
+    _imgs = imgs;
+    [self.collectionView reloadData];
+}
+
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.canEditing + 1;
+    return self.canEditing + self.imgs.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     PhotoCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCollectionCell" forIndexPath:indexPath];
     if (self.canEditing && (indexPath.row == [collectionView numberOfItemsInSection:0] - 1)) {
         cell.imagePath = @"icon_pic_add";
+        cell.closeBtnHidden = YES;
+    }else{    
+        cell.imagePath = [self.imgs objectAtIndex:indexPath.row];
+        cell.closeBtnHidden = !self.canEditing;
     }
+    cell.indexPath = indexPath;
+    WS(weakSelf);
+    cell.deleteImageBlock = ^(NSInteger idnex){
+        if (weakSelf.deleteImg) {
+            weakSelf.deleteImg(idnex);
+        }
+    };
     return cell;
+}
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.selectedImg) {
+        if (indexPath.row < self.imgs.count) {
+            self.selectedImg(indexPath.row, YES);
+        }else{
+            self.selectedImg(0, NO);
+        }
+    }
 }
 
 -(UILabel *)titleLabel{

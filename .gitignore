@@ -11,3 +11,9 @@ project.xcworkspace/
 xcuserdata/  
 
 UserInterface.xcuserstate
+
+*.libPlatformSDK.a
+
+*.DssSDK
+AdapterSDK/DataAdapterSDK/Depend/DssSDK/DssSDK.framework
+AdapterSDK/DataAdapterSDK/Depend/sdk_output/Lib

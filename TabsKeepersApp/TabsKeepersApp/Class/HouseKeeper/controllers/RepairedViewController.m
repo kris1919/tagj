@@ -13,11 +13,20 @@
 #import "TKTableViewFooterView.h"
 #import "TKKeyValueModel.h"
 #import "TKDoubleLabelCell.h"
+#import "TKCycleData.h"
+#import "MCNetworking.h"
+#import <YYModel.h>
+
+@implementation RepairDetailModel
+
+@end
 
 @interface RepairedViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong)TKTableView *tableView;
 @property (nonatomic ,strong)TKTableViewFooterView *footerView;
 @property (nonatomic ,strong)NSMutableArray *dataArr;
+@property (nonatomic ,strong)RepairDetailModel *detailModel;
+
 @end
 
 @implementation RepairedViewController
@@ -32,26 +41,57 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsMake(kNavigationBar_Height, 0, 0, 0));
     }];
-    self.tableView.tableFooterView = self.footerView;
+    
+    [self requestData];
+}
+
+- (void)setCanEvaluate:(BOOL)canEvaluate{
+    if (canEvaluate) {
+        self.tableView.tableFooterView = self.footerView;
+    }
+}
+
+- (void)requestData{
+    if (self.baoxiuId.length == 0) {
+        return;
+    }
+    TKUserModel *userModel = [TKCycleData shareInstance].userModel;
+    NSString *urlStr =[kTKApiConstantDomin stringByAppendingString:kTKApiConstantBaoxiuDetail];
+    NSDictionary *param = @{@"customId":userModel.customId,
+                            @"id":self.baoxiuId,
+                            };
+    WS(weakSelf);
+    [MCNetworking POSTWithUrl:urlStr parameter:param success:^(NSDictionary * _Nonnull responseDic) {
+        NSDictionary *resDic = [responseDic objectForKey:kTKResponseResultData];
+        weakSelf.detailModel = [RepairDetailModel yy_modelWithJSON:resDic];
+        [weakSelf setupData];
+    } failure:^(NSString * _Nonnull errorMsg) {
+        
+    } showHUD:YES view:self.view];
 }
 
 - (void)setupData{
     self.dataArr = [NSMutableArray arrayWithCapacity:0];
-    TKKeyValueModel *model1 = [[TKKeyValueModel alloc] initWithKey:@"报修类别:" value:@"市内报修"];
-    TKKeyValueModel *model2 = [[TKKeyValueModel alloc] initWithKey:@"报修描述:" value:@"文本信息文本信息文本信息文本信息文本信息文本信息文本信息文本信息文本信息文本信息文本信息文本信息😄"];
-    TKKeyValueModel *model3 = [[TKKeyValueModel alloc] initWithKey:@"" value:@""];
-    TKKeyValueModel *model4 = [[TKKeyValueModel alloc] initWithKey:@"联系人:" value:@"市内"];
-    TKKeyValueModel *model5 = [[TKKeyValueModel alloc] initWithKey:@"联系电话:" value:@"18817389999"];
-    TKKeyValueModel *model6 = [[TKKeyValueModel alloc] initWithKey:@"楼宇号:" value:@"201-9-101"];
+    TKKeyValueModel *model1 = [[TKKeyValueModel alloc] initWithKey:@"报修类别:" value:self.detailModel.type.integerValue == 2 ? @"室外报修": @"室内报修"];
+    TKKeyValueModel *model2 = [[TKKeyValueModel alloc] initWithKey:@"报修描述:" value:self.detailModel.describe];
+    TKKeyValueModel *model3 = [[TKKeyValueModel alloc] initWithKey:@"图片附件:" value:@"无"];
+    TKKeyValueModel *model4 = [[TKKeyValueModel alloc] initWithKey:@"联系人:" value:self.detailModel.name];
+    TKKeyValueModel *model5 = [[TKKeyValueModel alloc] initWithKey:@"联系电话:" value:self.detailModel.phone];
+    TKKeyValueModel *model6 = [[TKKeyValueModel alloc] initWithKey:@"楼宇号:" value:self.detailModel.hao];
     [self.dataArr addObjectsFromArray:@[model1,model2,model3,model4,model5,model6]];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataArr.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 2) {
+    if (indexPath.row == 2 && self.detailModel.imgList.count > 0) {
         NewRepairCell2 *cell = [tableView dequeueReusableCellWithIdentifier:@"NewRepairCell2" forIndexPath:indexPath];
+        cell.imgs = self.detailModel.imgList;
         return cell;
     }else{
         TKDoubleLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TKDoubleLabelCell" forIndexPath:indexPath];
@@ -62,7 +102,7 @@
     }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 2) {
+    if (indexPath.row == 2 && self.detailModel.imgList.count > 0) {
         return 126;
     }
     tableView.estimatedRowHeight = 60;

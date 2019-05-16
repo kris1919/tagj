@@ -11,7 +11,7 @@
 #import <Masonry.h>
 #import "UIFont+PingFangSC.h"
 
-@interface TKEvaluateView ()
+@interface TKEvaluateView ()<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (nonatomic ,strong)UIView *mask;
 @property (weak, nonatomic) IBOutlet UIButton *submitBtn;
@@ -36,6 +36,8 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
     tap.cancelsTouchesInView = NO;
     [self addGestureRecognizer:tap];
+    
+    self.textView.delegate = self;
 }
 - (void)keyboardWillShow:(NSNotification *)noti{
     CGRect rect = [noti.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
@@ -74,6 +76,12 @@
     [self endEditing:YES];
 }
 
+-(void)textViewDidEndEditing:(UITextView *)textView{
+    if (self.textViewEndEditingBlock) {
+        self.textViewEndEditingBlock(textView.text);
+    }
+}
+
 -(UIView *)mask{
     if (!_mask) {
         _mask = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
@@ -89,10 +97,14 @@
     [self hide];
 }
 - (IBAction)evaluateBtnAction:(UIButton *)sender {
-    
+    if (self.evaluateBlock) {
+        self.evaluateBlock(sender.tag);
+    }
 }
 - (IBAction)submitBtnAction:(UIButton *)sender {
-    
+    if (self.submitBlock) {
+        self.submitBlock();
+    }
 }
 
 @end

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NewRepairCell3 : UITableViewCell
 
+@property (nonatomic ,copy)void (^textFieldDidEndEditing)(NSString *text,NSInteger tag);
+
 @end
 
 NS_ASSUME_NONNULL_END

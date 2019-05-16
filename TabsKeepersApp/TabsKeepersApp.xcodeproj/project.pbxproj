@@ -7,6 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		451300C02286720D009D053B /* MCNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300BF2286720D009D053B /* MCNetworking.m */; };
+		451300C52286757F009D053B /* MCHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300C42286757F009D053B /* MCHUD.m */; };
+		451300C82286C130009D053B /* ServiceProtocalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300C72286C130009D053B /* ServiceProtocalViewController.m */; };
+		451300CB2286C8FB009D053B /* TKUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300CA2286C8FB009D053B /* TKUserModel.m */; };
+		451300CE2286C9CD009D053B /* TKCycleData.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300CD2286C9CD009D053B /* TKCycleData.m */; };
+		451300D1228905C2009D053B /* MyFamilyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300D0228905C2009D053B /* MyFamilyViewController.m */; };
+		451300D4228905D0009D053B /* MyFeeManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300D3228905D0009D053B /* MyFeeManageViewController.m */; };
+		451300D7228905DC009D053B /* MyNotiManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300D6228905DC009D053B /* MyNotiManageViewController.m */; };
+		451300DA228905F2009D053B /* ContactsUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300D9228905F2009D053B /* ContactsUsViewController.m */; };
+		451300DE22891037009D053B /* FamilyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300DC22891037009D053B /* FamilyTableViewCell.m */; };
+		451300DF22891037009D053B /* FamilyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 451300DD22891037009D053B /* FamilyTableViewCell.xib */; };
+		451300E222891414009D053B /* BottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300E122891414009D053B /* BottomView.m */; };
+		451300E522891709009D053B /* AddFamilyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300E422891709009D053B /* AddFamilyViewController.m */; };
+		451300E822892052009D053B /* MyFamilyListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300E722892052009D053B /* MyFamilyListModel.m */; };
+		451300EB22892254009D053B /* TKRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300EA22892254009D053B /* TKRefreshHeader.m */; };
+		451300EE2289226F009D053B /* TKRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300ED2289226F009D053B /* TKRefreshFooter.m */; };
+		451300F122893E0B009D053B /* KeyValueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300F022893E0B009D053B /* KeyValueModel.m */; };
+		451300F422894260009D053B /* TKSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300F322894260009D053B /* TKSelectedView.m */; };
+		451300F722894BDA009D053B /* WYFeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300F622894BDA009D053B /* WYFeeViewController.m */; };
+		451300FA22894BE7009D053B /* WaterFeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300F922894BE7009D053B /* WaterFeeViewController.m */; };
+		451300FE228950B1009D053B /* WYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 451300FC228950B1009D053B /* WYTableViewCell.m */; };
+		451300FF228950B1009D053B /* WYTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 451300FD228950B1009D053B /* WYTableViewCell.xib */; };
+		45130103228950C0009D053B /* WaterFeeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45130101228950C0009D053B /* WaterFeeTableViewCell.m */; };
+		45130104228950C0009D053B /* WaterFeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45130102228950C0009D053B /* WaterFeeTableViewCell.xib */; };
+		4513010722895267009D053B /* WYFeeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4513010622895267009D053B /* WYFeeModel.m */; };
+		4513010D22895AC6009D053B /* WYSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4513010C22895AC6009D053B /* WYSectionView.m */; };
+		45130110228961E0009D053B /* WaterSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4513010F228961E0009D053B /* WaterSectionView.m */; };
+		4513011322896BCB009D053B /* BillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4513011222896BCB009D053B /* BillViewController.m */; };
+		4513011622896BD7009D053B /* NotiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4513011522896BD7009D053B /* NotiViewController.m */; };
+		4513011922896F71009D053B /* BillModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4513011822896F71009D053B /* BillModel.m */; };
+		4513011D22897027009D053B /* BillTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4513011B22897027009D053B /* BillTableViewCell.m */; };
+		4513011E22897027009D053B /* BillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4513011C22897027009D053B /* BillTableViewCell.xib */; };
+		4513012122897550009D053B /* HouseNotificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4513012022897550009D053B /* HouseNotificationModel.m */; };
+		4513012422897BE8009D053B /* BaoxiuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4513012322897BE8009D053B /* BaoxiuModel.m */; };
 		45143DC3227148D40003202A /* TKRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45143DC2227148D40003202A /* TKRegisterViewController.m */; };
 		45143DC622714A140003202A /* TKHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45143DC522714A140003202A /* TKHomePageViewController.m */; };
 		45143DCA22714AC30003202A /* MCNavigationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45143DC922714AC30003202A /* MCNavigationBarView.m */; };
@@ -24,6 +58,14 @@
 		45241BDF227EC8A900D68947 /* NotificationListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45241BDD227EC8A900D68947 /* NotificationListCell.m */; };
 		45241BE0227EC8A900D68947 /* NotificationListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45241BDE227EC8A900D68947 /* NotificationListCell.xib */; };
 		45241BE3227ECDC000D68947 /* NotificationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45241BE2227ECDC000D68947 /* NotificationDetailViewController.m */; };
+		455EA642228BE5D70097E9CC /* NewPersonCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455EA641228BE5D70097E9CC /* NewPersonCenterViewController.m */; };
+		455EA646228BE6600097E9CC /* PersonCenterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 455EA644228BE6600097E9CC /* PersonCenterViewCell.m */; };
+		455EA647228BE6600097E9CC /* PersonCenterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455EA645228BE6600097E9CC /* PersonCenterViewCell.xib */; };
+		455EA64A228BE67B0097E9CC /* PersonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 455EA649228BE67B0097E9CC /* PersonHeaderView.m */; };
+		455EA64D228BE6840097E9CC /* PersonFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 455EA64C228BE6840097E9CC /* PersonFooterView.m */; };
+		455EA64F228BE68F0097E9CC /* PersonHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455EA64E228BE68F0097E9CC /* PersonHeaderView.xib */; };
+		455EA658228CF7E70097E9CC /* NormalNotiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 455EA656228CF7E70097E9CC /* NormalNotiCell.m */; };
+		455EA659228CF7E70097E9CC /* NormalNotiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455EA657228CF7E70097E9CC /* NormalNotiCell.xib */; };
 		45631C642270353600B90E8A /* TKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45631C632270353600B90E8A /* TKAppDelegate.m */; };
 		45631C6A2270353600B90E8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45631C682270353600B90E8A /* Main.storyboard */; };
 		45631C6C2270353700B90E8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45631C6B2270353700B90E8A /* Assets.xcassets */; };
@@ -41,6 +83,33 @@
 		458292DB2276CC4500CCA5ED /* HouseKeeperViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458292D92276CC4500CCA5ED /* HouseKeeperViewCell.xib */; };
 		458292E72278416100CCA5ED /* TKEvaluateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458292E42278416100CCA5ED /* TKEvaluateView.xib */; };
 		458292E82278416100CCA5ED /* TKEvaluateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 458292E62278416100CCA5ED /* TKEvaluateView.m */; };
+		4588873E228ABD5200AD9460 /* FeesSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4588873D228ABD5200AD9460 /* FeesSectionHeaderView.m */; };
+		45888741228ABD8E00AD9460 /* HomeFeesTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45888740228ABD8E00AD9460 /* HomeFeesTopView.m */; };
+		45888744228AC66B00AD9460 /* ZhiFuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45888743228AC66B00AD9460 /* ZhiFuView.m */; };
+		45888747228AC67D00AD9460 /* FeesDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45888746228AC67D00AD9460 /* FeesDetailView.m */; };
+		45888749228AC68700AD9460 /* ZhifuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45888748228AC68700AD9460 /* ZhifuView.xib */; };
+		4588874B228AC69200AD9460 /* FeesDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4588874A228AC69200AD9460 /* FeesDetailView.xib */; };
+		4588874E228AE0CE00AD9460 /* WYFeesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4588874D228AE0CE00AD9460 /* WYFeesModel.m */; };
+		459E82A2228A6D68003F9C7C /* HomeBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82A1228A6D68003F9C7C /* HomeBannerModel.m */; };
+		459E82A5228A6D73003F9C7C /* HomeAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82A4228A6D73003F9C7C /* HomeAdModel.m */; };
+		459E82AD228A73DD003F9C7C /* FFBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82A7228A73DD003F9C7C /* FFBannerView.m */; };
+		459E82AE228A73DD003F9C7C /* FFBannerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82AB228A73DD003F9C7C /* FFBannerViewCell.m */; };
+		459E82AF228A73DD003F9C7C /* FFBannerFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82AC228A73DD003F9C7C /* FFBannerFlowLayout.m */; };
+		459E82B2228A9BA5003F9C7C /* HomeWYFeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82B1228A9BA5003F9C7C /* HomeWYFeeViewController.m */; };
+		459E82B5228A9BAE003F9C7C /* HomeWaterFeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82B4228A9BAE003F9C7C /* HomeWaterFeeViewController.m */; };
+		459E82B8228A9C47003F9C7C /* HomeServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82B7228A9C47003F9C7C /* HomeServiceViewController.m */; };
+		459E82BB228A9C65003F9C7C /* HomeListenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82BA228A9C65003F9C7C /* HomeListenViewController.m */; };
+		459E82C1228A9DB8003F9C7C /* HomeParkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82C0228A9DB8003F9C7C /* HomeParkViewController.m */; };
+		459E82C4228A9EAB003F9C7C /* HomeShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82C3228A9EAB003F9C7C /* HomeShopViewController.m */; };
+		459E82C8228AA103003F9C7C /* FeesListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82C6228AA103003F9C7C /* FeesListViewCell.m */; };
+		459E82C9228AA103003F9C7C /* FeesListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459E82C7228AA103003F9C7C /* FeesListViewCell.xib */; };
+		459E82CD228AA113003F9C7C /* FeesHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82CB228AA113003F9C7C /* FeesHistoryCell.m */; };
+		459E82CE228AA113003F9C7C /* FeesHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459E82CC228AA113003F9C7C /* FeesHistoryCell.xib */; };
+		459E82D1228AA1C3003F9C7C /* FeesListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82D0228AA1C3003F9C7C /* FeesListModel.m */; };
+		45BDA8D1228B023D00D789D4 /* ServiceListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BDA8CF228B023D00D789D4 /* ServiceListViewCell.m */; };
+		45BDA8D2228B023D00D789D4 /* ServiceListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45BDA8D0228B023D00D789D4 /* ServiceListViewCell.xib */; };
+		45BDA8D5228B0BAB00D789D4 /* ServerListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BDA8D4228B0BAB00D789D4 /* ServerListModel.m */; };
+		45BDA8D8228B0D7300D789D4 /* ServiceTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BDA8D7228B0D7300D789D4 /* ServiceTopView.m */; };
 		45D700A722757A5500EA6FEF /* TKTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D700A622757A5500EA6FEF /* TKTableView.m */; };
 		45D700AA22757E1800EA6FEF /* HomeHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D700A922757E1800EA6FEF /* HomeHeaderCell.m */; };
 		45D700AD227594A800EA6FEF /* HomeHeaderCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D700AC227594A800EA6FEF /* HomeHeaderCollectionCell.m */; };
@@ -62,6 +131,71 @@
 		1889CB7A5FA3E11DE5DD0CBA /* libPods-TabsKeepersApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TabsKeepersApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		430F15464BD858151BD5ED8D /* Pods-TabsKeepersApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabsKeepersApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TabsKeepersApp/Pods-TabsKeepersApp.debug.xcconfig"; sourceTree = "<group>"; };
 		44A4B22BE0D8045B8E3ADA5E /* Pods-TabsKeepersApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabsKeepersApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TabsKeepersApp/Pods-TabsKeepersApp.release.xcconfig"; sourceTree = "<group>"; };
+		451300BE2286720D009D053B /* MCNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCNetworking.h; sourceTree = "<group>"; };
+		451300BF2286720D009D053B /* MCNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCNetworking.m; sourceTree = "<group>"; };
+		451300C222867324009D053B /* TKApiConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKApiConstant.h; sourceTree = "<group>"; };
+		451300C32286757F009D053B /* MCHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCHUD.h; sourceTree = "<group>"; };
+		451300C42286757F009D053B /* MCHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCHUD.m; sourceTree = "<group>"; };
+		451300C62286C130009D053B /* ServiceProtocalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceProtocalViewController.h; sourceTree = "<group>"; };
+		451300C72286C130009D053B /* ServiceProtocalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceProtocalViewController.m; sourceTree = "<group>"; };
+		451300C92286C8FB009D053B /* TKUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKUserModel.h; sourceTree = "<group>"; };
+		451300CA2286C8FB009D053B /* TKUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKUserModel.m; sourceTree = "<group>"; };
+		451300CC2286C9CD009D053B /* TKCycleData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKCycleData.h; sourceTree = "<group>"; };
+		451300CD2286C9CD009D053B /* TKCycleData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKCycleData.m; sourceTree = "<group>"; };
+		451300CF228905C2009D053B /* MyFamilyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFamilyViewController.h; sourceTree = "<group>"; };
+		451300D0228905C2009D053B /* MyFamilyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFamilyViewController.m; sourceTree = "<group>"; };
+		451300D2228905D0009D053B /* MyFeeManageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFeeManageViewController.h; sourceTree = "<group>"; };
+		451300D3228905D0009D053B /* MyFeeManageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFeeManageViewController.m; sourceTree = "<group>"; };
+		451300D5228905DC009D053B /* MyNotiManageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNotiManageViewController.h; sourceTree = "<group>"; };
+		451300D6228905DC009D053B /* MyNotiManageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNotiManageViewController.m; sourceTree = "<group>"; };
+		451300D8228905F2009D053B /* ContactsUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsUsViewController.h; sourceTree = "<group>"; };
+		451300D9228905F2009D053B /* ContactsUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsUsViewController.m; sourceTree = "<group>"; };
+		451300DB22891037009D053B /* FamilyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FamilyTableViewCell.h; sourceTree = "<group>"; };
+		451300DC22891037009D053B /* FamilyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FamilyTableViewCell.m; sourceTree = "<group>"; };
+		451300DD22891037009D053B /* FamilyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyTableViewCell.xib; sourceTree = "<group>"; };
+		451300E022891414009D053B /* BottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomView.h; sourceTree = "<group>"; };
+		451300E122891414009D053B /* BottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomView.m; sourceTree = "<group>"; };
+		451300E322891709009D053B /* AddFamilyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddFamilyViewController.h; sourceTree = "<group>"; };
+		451300E422891709009D053B /* AddFamilyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddFamilyViewController.m; sourceTree = "<group>"; };
+		451300E622892052009D053B /* MyFamilyListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFamilyListModel.h; sourceTree = "<group>"; };
+		451300E722892052009D053B /* MyFamilyListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFamilyListModel.m; sourceTree = "<group>"; };
+		451300E922892254009D053B /* TKRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKRefreshHeader.h; sourceTree = "<group>"; };
+		451300EA22892254009D053B /* TKRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKRefreshHeader.m; sourceTree = "<group>"; };
+		451300EC2289226F009D053B /* TKRefreshFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKRefreshFooter.h; sourceTree = "<group>"; };
+		451300ED2289226F009D053B /* TKRefreshFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKRefreshFooter.m; sourceTree = "<group>"; };
+		451300EF22893E0B009D053B /* KeyValueModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyValueModel.h; sourceTree = "<group>"; };
+		451300F022893E0B009D053B /* KeyValueModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyValueModel.m; sourceTree = "<group>"; };
+		451300F222894260009D053B /* TKSelectedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKSelectedView.h; sourceTree = "<group>"; };
+		451300F322894260009D053B /* TKSelectedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKSelectedView.m; sourceTree = "<group>"; };
+		451300F522894BDA009D053B /* WYFeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYFeeViewController.h; sourceTree = "<group>"; };
+		451300F622894BDA009D053B /* WYFeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYFeeViewController.m; sourceTree = "<group>"; };
+		451300F822894BE7009D053B /* WaterFeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFeeViewController.h; sourceTree = "<group>"; };
+		451300F922894BE7009D053B /* WaterFeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFeeViewController.m; sourceTree = "<group>"; };
+		451300FB228950B1009D053B /* WYTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYTableViewCell.h; sourceTree = "<group>"; };
+		451300FC228950B1009D053B /* WYTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYTableViewCell.m; sourceTree = "<group>"; };
+		451300FD228950B1009D053B /* WYTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WYTableViewCell.xib; sourceTree = "<group>"; };
+		45130100228950C0009D053B /* WaterFeeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFeeTableViewCell.h; sourceTree = "<group>"; };
+		45130101228950C0009D053B /* WaterFeeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFeeTableViewCell.m; sourceTree = "<group>"; };
+		45130102228950C0009D053B /* WaterFeeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaterFeeTableViewCell.xib; sourceTree = "<group>"; };
+		4513010522895267009D053B /* WYFeeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYFeeModel.h; sourceTree = "<group>"; };
+		4513010622895267009D053B /* WYFeeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYFeeModel.m; sourceTree = "<group>"; };
+		4513010B22895AC6009D053B /* WYSectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYSectionView.h; sourceTree = "<group>"; };
+		4513010C22895AC6009D053B /* WYSectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYSectionView.m; sourceTree = "<group>"; };
+		4513010E228961E0009D053B /* WaterSectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterSectionView.h; sourceTree = "<group>"; };
+		4513010F228961E0009D053B /* WaterSectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterSectionView.m; sourceTree = "<group>"; };
+		4513011122896BCB009D053B /* BillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BillViewController.h; sourceTree = "<group>"; };
+		4513011222896BCB009D053B /* BillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BillViewController.m; sourceTree = "<group>"; };
+		4513011422896BD7009D053B /* NotiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotiViewController.h; sourceTree = "<group>"; };
+		4513011522896BD7009D053B /* NotiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotiViewController.m; sourceTree = "<group>"; };
+		4513011722896F71009D053B /* BillModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BillModel.h; sourceTree = "<group>"; };
+		4513011822896F71009D053B /* BillModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BillModel.m; sourceTree = "<group>"; };
+		4513011A22897027009D053B /* BillTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BillTableViewCell.h; sourceTree = "<group>"; };
+		4513011B22897027009D053B /* BillTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BillTableViewCell.m; sourceTree = "<group>"; };
+		4513011C22897027009D053B /* BillTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillTableViewCell.xib; sourceTree = "<group>"; };
+		4513011F22897550009D053B /* HouseNotificationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseNotificationModel.h; sourceTree = "<group>"; };
+		4513012022897550009D053B /* HouseNotificationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseNotificationModel.m; sourceTree = "<group>"; };
+		4513012222897BE8009D053B /* BaoxiuModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaoxiuModel.h; sourceTree = "<group>"; };
+		4513012322897BE8009D053B /* BaoxiuModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaoxiuModel.m; sourceTree = "<group>"; };
 		45143DC1227148D40003202A /* TKRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKRegisterViewController.h; sourceTree = "<group>"; };
 		45143DC2227148D40003202A /* TKRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKRegisterViewController.m; sourceTree = "<group>"; };
 		45143DC422714A140003202A /* TKHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKHomePageViewController.h; sourceTree = "<group>"; };
@@ -92,6 +226,19 @@
 		45241BDE227EC8A900D68947 /* NotificationListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationListCell.xib; sourceTree = "<group>"; };
 		45241BE1227ECDC000D68947 /* NotificationDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationDetailViewController.h; sourceTree = "<group>"; };
 		45241BE2227ECDC000D68947 /* NotificationDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationDetailViewController.m; sourceTree = "<group>"; };
+		455EA640228BE5D70097E9CC /* NewPersonCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPersonCenterViewController.h; sourceTree = "<group>"; };
+		455EA641228BE5D70097E9CC /* NewPersonCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPersonCenterViewController.m; sourceTree = "<group>"; };
+		455EA643228BE6600097E9CC /* PersonCenterViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonCenterViewCell.h; sourceTree = "<group>"; };
+		455EA644228BE6600097E9CC /* PersonCenterViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonCenterViewCell.m; sourceTree = "<group>"; };
+		455EA645228BE6600097E9CC /* PersonCenterViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCenterViewCell.xib; sourceTree = "<group>"; };
+		455EA648228BE67B0097E9CC /* PersonHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonHeaderView.h; sourceTree = "<group>"; };
+		455EA649228BE67B0097E9CC /* PersonHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonHeaderView.m; sourceTree = "<group>"; };
+		455EA64B228BE6840097E9CC /* PersonFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonFooterView.h; sourceTree = "<group>"; };
+		455EA64C228BE6840097E9CC /* PersonFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonFooterView.m; sourceTree = "<group>"; };
+		455EA64E228BE68F0097E9CC /* PersonHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonHeaderView.xib; sourceTree = "<group>"; };
+		455EA655228CF7E70097E9CC /* NormalNotiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalNotiCell.h; sourceTree = "<group>"; };
+		455EA656228CF7E70097E9CC /* NormalNotiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalNotiCell.m; sourceTree = "<group>"; };
+		455EA657228CF7E70097E9CC /* NormalNotiCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalNotiCell.xib; sourceTree = "<group>"; };
 		45631C5F2270353600B90E8A /* TabsKeepersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabsKeepersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45631C622270353600B90E8A /* TKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKAppDelegate.h; sourceTree = "<group>"; };
 		45631C632270353600B90E8A /* TKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKAppDelegate.m; sourceTree = "<group>"; };
@@ -123,6 +270,55 @@
 		458292E42278416100CCA5ED /* TKEvaluateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKEvaluateView.xib; sourceTree = "<group>"; };
 		458292E52278416100CCA5ED /* TKEvaluateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKEvaluateView.h; sourceTree = "<group>"; };
 		458292E62278416100CCA5ED /* TKEvaluateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKEvaluateView.m; sourceTree = "<group>"; };
+		4588873C228ABD5200AD9460 /* FeesSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeesSectionHeaderView.h; sourceTree = "<group>"; };
+		4588873D228ABD5200AD9460 /* FeesSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeesSectionHeaderView.m; sourceTree = "<group>"; };
+		4588873F228ABD8E00AD9460 /* HomeFeesTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeFeesTopView.h; sourceTree = "<group>"; };
+		45888740228ABD8E00AD9460 /* HomeFeesTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeFeesTopView.m; sourceTree = "<group>"; };
+		45888742228AC66B00AD9460 /* ZhiFuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhiFuView.h; sourceTree = "<group>"; };
+		45888743228AC66B00AD9460 /* ZhiFuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhiFuView.m; sourceTree = "<group>"; };
+		45888745228AC67D00AD9460 /* FeesDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeesDetailView.h; sourceTree = "<group>"; };
+		45888746228AC67D00AD9460 /* FeesDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeesDetailView.m; sourceTree = "<group>"; };
+		45888748228AC68700AD9460 /* ZhifuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZhifuView.xib; sourceTree = "<group>"; };
+		4588874A228AC69200AD9460 /* FeesDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeesDetailView.xib; sourceTree = "<group>"; };
+		4588874C228AE0CE00AD9460 /* WYFeesModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYFeesModel.h; sourceTree = "<group>"; };
+		4588874D228AE0CE00AD9460 /* WYFeesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYFeesModel.m; sourceTree = "<group>"; };
+		459E82A0228A6D68003F9C7C /* HomeBannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeBannerModel.h; sourceTree = "<group>"; };
+		459E82A1228A6D68003F9C7C /* HomeBannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeBannerModel.m; sourceTree = "<group>"; };
+		459E82A3228A6D73003F9C7C /* HomeAdModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeAdModel.h; sourceTree = "<group>"; };
+		459E82A4228A6D73003F9C7C /* HomeAdModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeAdModel.m; sourceTree = "<group>"; };
+		459E82A7228A73DD003F9C7C /* FFBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFBannerView.m; sourceTree = "<group>"; };
+		459E82A8228A73DD003F9C7C /* FFBannerViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFBannerViewCell.h; sourceTree = "<group>"; };
+		459E82A9228A73DD003F9C7C /* FFBannerFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFBannerFlowLayout.h; sourceTree = "<group>"; };
+		459E82AA228A73DD003F9C7C /* FFBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFBannerView.h; sourceTree = "<group>"; };
+		459E82AB228A73DD003F9C7C /* FFBannerViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFBannerViewCell.m; sourceTree = "<group>"; };
+		459E82AC228A73DD003F9C7C /* FFBannerFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFBannerFlowLayout.m; sourceTree = "<group>"; };
+		459E82B0228A9BA5003F9C7C /* HomeWYFeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeWYFeeViewController.h; sourceTree = "<group>"; };
+		459E82B1228A9BA5003F9C7C /* HomeWYFeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeWYFeeViewController.m; sourceTree = "<group>"; };
+		459E82B3228A9BAE003F9C7C /* HomeWaterFeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeWaterFeeViewController.h; sourceTree = "<group>"; };
+		459E82B4228A9BAE003F9C7C /* HomeWaterFeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeWaterFeeViewController.m; sourceTree = "<group>"; };
+		459E82B6228A9C47003F9C7C /* HomeServiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeServiceViewController.h; sourceTree = "<group>"; };
+		459E82B7228A9C47003F9C7C /* HomeServiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeServiceViewController.m; sourceTree = "<group>"; };
+		459E82B9228A9C65003F9C7C /* HomeListenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeListenViewController.h; sourceTree = "<group>"; };
+		459E82BA228A9C65003F9C7C /* HomeListenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeListenViewController.m; sourceTree = "<group>"; };
+		459E82BF228A9DB8003F9C7C /* HomeParkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeParkViewController.h; sourceTree = "<group>"; };
+		459E82C0228A9DB8003F9C7C /* HomeParkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeParkViewController.m; sourceTree = "<group>"; };
+		459E82C2228A9EAB003F9C7C /* HomeShopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeShopViewController.h; sourceTree = "<group>"; };
+		459E82C3228A9EAB003F9C7C /* HomeShopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeShopViewController.m; sourceTree = "<group>"; };
+		459E82C5228AA103003F9C7C /* FeesListViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeesListViewCell.h; sourceTree = "<group>"; };
+		459E82C6228AA103003F9C7C /* FeesListViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeesListViewCell.m; sourceTree = "<group>"; };
+		459E82C7228AA103003F9C7C /* FeesListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeesListViewCell.xib; sourceTree = "<group>"; };
+		459E82CA228AA113003F9C7C /* FeesHistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeesHistoryCell.h; sourceTree = "<group>"; };
+		459E82CB228AA113003F9C7C /* FeesHistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeesHistoryCell.m; sourceTree = "<group>"; };
+		459E82CC228AA113003F9C7C /* FeesHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeesHistoryCell.xib; sourceTree = "<group>"; };
+		459E82CF228AA1C3003F9C7C /* FeesListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeesListModel.h; sourceTree = "<group>"; };
+		459E82D0228AA1C3003F9C7C /* FeesListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeesListModel.m; sourceTree = "<group>"; };
+		45BDA8CE228B023D00D789D4 /* ServiceListViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceListViewCell.h; sourceTree = "<group>"; };
+		45BDA8CF228B023D00D789D4 /* ServiceListViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceListViewCell.m; sourceTree = "<group>"; };
+		45BDA8D0228B023D00D789D4 /* ServiceListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceListViewCell.xib; sourceTree = "<group>"; };
+		45BDA8D3228B0BAB00D789D4 /* ServerListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerListModel.h; sourceTree = "<group>"; };
+		45BDA8D4228B0BAB00D789D4 /* ServerListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerListModel.m; sourceTree = "<group>"; };
+		45BDA8D6228B0D7300D789D4 /* ServiceTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceTopView.h; sourceTree = "<group>"; };
+		45BDA8D7228B0D7300D789D4 /* ServiceTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceTopView.m; sourceTree = "<group>"; };
 		45D700A522757A5500EA6FEF /* TKTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKTableView.h; sourceTree = "<group>"; };
 		45D700A622757A5500EA6FEF /* TKTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKTableView.m; sourceTree = "<group>"; };
 		45D700A822757E1800EA6FEF /* HomeHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderCell.h; sourceTree = "<group>"; };
@@ -163,6 +359,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		451300BD22867177009D053B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				451300BE2286720D009D053B /* MCNetworking.h */,
+				451300BF2286720D009D053B /* MCNetworking.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		45143DC722714A9A0003202A /* MCNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +375,23 @@
 				45143DC922714AC30003202A /* MCNavigationBarView.m */,
 			);
 			path = MCNavigationBar;
+			sourceTree = "<group>";
+		};
+		455EA63F228BE5D70097E9CC /* newcenter */ = {
+			isa = PBXGroup;
+			children = (
+				455EA640228BE5D70097E9CC /* NewPersonCenterViewController.h */,
+				455EA641228BE5D70097E9CC /* NewPersonCenterViewController.m */,
+				455EA643228BE6600097E9CC /* PersonCenterViewCell.h */,
+				455EA644228BE6600097E9CC /* PersonCenterViewCell.m */,
+				455EA645228BE6600097E9CC /* PersonCenterViewCell.xib */,
+				455EA648228BE67B0097E9CC /* PersonHeaderView.h */,
+				455EA649228BE67B0097E9CC /* PersonHeaderView.m */,
+				455EA64B228BE6840097E9CC /* PersonFooterView.h */,
+				455EA64C228BE6840097E9CC /* PersonFooterView.m */,
+				455EA64E228BE68F0097E9CC /* PersonHeaderView.xib */,
+			);
+			path = newcenter;
 			sourceTree = "<group>";
 		};
 		45631C562270353600B90E8A = {
@@ -198,6 +420,7 @@
 				45631C8F22703E0A00B90E8A /* Vendor */,
 				45631CA02270689F00B90E8A /* Category */,
 				45631C8922703C0300B90E8A /* Constant */,
+				451300BD22867177009D053B /* Network */,
 				45631C8A22703C0300B90E8A /* Data */,
 				45631C622270353600B90E8A /* TKAppDelegate.h */,
 				45631C632270353600B90E8A /* TKAppDelegate.m */,
@@ -238,6 +461,16 @@
 		45631C7A22703C0300B90E8A /* models */ = {
 			isa = PBXGroup;
 			children = (
+				459E82A0228A6D68003F9C7C /* HomeBannerModel.h */,
+				459E82A1228A6D68003F9C7C /* HomeBannerModel.m */,
+				459E82A3228A6D73003F9C7C /* HomeAdModel.h */,
+				459E82A4228A6D73003F9C7C /* HomeAdModel.m */,
+				459E82CF228AA1C3003F9C7C /* FeesListModel.h */,
+				459E82D0228AA1C3003F9C7C /* FeesListModel.m */,
+				4588874C228AE0CE00AD9460 /* WYFeesModel.h */,
+				4588874D228AE0CE00AD9460 /* WYFeesModel.m */,
+				45BDA8D3228B0BAB00D789D4 /* ServerListModel.h */,
+				45BDA8D4228B0BAB00D789D4 /* ServerListModel.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -247,6 +480,18 @@
 			children = (
 				45143DC422714A140003202A /* TKHomePageViewController.h */,
 				45143DC522714A140003202A /* TKHomePageViewController.m */,
+				459E82B0228A9BA5003F9C7C /* HomeWYFeeViewController.h */,
+				459E82B1228A9BA5003F9C7C /* HomeWYFeeViewController.m */,
+				459E82B3228A9BAE003F9C7C /* HomeWaterFeeViewController.h */,
+				459E82B4228A9BAE003F9C7C /* HomeWaterFeeViewController.m */,
+				459E82B6228A9C47003F9C7C /* HomeServiceViewController.h */,
+				459E82B7228A9C47003F9C7C /* HomeServiceViewController.m */,
+				459E82B9228A9C65003F9C7C /* HomeListenViewController.h */,
+				459E82BA228A9C65003F9C7C /* HomeListenViewController.m */,
+				459E82BF228A9DB8003F9C7C /* HomeParkViewController.h */,
+				459E82C0228A9DB8003F9C7C /* HomeParkViewController.m */,
+				459E82C2228A9EAB003F9C7C /* HomeShopViewController.h */,
+				459E82C3228A9EAB003F9C7C /* HomeShopViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -254,6 +499,7 @@
 		45631C7C22703C0300B90E8A /* views */ = {
 			isa = PBXGroup;
 			children = (
+				459E82A6228A73DD003F9C7C /* BannerView */,
 				45D700A822757E1800EA6FEF /* HomeHeaderCell.h */,
 				45D700A922757E1800EA6FEF /* HomeHeaderCell.m */,
 				45D700AB227594A800EA6FEF /* HomeHeaderCollectionCell.h */,
@@ -264,6 +510,27 @@
 				45D700B32275AF3E00EA6FEF /* HomeAdvertiseCell.h */,
 				45D700B42275AF3E00EA6FEF /* HomeAdvertiseCell.m */,
 				45D700B52275AF3E00EA6FEF /* HomeAdvertiseCell.xib */,
+				459E82C5228AA103003F9C7C /* FeesListViewCell.h */,
+				459E82C6228AA103003F9C7C /* FeesListViewCell.m */,
+				459E82C7228AA103003F9C7C /* FeesListViewCell.xib */,
+				459E82CA228AA113003F9C7C /* FeesHistoryCell.h */,
+				459E82CB228AA113003F9C7C /* FeesHistoryCell.m */,
+				459E82CC228AA113003F9C7C /* FeesHistoryCell.xib */,
+				4588873C228ABD5200AD9460 /* FeesSectionHeaderView.h */,
+				4588873D228ABD5200AD9460 /* FeesSectionHeaderView.m */,
+				4588873F228ABD8E00AD9460 /* HomeFeesTopView.h */,
+				45888740228ABD8E00AD9460 /* HomeFeesTopView.m */,
+				45888742228AC66B00AD9460 /* ZhiFuView.h */,
+				45888743228AC66B00AD9460 /* ZhiFuView.m */,
+				45888745228AC67D00AD9460 /* FeesDetailView.h */,
+				45888746228AC67D00AD9460 /* FeesDetailView.m */,
+				45888748228AC68700AD9460 /* ZhifuView.xib */,
+				4588874A228AC69200AD9460 /* FeesDetailView.xib */,
+				45BDA8CE228B023D00D789D4 /* ServiceListViewCell.h */,
+				45BDA8CF228B023D00D789D4 /* ServiceListViewCell.m */,
+				45BDA8D0228B023D00D789D4 /* ServiceListViewCell.xib */,
+				45BDA8D6228B0D7300D789D4 /* ServiceTopView.h */,
+				45BDA8D7228B0D7300D789D4 /* ServiceTopView.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -283,6 +550,8 @@
 			children = (
 				45241BD4227EBA3600D68947 /* TKKeyValueModel.h */,
 				45241BD5227EBA3600D68947 /* TKKeyValueModel.m */,
+				4513012222897BE8009D053B /* BaoxiuModel.h */,
+				4513012322897BE8009D053B /* BaoxiuModel.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -341,6 +610,14 @@
 		45631C8222703C0300B90E8A /* models */ = {
 			isa = PBXGroup;
 			children = (
+				451300E622892052009D053B /* MyFamilyListModel.h */,
+				451300E722892052009D053B /* MyFamilyListModel.m */,
+				451300EF22893E0B009D053B /* KeyValueModel.h */,
+				451300F022893E0B009D053B /* KeyValueModel.m */,
+				4513010522895267009D053B /* WYFeeModel.h */,
+				4513010622895267009D053B /* WYFeeModel.m */,
+				4513011722896F71009D053B /* BillModel.h */,
+				4513011822896F71009D053B /* BillModel.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -348,8 +625,27 @@
 		45631C8322703C0300B90E8A /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				455EA63F228BE5D70097E9CC /* newcenter */,
 				45F65FEA22744B70009F6F6B /* PersonCenterViewController.h */,
 				45F65FEB22744B70009F6F6B /* PersonCenterViewController.m */,
+				451300CF228905C2009D053B /* MyFamilyViewController.h */,
+				451300D0228905C2009D053B /* MyFamilyViewController.m */,
+				451300D2228905D0009D053B /* MyFeeManageViewController.h */,
+				451300D3228905D0009D053B /* MyFeeManageViewController.m */,
+				451300F522894BDA009D053B /* WYFeeViewController.h */,
+				451300F622894BDA009D053B /* WYFeeViewController.m */,
+				451300F822894BE7009D053B /* WaterFeeViewController.h */,
+				451300F922894BE7009D053B /* WaterFeeViewController.m */,
+				451300D5228905DC009D053B /* MyNotiManageViewController.h */,
+				451300D6228905DC009D053B /* MyNotiManageViewController.m */,
+				4513011122896BCB009D053B /* BillViewController.h */,
+				4513011222896BCB009D053B /* BillViewController.m */,
+				4513011422896BD7009D053B /* NotiViewController.h */,
+				4513011522896BD7009D053B /* NotiViewController.m */,
+				451300D8228905F2009D053B /* ContactsUsViewController.h */,
+				451300D9228905F2009D053B /* ContactsUsViewController.m */,
+				451300E322891709009D053B /* AddFamilyViewController.h */,
+				451300E422891709009D053B /* AddFamilyViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -357,6 +653,29 @@
 		45631C8422703C0300B90E8A /* views */ = {
 			isa = PBXGroup;
 			children = (
+				451300DB22891037009D053B /* FamilyTableViewCell.h */,
+				451300DC22891037009D053B /* FamilyTableViewCell.m */,
+				451300DD22891037009D053B /* FamilyTableViewCell.xib */,
+				451300E022891414009D053B /* BottomView.h */,
+				451300E122891414009D053B /* BottomView.m */,
+				451300F222894260009D053B /* TKSelectedView.h */,
+				451300F322894260009D053B /* TKSelectedView.m */,
+				451300FB228950B1009D053B /* WYTableViewCell.h */,
+				451300FC228950B1009D053B /* WYTableViewCell.m */,
+				451300FD228950B1009D053B /* WYTableViewCell.xib */,
+				45130100228950C0009D053B /* WaterFeeTableViewCell.h */,
+				45130101228950C0009D053B /* WaterFeeTableViewCell.m */,
+				45130102228950C0009D053B /* WaterFeeTableViewCell.xib */,
+				4513010B22895AC6009D053B /* WYSectionView.h */,
+				4513010C22895AC6009D053B /* WYSectionView.m */,
+				4513010E228961E0009D053B /* WaterSectionView.h */,
+				4513010F228961E0009D053B /* WaterSectionView.m */,
+				4513011A22897027009D053B /* BillTableViewCell.h */,
+				4513011B22897027009D053B /* BillTableViewCell.m */,
+				4513011C22897027009D053B /* BillTableViewCell.xib */,
+				455EA655228CF7E70097E9CC /* NormalNotiCell.h */,
+				455EA656228CF7E70097E9CC /* NormalNotiCell.m */,
+				455EA657228CF7E70097E9CC /* NormalNotiCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -374,6 +693,8 @@
 		45631C8622703C0300B90E8A /* models */ = {
 			isa = PBXGroup;
 			children = (
+				4513011F22897550009D053B /* HouseNotificationModel.h */,
+				4513012022897550009D053B /* HouseNotificationModel.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -402,6 +723,7 @@
 		45631C8922703C0300B90E8A /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				451300C222867324009D053B /* TKApiConstant.h */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -411,6 +733,8 @@
 			children = (
 				45631C8B22703C2B00B90E8A /* TKUserDefault.h */,
 				45631C8C22703C2B00B90E8A /* TKUserDefault.m */,
+				451300CC2286C9CD009D053B /* TKCycleData.h */,
+				451300CD2286C9CD009D053B /* TKCycleData.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -428,6 +752,8 @@
 				45631C9C2270403000B90E8A /* TKUtils.h */,
 				45631C9D2270403000B90E8A /* TKUtils.m */,
 				45631C9F2270418000B90E8A /* TKDefinded.h */,
+				451300C32286757F009D053B /* MCHUD.h */,
+				451300C42286757F009D053B /* MCHUD.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -441,6 +767,10 @@
 				45631C9722703F0B00B90E8A /* TKLoginViewController.m */,
 				45143DC1227148D40003202A /* TKRegisterViewController.h */,
 				45143DC2227148D40003202A /* TKRegisterViewController.m */,
+				451300C62286C130009D053B /* ServiceProtocalViewController.h */,
+				451300C72286C130009D053B /* ServiceProtocalViewController.m */,
+				451300C92286C8FB009D053B /* TKUserModel.h */,
+				451300CA2286C8FB009D053B /* TKUserModel.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -457,6 +787,10 @@
 				45F65FE522744B1A009F6F6B /* TKTabBarController.m */,
 				45D700A522757A5500EA6FEF /* TKTableView.h */,
 				45D700A622757A5500EA6FEF /* TKTableView.m */,
+				451300E922892254009D053B /* TKRefreshHeader.h */,
+				451300EA22892254009D053B /* TKRefreshHeader.m */,
+				451300EC2289226F009D053B /* TKRefreshFooter.h */,
+				451300ED2289226F009D053B /* TKRefreshFooter.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -472,6 +806,19 @@
 				45F65FF122744C21009F6F6B /* UIColor+Theme.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		459E82A6228A73DD003F9C7C /* BannerView */ = {
+			isa = PBXGroup;
+			children = (
+				459E82A7228A73DD003F9C7C /* FFBannerView.m */,
+				459E82A8228A73DD003F9C7C /* FFBannerViewCell.h */,
+				459E82A9228A73DD003F9C7C /* FFBannerFlowLayout.h */,
+				459E82AA228A73DD003F9C7C /* FFBannerView.h */,
+				459E82AB228A73DD003F9C7C /* FFBannerViewCell.m */,
+				459E82AC228A73DD003F9C7C /* FFBannerFlowLayout.m */,
+			);
+			path = BannerView;
 			sourceTree = "<group>";
 		};
 		720368A8214035C8DC52F854 /* Pods */ = {
@@ -502,6 +849,7 @@
 				45631C5B2270353600B90E8A /* Sources */,
 				45631C5C2270353600B90E8A /* Frameworks */,
 				45631C5D2270353600B90E8A /* Resources */,
+				F2DA0DF36E461FB83969FA51 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -549,17 +897,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455EA647228BE6600097E9CC /* PersonCenterViewCell.xib in Resources */,
+				459E82C9228AA103003F9C7C /* FeesListViewCell.xib in Resources */,
+				451300DF22891037009D053B /* FamilyTableViewCell.xib in Resources */,
 				45241BD0227E73B900D68947 /* PhotoCollectionCell.xib in Resources */,
 				45631C6F2270353700B90E8A /* LaunchScreen.storyboard in Resources */,
+				4588874B228AC69200AD9460 /* FeesDetailView.xib in Resources */,
 				45D700B72275AF3E00EA6FEF /* HomeAdvertiseCell.xib in Resources */,
+				455EA64F228BE68F0097E9CC /* PersonHeaderView.xib in Resources */,
 				45D700B22275AAA100EA6FEF /* HomeNotificationCell.xib in Resources */,
+				451300FF228950B1009D053B /* WYTableViewCell.xib in Resources */,
+				459E82CE228AA113003F9C7C /* FeesHistoryCell.xib in Resources */,
 				45631C6C2270353700B90E8A /* Assets.xcassets in Resources */,
 				458292E72278416100CCA5ED /* TKEvaluateView.xib in Resources */,
 				45631C6A2270353600B90E8A /* Main.storyboard in Resources */,
 				458292D32276A01F00CCA5ED /* 行驶证.jpeg in Resources */,
 				45241BE0227EC8A900D68947 /* NotificationListCell.xib in Resources */,
 				458292DB2276CC4500CCA5ED /* HouseKeeperViewCell.xib in Resources */,
+				4513011E22897027009D053B /* BillTableViewCell.xib in Resources */,
+				45888749228AC68700AD9460 /* ZhifuView.xib in Resources */,
+				45130104228950C0009D053B /* WaterFeeTableViewCell.xib in Resources */,
+				45BDA8D2228B023D00D789D4 /* ServiceListViewCell.xib in Resources */,
 				4514C511227BDB250075EE32 /* NewRepairCell1.xib in Resources */,
+				455EA659228CF7E70097E9CC /* NormalNotiCell.xib in Resources */,
 				4514C519227BDB480075EE32 /* NewRepairCell3.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,6 +949,39 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F2DA0DF36E461FB83969FA51 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TabsKeepersApp/Pods-TabsKeepersApp-resources.sh",
+				"${PODS_ROOT}/../../AdapterSDK/DataAdapterSDK/Depend/sdk_output/Bundle/MobileMediaPlayFramework.bundle",
+				"${PODS_ROOT}/../../AdapterSDK/DataAdapterSDK/Depend/sdk_output/Bundle/MobileMediaPlayUI.bundle",
+				"${PODS_ROOT}/../../AdapterSDK/DataAdapterSDK/Depend/sdk_output/Bundle/OAStackView.bundle",
+				"${PODS_ROOT}/HXPhotoPicker/照片选择器/HXPhotoPicker/Resource/HXPhotoPicker.bundle",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/OAStackView/OAStackView.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MobileMediaPlayFramework.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MobileMediaPlayUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/OAStackView.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HXPhotoPicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TabsKeepersApp/Pods-TabsKeepersApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -596,42 +989,99 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45130103228950C0009D053B /* WaterFeeTableViewCell.m in Sources */,
 				45143DCA22714AC30003202A /* MCNavigationBarView.m in Sources */,
+				4513011622896BD7009D053B /* NotiViewController.m in Sources */,
 				4514C510227BDB250075EE32 /* NewRepairCell1.m in Sources */,
+				459E82AF228A73DD003F9C7C /* FFBannerFlowLayout.m in Sources */,
+				451300F422894260009D053B /* TKSelectedView.m in Sources */,
+				455EA64A228BE67B0097E9CC /* PersonHeaderView.m in Sources */,
+				451300EE2289226F009D053B /* TKRefreshFooter.m in Sources */,
 				45241BD6227EBA3600D68947 /* TKKeyValueModel.m in Sources */,
 				45F65FE922744B62009F6F6B /* HouseKeeperViewController.m in Sources */,
 				4514C50C227BDA130075EE32 /* RepairedViewController.m in Sources */,
+				4513011322896BCB009D053B /* BillViewController.m in Sources */,
+				451300DA228905F2009D053B /* ContactsUsViewController.m in Sources */,
+				4513010D22895AC6009D053B /* WYSectionView.m in Sources */,
 				45D700A722757A5500EA6FEF /* TKTableView.m in Sources */,
+				451300DE22891037009D053B /* FamilyTableViewCell.m in Sources */,
+				451300F122893E0B009D053B /* KeyValueModel.m in Sources */,
+				459E82A2228A6D68003F9C7C /* HomeBannerModel.m in Sources */,
 				45F65FEF22744B7C009F6F6B /* NotificationViewController.m in Sources */,
+				45BDA8D8228B0D7300D789D4 /* ServiceTopView.m in Sources */,
+				451300CB2286C8FB009D053B /* TKUserModel.m in Sources */,
+				455EA658228CF7E70097E9CC /* NormalNotiCell.m in Sources */,
+				451300D1228905C2009D053B /* MyFamilyViewController.m in Sources */,
+				45BDA8D1228B023D00D789D4 /* ServiceListViewCell.m in Sources */,
+				459E82C1228A9DB8003F9C7C /* HomeParkViewController.m in Sources */,
 				45631C722270353700B90E8A /* main.m in Sources */,
 				45241BCF227E73B900D68947 /* PhotoCollectionCell.m in Sources */,
 				45241BDF227EC8A900D68947 /* NotificationListCell.m in Sources */,
 				45F65FE0227437AE009F6F6B /* UIFont+PingFangSC.m in Sources */,
 				45D700B62275AF3E00EA6FEF /* HomeAdvertiseCell.m in Sources */,
+				4513012422897BE8009D053B /* BaoxiuModel.m in Sources */,
+				45888744228AC66B00AD9460 /* ZhiFuView.m in Sources */,
+				459E82B5228A9BAE003F9C7C /* HomeWaterFeeViewController.m in Sources */,
 				45F65FF222744C21009F6F6B /* UIColor+Theme.m in Sources */,
+				4588873E228ABD5200AD9460 /* FeesSectionHeaderView.m in Sources */,
 				45143DC622714A140003202A /* TKHomePageViewController.m in Sources */,
 				4514C518227BDB480075EE32 /* NewRepairCell3.m in Sources */,
 				45143DC3227148D40003202A /* TKRegisterViewController.m in Sources */,
 				458292E82278416100CCA5ED /* TKEvaluateView.m in Sources */,
+				451300EB22892254009D053B /* TKRefreshHeader.m in Sources */,
+				451300CE2286C9CD009D053B /* TKCycleData.m in Sources */,
+				45130110228961E0009D053B /* WaterSectionView.m in Sources */,
 				4514C514227BDB390075EE32 /* NewRepairCell2.m in Sources */,
 				45241BE3227ECDC000D68947 /* NotificationDetailViewController.m in Sources */,
+				459E82B2228A9BA5003F9C7C /* HomeWYFeeViewController.m in Sources */,
+				451300C02286720D009D053B /* MCNetworking.m in Sources */,
+				459E82B8228A9C47003F9C7C /* HomeServiceViewController.m in Sources */,
 				45631C9E2270403000B90E8A /* TKUtils.m in Sources */,
+				451300D4228905D0009D053B /* MyFeeManageViewController.m in Sources */,
 				45631C8D22703C2B00B90E8A /* TKUserDefault.m in Sources */,
 				458292DA2276CC4500CCA5ED /* HouseKeeperViewCell.m in Sources */,
+				455EA64D228BE6840097E9CC /* PersonFooterView.m in Sources */,
 				45631C9822703F0B00B90E8A /* TKLoginViewController.m in Sources */,
+				45888747228AC67D00AD9460 /* FeesDetailView.m in Sources */,
 				45631C9522703EF400B90E8A /* TKBaseViewController.m in Sources */,
+				451300C52286757F009D053B /* MCHUD.m in Sources */,
+				451300E822892052009D053B /* MyFamilyListModel.m in Sources */,
+				4513012122897550009D053B /* HouseNotificationModel.m in Sources */,
+				4513010722895267009D053B /* WYFeeModel.m in Sources */,
+				459E82C8228AA103003F9C7C /* FeesListViewCell.m in Sources */,
+				459E82C4228A9EAB003F9C7C /* HomeShopViewController.m in Sources */,
+				45888741228ABD8E00AD9460 /* HomeFeesTopView.m in Sources */,
+				459E82BB228A9C65003F9C7C /* HomeListenViewController.m in Sources */,
 				45631CA3227068CE00B90E8A /* NSString+Judge.m in Sources */,
 				45631C642270353600B90E8A /* TKAppDelegate.m in Sources */,
+				455EA646228BE6600097E9CC /* PersonCenterViewCell.m in Sources */,
+				451300FE228950B1009D053B /* WYTableViewCell.m in Sources */,
 				45631C9B22703FCE00B90E8A /* TKBaseNavigationController.m in Sources */,
 				45F65FE622744B1A009F6F6B /* TKTabBarController.m in Sources */,
+				451300E222891414009D053B /* BottomView.m in Sources */,
 				45D700AD227594A800EA6FEF /* HomeHeaderCollectionCell.m in Sources */,
 				45D700B12275AAA100EA6FEF /* HomeNotificationCell.m in Sources */,
+				451300C82286C130009D053B /* ServiceProtocalViewController.m in Sources */,
+				45BDA8D5228B0BAB00D789D4 /* ServerListModel.m in Sources */,
+				4513011D22897027009D053B /* BillTableViewCell.m in Sources */,
+				451300FA22894BE7009D053B /* WaterFeeViewController.m in Sources */,
+				455EA642228BE5D70097E9CC /* NewPersonCenterViewController.m in Sources */,
 				45D700AA22757E1800EA6FEF /* HomeHeaderCell.m in Sources */,
+				4513011922896F71009D053B /* BillModel.m in Sources */,
+				459E82AD228A73DD003F9C7C /* FFBannerView.m in Sources */,
+				459E82A5228A6D73003F9C7C /* HomeAdModel.m in Sources */,
 				45F65FEC22744B70009F6F6B /* PersonCenterViewController.m in Sources */,
+				459E82CD228AA113003F9C7C /* FeesHistoryCell.m in Sources */,
+				451300F722894BDA009D053B /* WYFeeViewController.m in Sources */,
 				458292D62276ABEA00CCA5ED /* NewRepaireViewController.m in Sources */,
 				45241BD3227E80C400D68947 /* TKTableViewFooterView.m in Sources */,
+				459E82D1228AA1C3003F9C7C /* FeesListModel.m in Sources */,
 				45241BDA227EBBE700D68947 /* TKDoubleLabelCell.m in Sources */,
+				4588874E228AE0CE00AD9460 /* WYFeesModel.m in Sources */,
+				459E82AE228A73DD003F9C7C /* FFBannerViewCell.m in Sources */,
 				45F65FE32274436A009F6F6B /* PLCountBtn.m in Sources */,
+				451300E522891709009D053B /* AddFamilyViewController.m in Sources */,
+				451300D7228905DC009D053B /* MyNotiManageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,7 +1225,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3NNM9A57Q6;
+				DEVELOPMENT_TEAM = ZDEGVA8JT8;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = TabsKeepersApp/TK_PrefixHeader.pch;
 				INFOPLIST_FILE = TabsKeepersApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -783,7 +1234,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tsfa.TabsKeepersApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsfa.TabsKeepers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -795,7 +1246,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3NNM9A57Q6;
+				DEVELOPMENT_TEAM = ZDEGVA8JT8;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = TabsKeepersApp/TK_PrefixHeader.pch;
 				INFOPLIST_FILE = TabsKeepersApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -803,7 +1255,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tsfa.TabsKeepersApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tsfa.TabsKeepers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

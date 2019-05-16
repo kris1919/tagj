@@ -37,4 +37,14 @@
     return [[userDefaults objectForKey:@"userDefault_tk_isLogin"] boolValue];
 }
 
++ (void)setUserInfo:(NSDictionary *)userInfo{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:userInfo forKey:@"userDefault_tk_userInfo"];
+    [userDefaults synchronize];
+}
++ (NSDictionary *)getUserInfo{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    return [userDefaults objectForKey:@"userDefault_tk_userInfo"];
+}
+
 @end

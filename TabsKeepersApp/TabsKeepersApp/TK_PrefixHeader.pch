@@ -15,5 +15,6 @@
 #import "TKUserDefault.h"
 #import "TKDefinded.h"
 #import "TKUtils.h"
+#import "TKApiConstant.h"
 
 #endif /* TK_PrefixHeader_pch */

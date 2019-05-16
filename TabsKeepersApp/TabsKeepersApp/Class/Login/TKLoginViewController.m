@@ -8,6 +8,11 @@
 
 #import "TKLoginViewController.h"
 #import "NSString+Judge.h"
+#import "MCHUD.h"
+#import "MCNetworking.h"
+#import "ServiceProtocalViewController.h"
+#import "TKRegisterViewController.h"
+#import "TKUserDefault.h"
 
 @interface TKLoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneTF;
@@ -31,6 +36,9 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
     self.mc_navigationBar.hidden = YES;
+    
+    self.phoneTF.text = @"13764204128";
+    self.pwdTF.text = @"1";
 }
 
 - (void)keyboardWillShow:(NSNotification *)noti{
@@ -53,14 +61,28 @@
 
 - (IBAction)loginBtnAction:(UIButton *)sender {
     if (![self.phoneTF.text isPhoneNum]) {
+        [MCHUD showTips:@"请填写正确的手机号码" view:self.view];
         return;
     }
     if (0 == self.pwdTF.text.length) {
+        [MCHUD showTips:@"请填写密码" view:self.view];
         return;
     }
-    if (!self.loginBtn.selected) {
+    if (!self.serverBtn.selected) {
+        [MCHUD showTips:@"请认真阅读协议" view:self.view];
         return;
     }
+    NSString *urlStr = [kTKApiConstantDomin stringByAppendingString:kTKApiConstantLogin];
+    NSDictionary *param = @{@"phone":self.phoneTF.text,
+                          @"password":self.pwdTF.text,
+                          @"tsId":@"9999"
+                          };
+    [MCNetworking POSTWithUrl:urlStr parameter:param success:^(NSDictionary * _Nonnull responseDic) {
+        [TKUserDefault setUserInfo:[responseDic objectForKey:kTKResponseResultData]];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationLoginSuccess object:nil];
+    } failure:^(NSString * _Nonnull errorMsg) {
+       
+    } showHUD:YES view:self.view];
 }
 - (IBAction)forgetBtnAction:(UIButton *)sender {
     
@@ -70,11 +92,26 @@
 }
 
 - (IBAction)showServerPage:(UIButton *)sender {
-    
+    ServiceProtocalViewController *pageVC = [[ServiceProtocalViewController alloc] init];
+    NSString *urlStr = [kTKApiConstantDomin stringByAppendingString:kTKApiConstantServicePage];
+    pageVC.urlStr = urlStr;
+    pageVC.mc_navigationBar.title = @"服务协议";
+    [self.navigationController pushViewController:pageVC animated:YES];
 }
-
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(nullable id)sender NS_AVAILABLE_IOS(5_0){
+    if([segue.destinationViewController isKindOfClass:[TKRegisterViewController class]]){
+        TKRegisterViewController *registVC = (TKRegisterViewController *)segue.destinationViewController;
+        WS(weakSelf);
+        registVC.resetPwdSuccess = ^(NSString * _Nonnull phone, NSString * _Nonnull pwd) {
+            weakSelf.phoneTF.text = phone;
+            weakSelf.pwdTF.text = pwd;
+            [weakSelf loginBtnAction:weakSelf.loginBtn];
+        };
+    }
 }
 
 /*

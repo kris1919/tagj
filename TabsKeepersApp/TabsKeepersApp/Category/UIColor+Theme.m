@@ -22,6 +22,10 @@
     return [UIColor colorWithR:153 G:153 B:153 A:1.f];
 }
 
++ (UIColor *)labelColorLevel102{
+    return [UIColor colorWithR:102 G:102 B:102 A:1.f];
+}
+
 + (UIColor *)tableViewBgColor{
     return [UIColor colorWithR:239 G:239 B:245 A:1.f];
 }

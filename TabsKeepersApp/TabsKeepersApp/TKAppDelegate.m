@@ -10,6 +10,7 @@
 #import "TKBaseNavigationController.h"
 #import "TKLoginViewController.h"
 #import "TKTabBarController.h"
+#import <IQKeyboardManager.h>
 
 @interface TKAppDelegate ()
 
@@ -20,15 +21,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [TKUserDefault setIsLogin:NO];
+//    [TKUserDefault setIsLogin:NO];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessNoti) name:kNotificationLoginSuccess object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logoutNoti) name:kNotificationLogout object:nil];
+
     self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     [self setupRootVC];
     [self.window makeKeyAndVisible];
+    
+    [self config];
     return YES;
 }
-
+- (void)loginSuccessNoti{
+    [TKUserDefault setIsLogin:YES];
+    [self setupRootVC];
+}
+- (void)logoutNoti{
+    [TKUserDefault setIsLogin:NO];
+    [self setupRootVC];
+}
 - (void)setupRootVC{
-    if ([TKUserDefault getIsLogin]) {
+    if (![TKUserDefault getIsLogin]) {
         TKLoginViewController *loginVC = [TKUtils viewControllerWithStory:@"Main" storyId:@"TKLoginViewController"];
         TKBaseNavigationController *navi = [[TKBaseNavigationController alloc] initWithRootViewController:loginVC];
         self.window.rootViewController = navi;
@@ -66,5 +79,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
+- (void)config{
+    [[IQKeyboardManager sharedManager] setToolbarManageBehaviour:IQAutoToolbarByPosition]; //输入框自动上移
+    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+}
 @end

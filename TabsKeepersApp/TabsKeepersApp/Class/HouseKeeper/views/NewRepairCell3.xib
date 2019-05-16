@@ -47,7 +47,7 @@
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入联系人" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cav-1k-syV">
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入联系人" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cav-1k-syV">
                         <rect key="frame" x="134" y="0.0" width="173" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="ud7-iA-Jnl"/>
@@ -56,7 +56,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入联系电话" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qYk-NH-ewr">
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入联系电话" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qYk-NH-ewr">
                         <rect key="frame" x="134" y="51" width="173" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="IUY-f7-8Ah"/>
@@ -65,7 +65,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入单元号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7oD-r2-chj">
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入单元号" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7oD-r2-chj">
                         <rect key="frame" x="134" y="102" width="173" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="HYK-6X-RQX"/>
@@ -116,6 +116,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="addressLabel" destination="7oD-r2-chj" id="KDc-Tj-WzE"/>
+                <outlet property="nameLabel" destination="cav-1k-syV" id="g7u-GS-t7M"/>
+                <outlet property="phoneLabel" destination="qYk-NH-ewr" id="M5a-JJ-zri"/>
+            </connections>
             <point key="canvasLocation" x="144.80000000000001" y="119.64017991004499"/>
         </tableViewCell>
     </objects>

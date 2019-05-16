@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NewRepaireViewController : TKBaseViewController
 
+@property (nonatomic ,copy)void (^submitSuccessBlock)(void);
+
+
 @end
 
 NS_ASSUME_NONNULL_END

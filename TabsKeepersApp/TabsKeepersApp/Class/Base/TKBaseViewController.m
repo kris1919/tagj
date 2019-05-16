@@ -19,12 +19,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
-    
-    [self.mc_navigationBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        CGFloat x = [self statusBarHeight];
-        make.left.right.top.mas_equalTo(self.view);
-        make.height.mas_equalTo(@(x+44));
-    }];
+
     __weak __typeof(self) weakSelf = self;
     self.mc_navigationBar.backButtonHandle = ^{
         [weakSelf.navigationController popViewControllerAnimated:YES];
@@ -37,7 +32,7 @@
 
 -(MCNavigationBarView *)mc_navigationBar{
     if (!_mc_navigationBar) {
-        _mc_navigationBar = [[MCNavigationBarView alloc] init];
+        _mc_navigationBar = [[MCNavigationBarView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 44 + [self statusBarHeight])];
         [self.view addSubview:_mc_navigationBar];
     }
     return _mc_navigationBar;

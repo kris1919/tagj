@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIColor *)labelColorLevel153;
 
++ (UIColor *)labelColorLevel102;
+
 + (UIColor *)tableViewBgColor;
 
 @end

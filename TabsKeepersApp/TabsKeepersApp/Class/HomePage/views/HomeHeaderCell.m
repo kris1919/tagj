@@ -10,10 +10,12 @@
 #import <Masonry.h>
 #import "UIFont+PingFangSC.h"
 #import "HomeHeaderCollectionCell.h"
+#import "TKCycleData.h"
+#import "FFBannerView.h"
 
 @interface HomeHeaderCell()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (nonatomic ,strong)UIImageView *bgImageView;
-@property (nonatomic ,strong)UIImageView *adImageView;
+@property (nonatomic ,strong)FFBannerView *adBannerView;
 @property (nonatomic ,strong)UICollectionView *collectionView;
 @property (nonatomic ,strong)UIImageView *locationImageView;
 @property (nonatomic ,strong)UILabel *titleLabel;
@@ -41,16 +43,23 @@
     }
     return self;
 }
+
+-(void)setBannerImages:(NSArray *)bannerImages{
+    _bannerImages = bannerImages;
+    self.adBannerView.imagesUrl = bannerImages;
+}
+
 - (void)addMasonry{
     [self.bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.mas_equalTo(self);
         make.height.mas_equalTo(@(224));
     }];
-    [self.adImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self).offset(15);
-        make.right.mas_equalTo(self).offset(-15);
+
+    [self.adBannerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self).offset(0);
+        make.right.mas_equalTo(self).offset(0);
         make.bottom.mas_equalTo(self.bgImageView.mas_bottom).offset(15);
-        make.height.mas_equalTo(self.adImageView.mas_width).multipliedBy(0.45);
+        make.height.mas_equalTo(self.adBannerView.mas_width).multipliedBy(0.45);
     }];
     CGFloat topMargin = kIPhoneXSeries ? 45 : 32;
     [self.locationImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -65,10 +74,13 @@
     }];
     CGFloat heigth = (kScreenWidth - 30) / 4.0 * 2;
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.adImageView.mas_bottom).offset(15);
+        make.top.mas_equalTo(self.adBannerView.mas_bottom).offset(15);
         make.left.right.mas_equalTo(self);
         make.height.mas_equalTo(@(heigth));
     }];
+    
+    TKUserModel *userModel = [TKCycleData shareInstance].userModel;
+    self.titleLabel.text = userModel.xiaoqu;
 }
 
 - (UICollectionView *)collectionView{
@@ -102,7 +114,6 @@
 -(UILabel *)titleLabel{
     if (!_titleLabel) {
         _titleLabel = [UILabel new];
-        _titleLabel.text = @"天安别墅";
         _titleLabel.textColor = [UIColor whiteColor];
         _titleLabel.font = [UIFont pingFangFontOfSize:22];
         [self addSubview:_titleLabel];
@@ -115,21 +126,26 @@
         _bgImageView = [UIImageView new];
         _bgImageView.image = [UIImage imageNamed:@"icon_home_top"];
         _bgImageView.contentMode = UIViewContentModeScaleAspectFill;
+        _bgImageView.userInteractionEnabled = YES;
         [self addSubview:_bgImageView];
     }
     return _bgImageView;
 }
 
--(UIImageView *)adImageView{
-    if (!_adImageView) {
-        _adImageView = [UIImageView new];
-        _adImageView.layer.cornerRadius = 8;
-        _adImageView.clipsToBounds = YES;
-        _adImageView.contentMode = UIViewContentModeScaleAspectFill;
-        _adImageView.backgroundColor = [UIColor lightGrayColor];
-        [self addSubview:_adImageView];
+-(FFBannerView *)adBannerView{
+    if (!_adBannerView) {
+        _adBannerView = [[FFBannerView alloc] initWithFrame:CGRectZero];
+        _adBannerView.backgroundColor = [UIColor clearColor];
+        _adBannerView.hidePageControl = YES;
+        WS(weakSelf);
+        _adBannerView.didSelectedItemBlock = ^(NSInteger index) {
+            if (weakSelf.didSelectAdivertiseItemBlock) {
+                weakSelf.didSelectAdivertiseItemBlock(index);
+            }
+        };
+        [self addSubview:_adBannerView];
     }
-    return _adImageView;
+    return _adBannerView;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

@@ -25,6 +25,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)setIsLogin:(BOOL)isLogin;
 + (BOOL)getIsLogin;
 
+/**
+ 用户信息
+ */
++ (void)setUserInfo:(NSDictionary *)userInfo;
++ (NSDictionary *)getUserInfo;
+
 @end
 
 NS_ASSUME_NONNULL_END

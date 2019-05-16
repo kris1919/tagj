@@ -1,0 +1,71 @@
+{
+  "name": "DataAdapterSDK",
+  "version": "0.1.0",
+  "summary": "A short description of DataAdapterSDK.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ly/DataAdapterSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ly": "1090336995@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/ly/DataAdapterSDK.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "frameworks": [
+    "VideoToolbox",
+    "AudioToolbox",
+    "CoreMedia"
+  ],
+  "libraries": [
+    "c++",
+    "iconv",
+    "z",
+    "resolv",
+    "xml2",
+    "stdc++.6.0.9"
+  ],
+  "vendored_libraries": [
+    "DataAdapterSDK/Depend/sdk_output/Lib/*.a",
+    "DataAdapterSDK/stdc++/libstdc++.6.0.9.tbd"
+  ],
+  "vendored_frameworks": "DataAdapterSDK/Depend/DssSDK/DssSDK.framework",
+  "pod_target_xcconfig": {
+    "ENABLE_BITCODE": "false",
+    "CLANG_CXX_LIBRARY": "libstdc++",
+    "CLANG_WARN_DOCUMENTATION_COMMENTS": "NO",
+    "OTHER_LDFLAGS": "-ObjC -all_load"
+  },
+  "dependencies": {
+    "SBJson": [
+      "2.2.3"
+    ],
+    "XMLDictionary": [
+
+    ],
+    "OAStackView": [
+      "~> 1.0.1"
+    ],
+    "MBProgressHUD": [
+
+    ],
+    "AFNetworking": [
+
+    ],
+    "MQTTClient": [
+
+    ],
+    "KissXML": [
+
+    ]
+  },
+  "resources": "DataAdapterSDK/Depend/sdk_output/Bundle/*.bundle",
+  "public_header_files": "DataAdapterSDK/Depend/sdk_output/**/*.h",
+  "source_files": "DataAdapterSDK/Depend/sdk_output/**/*.h"
+}

@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaoxiuModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HouseKeeperViewCell : UITableViewCell
 
-@property (nonatomic ,copy)void (^operBtnHandleBlock)(void);
+@property (nonatomic ,copy)void (^operBtnHandleBlock)(NSInteger type,NSInteger index);
+
+@property (nonatomic ,strong)BaoxiuModel *model;
+
+@property (nonatomic ,strong)NSIndexPath *indenPath;
 
 
 @end

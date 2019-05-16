@@ -36,6 +36,9 @@
                         <state key="normal" title="室内报修" image="icon_arrow_down">
                             <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="baoxiuBtnClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="c3G-8e-Nz0"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="报修描述" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoc-Jd-Icz">
                         <rect key="frame" x="16" y="51" width="64" height="23"/>
@@ -64,6 +67,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="baoxiuBtn" destination="q2c-cq-gGT" id="dIv-1c-gFN"/>
+                <outlet property="inputView" destination="QZb-Qu-JcJ" id="bds-lq-8hc"/>
+            </connections>
             <point key="canvasLocation" x="49.600000000000001" y="93.553223388305852"/>
         </tableViewCell>
     </objects>

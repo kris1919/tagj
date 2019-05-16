@@ -9,7 +9,7 @@
 #import "TKTabBarController.h"
 #import "TKHomePageViewController.h"
 #import "HouseKeeperViewController.h"
-#import "PersonCenterViewController.h"
+#import "NewPersonCenterViewController.h"
 #import "NotificationViewController.h"
 #import "TKBaseNavigationController.h"
 #import "UIColor+Theme.h"
@@ -26,7 +26,7 @@
     
     [self addChildViewControllers];
     
-    self.selectedIndex = 2;
+    self.selectedIndex = 0;
     
     [self setupTabBar];
     
@@ -65,7 +65,7 @@
     NotificationViewController *notiVC = [[NotificationViewController alloc] init];
     [self addChildViewController:notiVC title:@"小区公告" image:@"icon_tab_noti_un" selectedImage:@"icon_tab_noti"];
 
-    PersonCenterViewController *mineVC = [TKUtils viewControllerWithStory:@"Main" storyId:@"PersonCenterViewController"];
+    NewPersonCenterViewController *mineVC = [[NewPersonCenterViewController alloc] init];
     [self addChildViewController:mineVC title:@"个人中心" image:@"icon_tab_person_un" selectedImage:@"icon_tab_person"];
 }
 

@@ -17,6 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIView *)nibWithNibName:(NSString *)nibName;
 
++ (NSString *)pathForCache:(NSString *)finder;
+
++ (UIImage *)fixOrientation:(UIImage *)aImage;
+
++ (CGFloat)heightForString:(NSString *)string Width:(CGFloat)width fontSize:(int)fontSize lineSpace:(int)lineSpace;
+
 @end
 
 NS_ASSUME_NONNULL_END

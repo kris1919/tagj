@@ -14,6 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic ,copy)void (^didSelectItemBlock)(NSInteger index);
 
+@property (nonatomic ,strong)NSArray *bannerImages;
+
+@property (nonatomic ,copy)void (^didSelectAdivertiseItemBlock)(NSInteger index);
+
 @end
 
 NS_ASSUME_NONNULL_END

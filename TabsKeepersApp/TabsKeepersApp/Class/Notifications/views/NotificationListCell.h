@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HouseNotificationModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NotificationListCell : UITableViewCell
+
+@property (nonatomic ,strong)HouseNotificationModel *model;
+
 
 @end
 

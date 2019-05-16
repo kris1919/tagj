@@ -14,6 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)show;
 
+@property (nonatomic ,copy)void (^submitBlock)(void);
+
+@property (nonatomic ,copy)void (^textViewEndEditingBlock)(NSString *text);
+
+@property (nonatomic ,copy)void (^evaluateBlock)(NSInteger level);
+
 @end
 
 NS_ASSUME_NONNULL_END
