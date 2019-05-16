@@ -25,6 +25,7 @@
 #import "HomeListenViewController.h"
 #import "HomeParkViewController.h"
 #import "NewRepaireViewController.h"
+#import "TKRefreshFooter.h"
 
 @interface TKHomePageViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong)TKTableView *tableView;
@@ -55,6 +56,11 @@
     [self requestData];
     
     [self requstAdData];
+    WS(weakSelf);
+    self.tableView.mj_footer = [TKRefreshFooter footerWithRefreshingBlock:^{
+        weakSelf.currentPage++;
+        [weakSelf requstAdData];
+    }];
 }
 - (void)requstAdData{
     TKUserModel *userModel = [TKCycleData shareInstance].userModel;
@@ -71,23 +77,16 @@
             [weakSelf.adDataArr addObject:model];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.tableView.mj_footer endRefreshing];
             [weakSelf.tableView reloadData];
         });
     } failure:^(NSString * _Nonnull errorMsg) {
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.tableView.mj_footer endRefreshing];
+        });
     } showHUD:NO view:self.view];
 }
-//- (NSArray *)testaaa{
-//    return  @[@{
-//        @"img": @"http://wuye.gugangkf.cn/Upload/1.jpg",
-//        @"url": @"https://www.baidu.com/"
-//    },
-//     @{
-//         @"img": @"2",
-//         @"url": @"https://www.baidu.com/"
-//     }
-//              ];
-//}
+
 - (void)requestData{
     TKUserModel *userModel = [TKCycleData shareInstance].userModel;
     NSString *urlStr =[kTKApiConstantDomin stringByAppendingString:kTKApiConstantHomeBanner];
@@ -217,7 +216,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 0) return (254 + (kScreenWidth - 30) * 0.5);
+    if (indexPath.section == 0) return (269 + (kScreenWidth - 60) * 0.5) + (kIPhoneXSeries ? 24 : 0);
     if (indexPath.section == 1) return 46;
     return 160;
 }
@@ -243,7 +242,7 @@
         [_tableView registerNib:[UINib nibWithNibName:@"HomeAdvertiseCell" bundle:nil] forCellReuseIdentifier:@"HomeAdvertiseCell"];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.bounces = NO;
+//        _tableView.bounces = NO;
         [self.view addSubview:_tableView];
     }
     return _tableView;

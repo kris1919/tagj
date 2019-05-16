@@ -363,7 +363,7 @@
         _photoManager.configuration.hideOriginalBtn = YES;
         _photoManager.configuration.navigationBar = ^(UINavigationBar *navigationBar, UIViewController *viewController) {
             navigationBar.barTintColor = [UIColor whiteColor];
-            navigationBar.tintColor = [UIColor whiteColor];
+            navigationBar.tintColor = [UIColor blackColor];
         };
         self.photoManager.configuration.photoMaxNum = 3;
     }

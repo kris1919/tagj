@@ -36,13 +36,13 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self).offset(5);
+            make.centerY.mas_equalTo(self).offset(-20);
             make.centerX.mas_equalTo(self);
-            make.width.height.mas_equalTo(@(36));
+            make.width.height.mas_equalTo(@(25));
         }];
     
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.iconImageView.mas_bottom).offset(10);
+            make.top.mas_equalTo(self.iconImageView.mas_bottom).offset(16);
             make.left.right.mas_equalTo(self);
         }];
     }

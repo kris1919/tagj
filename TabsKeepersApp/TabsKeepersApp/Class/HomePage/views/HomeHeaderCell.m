@@ -15,6 +15,7 @@
 
 @interface HomeHeaderCell()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (nonatomic ,strong)UIImageView *bgImageView;
+@property (nonatomic ,strong)UIView *topTitleView;
 @property (nonatomic ,strong)FFBannerView *adBannerView;
 @property (nonatomic ,strong)UICollectionView *collectionView;
 @property (nonatomic ,strong)UIImageView *locationImageView;
@@ -50,35 +51,42 @@
 }
 
 - (void)addMasonry{
+    CGFloat xPadding = kIPhoneXSeries ? 24 : 0;
     [self.bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.mas_equalTo(self);
-        make.height.mas_equalTo(@(224));
+        make.height.mas_equalTo(@(224 + xPadding));
     }];
-
+    
+    [self.topTitleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self).offset(32 + xPadding);
+        make.height.mas_equalTo(@(24));
+        make.centerX.mas_equalTo(self);
+    }];
+    [self.locationImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.topTitleView);
+        make.width.mas_equalTo(@(26));
+        make.height.mas_equalTo(@(24));
+        make.left.mas_equalTo(self.topTitleView);
+    }];
+    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self.locationImageView.mas_centerY);
+        make.left.mas_equalTo(self.locationImageView.mas_right).offset(5);
+         make.right.mas_equalTo(self.topTitleView);
+    }];
     [self.adBannerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self).offset(0);
         make.right.mas_equalTo(self).offset(0);
-        make.bottom.mas_equalTo(self.bgImageView.mas_bottom).offset(15);
-        make.height.mas_equalTo(self.adBannerView.mas_width).multipliedBy(0.45);
+        make.top.mas_equalTo(self.topTitleView.mas_bottom).offset(24);
+        make.bottom.mas_equalTo(self.bgImageView.mas_bottom).offset(25);
     }];
-    CGFloat topMargin = kIPhoneXSeries ? 45 : 32;
-    [self.locationImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self).offset(topMargin);
-        make.width.mas_equalTo(@(26));
-        make.height.mas_equalTo(@(24));
-        make.centerX.mas_equalTo(self).offset(-50);
-    }];
-    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(self).offset(15);
-        make.centerY.mas_equalTo(self.locationImageView.mas_centerY);
-    }];
-    CGFloat heigth = (kScreenWidth - 30) / 4.0 * 2;
+
+    CGFloat heigth = (kScreenWidth - 60) / 4.0 * 2;
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.adBannerView.mas_bottom).offset(15);
         make.left.right.mas_equalTo(self);
         make.height.mas_equalTo(@(heigth));
     }];
-    
+
     TKUserModel *userModel = [TKCycleData shareInstance].userModel;
     self.titleLabel.text = userModel.xiaoqu;
 }
@@ -88,8 +96,8 @@
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.sectionInset = UIEdgeInsetsMake(0, 15, 0, 15);
         layout.minimumLineSpacing = 0;
-        layout.minimumInteritemSpacing = 0;
-        CGFloat width = (kScreenWidth - 30) / 4.0;
+        layout.minimumInteritemSpacing = 10;
+        CGFloat width = (kScreenWidth - 60) / 4.0;
         layout.itemSize = CGSizeMake(width, width);
         
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
@@ -106,8 +114,9 @@
 -(UIImageView *)locationImageView{
     if (!_locationImageView) {
         _locationImageView = [[UIImageView alloc] init];
-        _locationImageView.image = [UIImage imageNamed:@"icon_home_location"];
-        [self addSubview:_locationImageView];
+        UIImage *image = [UIImage imageNamed:@"icon_home_location"];
+        _locationImageView.image = image;
+        [self.topTitleView addSubview:_locationImageView];
     }
     return _locationImageView;
 }
@@ -116,9 +125,16 @@
         _titleLabel = [UILabel new];
         _titleLabel.textColor = [UIColor whiteColor];
         _titleLabel.font = [UIFont pingFangFontOfSize:22];
-        [self addSubview:_titleLabel];
+        [self.topTitleView addSubview:_titleLabel];
     }
     return _titleLabel;
+}
+- (UIView *)topTitleView{
+    if (!_topTitleView) {
+        _topTitleView = [[UIView alloc] init];
+        [self addSubview:_topTitleView];
+    }
+    return _topTitleView;
 }
 
 -(UIImageView *)bgImageView{

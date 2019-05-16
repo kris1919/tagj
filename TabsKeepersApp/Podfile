@@ -10,6 +10,7 @@ pod 'MJRefresh'
 pod 'WMPageController', '~> 2.5.2'  #分页控制器
 pod 'IQKeyboardManager', '~> 6.2.0' #键盘遮挡
 pod 'HXPhotoPicker', '~> 2.2.3' #相册选择
+
 end
 
 pre_install do |installer|
