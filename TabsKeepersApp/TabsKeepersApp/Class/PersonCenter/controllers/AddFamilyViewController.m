@@ -48,6 +48,7 @@
         self.topConstraint.constant = 88 - 20 + 10;
     }
     [self.getCodeBtn setBackgroundImage:[UIImage imageNamed:@"icon_pwd_msgCode"] forState:UIControlStateNormal];
+    [self.getCodeBtn setBackgroundImage:[UIImage imageNamed:@"icon_pwd_msgCode"] forState:UIControlStateDisabled];
     [self.getCodeBtn addTarget:self action:@selector(getCode) forControlEvents:UIControlEventTouchUpInside];
     self.relationArr = [NSMutableArray arrayWithCapacity:0];
     

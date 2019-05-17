@@ -130,6 +130,10 @@
         case 3:
         {
             NewRepaireViewController *vc = [[NewRepaireViewController alloc] init];
+            WS(weakSelf);
+            vc.submitSuccessBlock = ^{
+                weakSelf.tabBarController.selectedIndex = 1;
+            };
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

@@ -66,6 +66,7 @@
 		455EA64F228BE68F0097E9CC /* PersonHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455EA64E228BE68F0097E9CC /* PersonHeaderView.xib */; };
 		455EA658228CF7E70097E9CC /* NormalNotiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 455EA656228CF7E70097E9CC /* NormalNotiCell.m */; };
 		455EA659228CF7E70097E9CC /* NormalNotiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455EA657228CF7E70097E9CC /* NormalNotiCell.xib */; };
+		455EA65F228D5FD20097E9CC /* ImageDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455EA65E228D5FD20097E9CC /* ImageDisplayViewController.m */; };
 		45631C642270353600B90E8A /* TKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45631C632270353600B90E8A /* TKAppDelegate.m */; };
 		45631C6A2270353600B90E8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45631C682270353600B90E8A /* Main.storyboard */; };
 		45631C6C2270353700B90E8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45631C6B2270353700B90E8A /* Assets.xcassets */; };
@@ -239,6 +240,8 @@
 		455EA655228CF7E70097E9CC /* NormalNotiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalNotiCell.h; sourceTree = "<group>"; };
 		455EA656228CF7E70097E9CC /* NormalNotiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalNotiCell.m; sourceTree = "<group>"; };
 		455EA657228CF7E70097E9CC /* NormalNotiCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalNotiCell.xib; sourceTree = "<group>"; };
+		455EA65D228D5FD20097E9CC /* ImageDisplayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageDisplayViewController.h; sourceTree = "<group>"; };
+		455EA65E228D5FD20097E9CC /* ImageDisplayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDisplayViewController.m; sourceTree = "<group>"; };
 		45631C5F2270353600B90E8A /* TabsKeepersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabsKeepersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45631C622270353600B90E8A /* TKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKAppDelegate.h; sourceTree = "<group>"; };
 		45631C632270353600B90E8A /* TKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKAppDelegate.m; sourceTree = "<group>"; };
@@ -791,6 +794,8 @@
 				451300EA22892254009D053B /* TKRefreshHeader.m */,
 				451300EC2289226F009D053B /* TKRefreshFooter.h */,
 				451300ED2289226F009D053B /* TKRefreshFooter.m */,
+				455EA65D228D5FD20097E9CC /* ImageDisplayViewController.h */,
+				455EA65E228D5FD20097E9CC /* ImageDisplayViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -962,6 +967,8 @@
 				"${PODS_ROOT}/../../AdapterSDK/DataAdapterSDK/Depend/sdk_output/Bundle/MobileMediaPlayUI.bundle",
 				"${PODS_ROOT}/../../AdapterSDK/DataAdapterSDK/Depend/sdk_output/Bundle/OAStackView.bundle",
 				"${PODS_ROOT}/HXPhotoPicker/照片选择器/HXPhotoPicker/Resource/HXPhotoPicker.bundle",
+				"${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPhotoBrowser.bundle",
+				"${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPBLocalizations.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/OAStackView/OAStackView.bundle",
@@ -974,6 +981,8 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MobileMediaPlayUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/OAStackView.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HXPhotoPicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IDMPhotoBrowser.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IDMPBLocalizations.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
@@ -994,6 +1003,7 @@
 				4513011622896BD7009D053B /* NotiViewController.m in Sources */,
 				4514C510227BDB250075EE32 /* NewRepairCell1.m in Sources */,
 				459E82AF228A73DD003F9C7C /* FFBannerFlowLayout.m in Sources */,
+				455EA65F228D5FD20097E9CC /* ImageDisplayViewController.m in Sources */,
 				451300F422894260009D053B /* TKSelectedView.m in Sources */,
 				455EA64A228BE67B0097E9CC /* PersonHeaderView.m in Sources */,
 				451300EE2289226F009D053B /* TKRefreshFooter.m in Sources */,

@@ -16,6 +16,7 @@
 #import "TKCycleData.h"
 #import "MCNetworking.h"
 #import <YYModel.h>
+#import "ImageDisplayViewController.h"
 
 @implementation RepairDetailModel
 
@@ -47,7 +48,7 @@
 
 - (void)setCanEvaluate:(BOOL)canEvaluate{
     if (canEvaluate) {
-        self.tableView.tableFooterView = self.footerView;
+//        self.tableView.tableFooterView = self.footerView;
     }
 }
 
@@ -92,6 +93,10 @@
     if (indexPath.row == 2 && self.detailModel.imgList.count > 0) {
         NewRepairCell2 *cell = [tableView dequeueReusableCellWithIdentifier:@"NewRepairCell2" forIndexPath:indexPath];
         cell.imgs = self.detailModel.imgList;
+        WS(weakSelf);
+        cell.selectedImg = ^(NSInteger index, BOOL show) {
+            [weakSelf displayImageWithIndex:index];
+        };
         return cell;
     }else{
         TKDoubleLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TKDoubleLabelCell" forIndexPath:indexPath];
@@ -100,6 +105,12 @@
         cell.valueString = model.value;
         return cell;
     }
+}
+- (void)displayImageWithIndex:(NSInteger)index{
+    NSArray *photos = [IDMPhoto photosWithURLs:self.detailModel.imgList];
+    ImageDisplayViewController *displayVC = [[ImageDisplayViewController alloc] initWithPhotos:photos];
+    [displayVC setInitialPageIndex:index];
+    [self presentViewController:displayVC animated:YES completion:nil];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 2 && self.detailModel.imgList.count > 0) {

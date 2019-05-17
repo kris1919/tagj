@@ -24,11 +24,10 @@
 
 -(void)awakeFromNib{
     [super awakeFromNib];
-    
     self.count = 60;
     [self setTitle:@"验证码" forState:UIControlStateNormal];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
+    [self setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
     self.titleLabel.font = [UIFont pingFangFontOfSize:14];
     self.titleLabel.adjustsFontSizeToFitWidth = YES;
     
@@ -44,7 +43,7 @@
         self.count = 60;
         [self setTitle:@"验证码" forState:UIControlStateNormal];
         [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [self setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
+        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
         self.titleLabel.font = [UIFont pingFangFontOfSize:14];
         self.titleLabel.adjustsFontSizeToFitWidth = YES;
         
@@ -57,7 +56,7 @@
 
 - (void)minusCount{
     if (self.tempCount > 0) {
-        [self setTitle:[NSString stringWithFormat:@"%@s后重新获取",@(self.tempCount)] forState:UIControlStateNormal];
+        [self setTitle:[NSString stringWithFormat:@"%@s后重新获取",@(self.tempCount)] forState:UIControlStateDisabled];
         self.enabled = NO;
         self.tempCount--;
     }else{

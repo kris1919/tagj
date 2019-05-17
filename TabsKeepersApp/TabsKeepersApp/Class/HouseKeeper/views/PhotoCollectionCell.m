@@ -19,7 +19,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code    
+    // Initialization code
+    self.picView.contentMode = UIViewContentModeScaleAspectFill;
+    self.picView.clipsToBounds = YES;
 }
 
 -(void)setImagePath:(NSString *)imagePath{

@@ -36,9 +36,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
     self.mc_navigationBar.hidden = YES;
-    
-    self.phoneTF.text = @"13764204128";
-    self.pwdTF.text = @"1";
 }
 
 - (void)keyboardWillShow:(NSNotification *)noti{
@@ -77,11 +74,12 @@
                           @"password":self.pwdTF.text,
                           @"tsId":@"9999"
                           };
+    WS(weakSelf);
     [MCNetworking POSTWithUrl:urlStr parameter:param success:^(NSDictionary * _Nonnull responseDic) {
         [TKUserDefault setUserInfo:[responseDic objectForKey:kTKResponseResultData]];
         [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationLoginSuccess object:nil];
     } failure:^(NSString * _Nonnull errorMsg) {
-       
+       [MCHUD showTips:errorMsg view:weakSelf.view];
     } showHUD:YES view:self.view];
 }
 - (IBAction)forgetBtnAction:(UIButton *)sender {

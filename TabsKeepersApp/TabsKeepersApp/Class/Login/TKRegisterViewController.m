@@ -45,6 +45,7 @@
         self.topContraint.constant = 88 + 48;
     }
     [self.getCodeBtn setBackgroundImage:[UIImage imageNamed:@"icon_pwd_msgCode"] forState:UIControlStateNormal];
+    [self.getCodeBtn setBackgroundImage:[UIImage imageNamed:@"icon_pwd_msgCode"] forState:UIControlStateDisabled];
 }
 - (void)keyboardWillShow:(NSNotification *)noti{
     CGRect rect = [noti.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
@@ -66,7 +67,7 @@
     [self.view endEditing:YES];
 }
 - (IBAction)countBtnAction:(PLCountBtn *)sender {
-    if ([self.phoneTf.text isPhoneNum] || self.phoneTf.text.length == 0) {
+    if (![self.phoneTf.text isPhoneNum] || self.phoneTf.text.length == 0) {
         [MCHUD showTips:@"请输入正确的手机号码" view:self.view];
         return;
     }
@@ -80,7 +81,7 @@
     } showHUD:YES view:self.view];
 }
 - (IBAction)resetBtnAction:(UIButton *)sender {
-    if ([self.phoneTf.text isPhoneNum] || self.phoneTf.text.length == 0) {
+    if (![self.phoneTf.text isPhoneNum] || self.phoneTf.text.length == 0) {
         [MCHUD showTips:@"请输入正确的手机号码" view:self.view];
         return;
     }

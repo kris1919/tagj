@@ -20,6 +20,7 @@
 #import "MCNetworking.h"
 #import "TKCycleData.h"
 #import "MCHUD.h"
+#import "ImageDisplayViewController.h"
 
 @interface NewRepaireViewController ()<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic ,strong)TKTableView *tableView;
@@ -33,7 +34,6 @@
 @property (nonatomic ,copy)NSString *describe;
 @property (nonatomic ,copy)NSString *uploadImageUrls;
 @property (nonatomic ,strong)NSMutableArray *pics;
-@property (nonatomic ,strong)NSMutableArray *uploadedPics;
 @property (nonatomic ,strong)HXPhotoManager *photoManager;
 @end
 
@@ -73,10 +73,12 @@
         dispatch_group_enter(group);
         NSString *urlStr = [NSString stringWithFormat:@"%@%@",kTKApiConstantDomin,kTKApiConstantUploadImg];
         UIImage *image = [UIImage imageWithContentsOfFile:localPath];
-        NSData *data = UIImageJPEGRepresentation(image, 1.0);
+        NSData *data = UIImageJPEGRepresentation(image, 0.9);
         NSString *encodedImageStr = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
-        encodedImageStr = [@"data:image/jpeg;base64," stringByAppendingString:encodedImageStr];
-        NSDictionary *param = @{@"img":encodedImageStr};
+        NSString *charactersToEscape = @"?!@#$^&%*+,:;='\"`<>()[]{}/\\| ";
+        NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
+        NSString *upSign = [encodedImageStr stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
+        NSDictionary *param = @{@"img":upSign};
         WS(weakSelf);
         [MCNetworking POSTWithUrl:urlStr parameter:param success:^(NSDictionary * _Nonnull responseDic) {
             NSDictionary *resDic = [responseDic objectForKey:kTKResponseResultData];
@@ -219,7 +221,10 @@
 }
 
 - (void)showImageWithIndex:(NSInteger)index{
-    
+    NSArray *photos = [IDMPhoto photosWithFilePaths:self.pics];
+    ImageDisplayViewController *displayVC = [[ImageDisplayViewController alloc] initWithPhotos:photos];
+    [displayVC setInitialPageIndex:index];
+    [self presentViewController:displayVC animated:YES completion:nil];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -227,7 +232,7 @@
         return 222;
     }
     if (indexPath.section == 1) {
-        return 126;
+        return (kScreenWidth - 32) / 4 + 50;
     }
     return 152;
 }
@@ -344,12 +349,6 @@
         _pics = [NSMutableArray arrayWithCapacity:0];
     }
     return _pics;
-}
--(NSMutableArray *)uploadedPics{
-    if (!_uploadedPics) {
-        _uploadedPics = [NSMutableArray arrayWithCapacity:0];
-    }
-    return _uploadedPics;
 }
 -(HXPhotoManager *)photoManager{
     if (!_photoManager) {

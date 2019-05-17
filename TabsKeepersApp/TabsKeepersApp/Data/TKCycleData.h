@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)shareInstance;
 
-@property (nonatomic ,strong)TKUserModel *userModel;
+@property (nonatomic ,strong ,nullable)TKUserModel *userModel;
 
 @end
 

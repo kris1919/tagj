@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - DACircularProgress (2.3.1)
   - DataAdapterSDK (0.1.0):
     - AFNetworking
     - KissXML
@@ -26,6 +27,10 @@ PODS:
   - HXPhotoPicker (2.2.8):
     - SDWebImage
     - YYWebImage
+  - IDMPhotoBrowser (1.11.3):
+    - DACircularProgress
+    - pop
+    - SDWebImage
   - IQKeyboardManager (6.2.1)
   - KissXML (5.2.3)
   - Masonry (1.1.0)
@@ -40,6 +45,7 @@ PODS:
     - MQTTClient/Min
   - MQTTClient/Min (0.15.2)
   - OAStackView (1.0.1)
+  - pop (1.0.12)
   - SBJson (2.2.3)
   - SDWebImage (5.0.1):
     - SDWebImage/Core (= 5.0.1)
@@ -59,6 +65,7 @@ DEPENDENCIES:
   - DataAdapterSDK (from `../AdapterSDK`)
   - FDFullscreenPopGesture
   - HXPhotoPicker (~> 2.2.3)
+  - IDMPhotoBrowser (from `https://github.com/thiagoperes/IDMPhotoBrowser.git`, branch `master`)
   - IQKeyboardManager (~> 6.2.0)
   - Masonry
   - MJRefresh
@@ -69,6 +76,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - DACircularProgress
     - FDFullscreenPopGesture
     - HXPhotoPicker
     - IQKeyboardManager
@@ -78,6 +86,7 @@ SPEC REPOS:
     - MJRefresh
     - MQTTClient
     - OAStackView
+    - pop
     - SBJson
     - SDWebImage
     - WMPageController
@@ -90,12 +99,22 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   DataAdapterSDK:
     :path: "../AdapterSDK"
+  IDMPhotoBrowser:
+    :branch: master
+    :git: https://github.com/thiagoperes/IDMPhotoBrowser.git
+
+CHECKOUT OPTIONS:
+  IDMPhotoBrowser:
+    :commit: 01fbba9cfa07199be79d5023e0178fd5f07a0a14
+    :git: https://github.com/thiagoperes/IDMPhotoBrowser.git
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   DataAdapterSDK: 504e2f24ae2df486a11230a87200fcc7789efdd5
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   HXPhotoPicker: c8d59a00c93e248aa6ce7b5852a4e4394649ce5f
+  IDMPhotoBrowser: c32a195808c6c8c39a54f5f69d79ae8a7eb23730
   IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
   KissXML: 09f88ff8161fd058d67b70740b8b516687b52823
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -103,6 +122,7 @@ SPEC CHECKSUMS:
   MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
   MQTTClient: 902c7bcac1501595f3d0b15178c7205b40331fb0
   OAStackView: 95e7cb79cbea25c2342f496a44bdbe8bd4c8d510
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   SBJson: c20bb8131fd41b858c5dc7f131eb833def727cd0
   SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
   WMPageController: 0c7624d2b48e4f1ab92371688cf6744ed701575d
@@ -112,6 +132,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 7eb0a9299c03996cbd27c9f46363703761959fe0
+PODFILE CHECKSUM: 24b67c3aaebabb42ba1bc4b55428be13ccb3e052
 
 COCOAPODS: 1.5.3

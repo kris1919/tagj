@@ -269,7 +269,7 @@
                                     <constraint firstAttribute="width" constant="14" id="sFk-On-ixF"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goH-20-Dez" customClass="PLCountBtn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goH-20-Dez" customClass="PLCountBtn">
                                 <rect key="frame" x="235" y="155" width="110" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="cKm-rf-8gY"/>
@@ -789,8 +789,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8p8-Cx-0zP" customClass="PLCountBtn">
-                                        <rect key="frame" x="259" y="58" width="100" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8p8-Cx-0zP" customClass="PLCountBtn">
+                                        <rect key="frame" x="259" y="56" width="100" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="hzQ-rg-6wk"/>
                                         </constraints>

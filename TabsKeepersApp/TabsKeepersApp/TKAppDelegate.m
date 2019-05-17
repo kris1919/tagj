@@ -11,6 +11,7 @@
 #import "TKLoginViewController.h"
 #import "TKTabBarController.h"
 #import <IQKeyboardManager.h>
+#import "TKCycleData.h"
 
 @interface TKAppDelegate ()
 
@@ -38,6 +39,7 @@
 }
 - (void)logoutNoti{
     [TKUserDefault setIsLogin:NO];
+    [TKCycleData shareInstance].userModel = nil;
     [self setupRootVC];
 }
 - (void)setupRootVC{
