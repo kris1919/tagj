@@ -74,7 +74,7 @@
     NSString *jpushId = [TKCycleData shareInstance].jpushRegisterId;
     NSDictionary *param = @{@"phone":self.phoneTF.text,
                             @"password":self.pwdTF.text,
-                            @"tsId":jpushId?:@""
+                            @"tsId":jpushId.length != 0 ? jpushId : @"9999"
                           };
     WS(weakSelf);
     [MCNetworking POSTWithUrl:urlStr parameter:param success:^(NSDictionary * _Nonnull responseDic) {

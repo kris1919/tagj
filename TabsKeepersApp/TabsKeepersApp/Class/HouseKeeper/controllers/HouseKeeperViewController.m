@@ -27,6 +27,8 @@
 @property (nonatomic ,strong)NSMutableArray *dataArr;
 @property (nonatomic ,copy)NSString *pjLevel;
 @property (nonatomic ,copy)NSString *pjContent;
+@property (nonatomic ,strong)TKEvaluateView *evaluateView;
+
 
 @end
 
@@ -38,6 +40,7 @@
     self.mc_navigationBar.title = @"天安管家";
     self.dataArr = [NSMutableArray arrayWithCapacity:0];
     self.currentPage = 1;
+    self.pjLevel = @"1";
     WS(weakSelf);
     [self.mc_navigationBar addRightBarItemWithImage:[UIImage imageNamed:@"icon_add"] handle:^{
         NewRepaireViewController *repairVC = [[NewRepaireViewController alloc] init];
@@ -102,6 +105,7 @@
                             };
     WS(weakSelf);
     [MCNetworking POSTWithUrl:urlStr parameter:param success:^(NSDictionary * _Nonnull responseDic) {
+        [weakSelf.evaluateView tk_hidden];
         [weakSelf.tableView reloadData];
     } failure:^(NSString * _Nonnull errorMsg) {
         
@@ -180,17 +184,16 @@
         if (type == 1) {//撤销
             [weakSelf shouldChexiao:index];
         }else if (type == 2){//评价
-            TKEvaluateView *view = (TKEvaluateView *)[TKUtils nibWithNibName:@"TKEvaluateView"];
-            view.submitBlock = ^{
+            self.evaluateView.submitBlock = ^{
                 [weakSelf addPj:index];
             };
-            view.evaluateBlock = ^(NSInteger level) {
+            self.evaluateView.evaluateBlock = ^(NSInteger level) {
                 weakSelf.pjLevel = [NSString stringWithFormat:@"%@",@(level)];
             };
-            view.textViewEndEditingBlock = ^(NSString * _Nonnull text) {
+            self.evaluateView.textViewEndEditingBlock = ^(NSString * _Nonnull text) {
                 weakSelf.pjContent = text;
             };
-            [view show];
+            [self.evaluateView show];
         }
     };
     return cell;
@@ -229,6 +232,13 @@
         [self.view addSubview:_tableView];
     }
     return _tableView;
+}
+
+-(TKEvaluateView *)evaluateView{
+    if (!_evaluateView) {
+        _evaluateView = (TKEvaluateView *)[TKUtils nibWithNibName:@"TKEvaluateView"];
+    }
+    return _evaluateView;
 }
 
 

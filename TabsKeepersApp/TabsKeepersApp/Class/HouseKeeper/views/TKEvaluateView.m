@@ -67,6 +67,10 @@
     [window addSubview:self];
 }
 
+-(void)tk_hidden{
+    [self hide];
+}
+
 - (void)hide{
     [self.mask removeFromSuperview];
     [self removeFromSuperview];
@@ -97,6 +101,13 @@
     [self hide];
 }
 - (IBAction)evaluateBtnAction:(UIButton *)sender {
+    UIButton *button1 = [self viewWithTag:1];
+    UIButton *button2 = [self viewWithTag:2];
+    UIButton *button3 = [self viewWithTag:3];
+    button1.selected = NO;
+    button2.selected = NO;
+    button3.selected = NO;
+    sender.selected = YES;
     if (self.evaluateBlock) {
         self.evaluateBlock(sender.tag);
     }

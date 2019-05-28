@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)show;
 
+- (void)tk_hidden;
+
 @property (nonatomic ,copy)void (^submitBlock)(void);
 
 @property (nonatomic ,copy)void (^textViewEndEditingBlock)(NSString *text);
