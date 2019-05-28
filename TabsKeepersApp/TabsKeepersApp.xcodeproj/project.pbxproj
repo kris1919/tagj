@@ -58,6 +58,34 @@
 		45241BDF227EC8A900D68947 /* NotificationListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45241BDD227EC8A900D68947 /* NotificationListCell.m */; };
 		45241BE0227EC8A900D68947 /* NotificationListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45241BDE227EC8A900D68947 /* NotificationListCell.xib */; };
 		45241BE3227ECDC000D68947 /* NotificationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45241BE2227ECDC000D68947 /* NotificationDetailViewController.m */; };
+		4531BFED229B880C00CD20D3 /* TKAliapy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531BFEC229B880C00CD20D3 /* TKAliapy.m */; };
+		4531C049229BB5CA00CD20D3 /* ListenListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C048229BB5CA00CD20D3 /* ListenListModel.m */; };
+		4531C04D229BB7D200CD20D3 /* ListenListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C04B229BB7D200CD20D3 /* ListenListViewCell.m */; };
+		4531C04E229BB7D200CD20D3 /* ListenListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4531C04C229BB7D200CD20D3 /* ListenListViewCell.xib */; };
+		4531C051229BBA8100CD20D3 /* ListenSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C050229BBA8100CD20D3 /* ListenSectionHeaderView.m */; };
+		4531C056229BFADF00CD20D3 /* AdapterLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C055229BFADF00CD20D3 /* AdapterLoginModel.m */; };
+		4531C067229BFC9F00CD20D3 /* DHDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C058229BFC9F00CD20D3 /* DHDataCenter.m */; };
+		4531C068229BFC9F00CD20D3 /* ZComBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C05A229BFC9F00CD20D3 /* ZComBoxView.m */; };
+		4531C069229BFC9F00CD20D3 /* DHHudPrecess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C05D229BFC9F00CD20D3 /* DHHudPrecess.m */; };
+		4531C06A229BFC9F00CD20D3 /* DHLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C05F229BFC9F00CD20D3 /* DHLoginManager.m */; };
+		4531C06B229BFC9F00CD20D3 /* DHDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C061229BFC9F00CD20D3 /* DHDeviceManager.m */; };
+		4531C06C229BFC9F00CD20D3 /* DHTVWallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C062229BFC9F00CD20D3 /* DHTVWallManager.m */; };
+		4531C06D229BFC9F00CD20D3 /* DHPlaybackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C063229BFC9F00CD20D3 /* DHPlaybackManager.m */; };
+		4531C070229BFF4300CD20D3 /* ListenSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C06F229BFF4300CD20D3 /* ListenSelectViewController.m */; };
+		4531C075229C01CC00CD20D3 /* DHPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C073229C01CC00CD20D3 /* DHPreviewViewController.m */; };
+		4531C076229C01CC00CD20D3 /* DHPlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C074229C01CC00CD20D3 /* DHPlaybackViewController.m */; };
+		4531C08B229C01EE00CD20D3 /* DSSPtzToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4531C078229C01ED00CD20D3 /* DSSPtzToolBar.xib */; };
+		4531C08C229C01EE00CD20D3 /* DSSPtzToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C079229C01ED00CD20D3 /* DSSPtzToolBar.m */; };
+		4531C08D229C01EE00CD20D3 /* DSSRealPtzControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C07A229C01ED00CD20D3 /* DSSRealPtzControlView.m */; };
+		4531C08E229C01EE00CD20D3 /* DHStreamSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C07B229C01ED00CD20D3 /* DHStreamSelectView.m */; };
+		4531C08F229C01EE00CD20D3 /* DSSPlayWndToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C07D229C01ED00CD20D3 /* DSSPlayWndToolBar.m */; };
+		4531C090229C01EE00CD20D3 /* DSSMainToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4531C07E229C01ED00CD20D3 /* DSSMainToolBar.xib */; };
+		4531C091229C01EE00CD20D3 /* DSSPlayWndToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4531C080229C01ED00CD20D3 /* DSSPlayWndToolBar.xib */; };
+		4531C092229C01EE00CD20D3 /* DSSMainToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C082229C01ED00CD20D3 /* DSSMainToolBar.m */; };
+		4531C093229C01EE00CD20D3 /* DHStreamSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4531C084229C01ED00CD20D3 /* DHStreamSelectView.xib */; };
+		4531C094229C01EE00CD20D3 /* DSSRealPtzControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4531C086229C01ED00CD20D3 /* DSSRealPtzControlView.xib */; };
+		4531C095229C01EE00CD20D3 /* PlaybackProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 4531C088229C01ED00CD20D3 /* PlaybackProgress.m */; };
+		4531C096229C01EE00CD20D3 /* PlaybackProgress.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4531C089229C01ED00CD20D3 /* PlaybackProgress.xib */; };
 		455EA642228BE5D70097E9CC /* NewPersonCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455EA641228BE5D70097E9CC /* NewPersonCenterViewController.m */; };
 		455EA646228BE6600097E9CC /* PersonCenterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 455EA644228BE6600097E9CC /* PersonCenterViewCell.m */; };
 		455EA647228BE6600097E9CC /* PersonCenterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455EA645228BE6600097E9CC /* PersonCenterViewCell.xib */; };
@@ -78,7 +106,6 @@
 		45631C9B22703FCE00B90E8A /* TKBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45631C9A22703FCE00B90E8A /* TKBaseNavigationController.m */; };
 		45631C9E2270403000B90E8A /* TKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 45631C9D2270403000B90E8A /* TKUtils.m */; };
 		45631CA3227068CE00B90E8A /* NSString+Judge.m in Sources */ = {isa = PBXBuildFile; fileRef = 45631CA2227068CE00B90E8A /* NSString+Judge.m */; };
-		458292D32276A01F00CCA5ED /* 行驶证.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 458292D22276A01F00CCA5ED /* 行驶证.jpeg */; };
 		458292D62276ABEA00CCA5ED /* NewRepaireViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 458292D52276ABEA00CCA5ED /* NewRepaireViewController.m */; };
 		458292DA2276CC4500CCA5ED /* HouseKeeperViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 458292D82276CC4500CCA5ED /* HouseKeeperViewCell.m */; };
 		458292DB2276CC4500CCA5ED /* HouseKeeperViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458292D92276CC4500CCA5ED /* HouseKeeperViewCell.xib */; };
@@ -91,6 +118,7 @@
 		45888749228AC68700AD9460 /* ZhifuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45888748228AC68700AD9460 /* ZhifuView.xib */; };
 		4588874B228AC69200AD9460 /* FeesDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4588874A228AC69200AD9460 /* FeesDetailView.xib */; };
 		4588874E228AE0CE00AD9460 /* WYFeesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4588874D228AE0CE00AD9460 /* WYFeesModel.m */; };
+		459B5B73229CC6B900DFBA24 /* DHQueryRecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 459B5B72229CC6B900DFBA24 /* DHQueryRecordsViewController.m */; };
 		459E82A2228A6D68003F9C7C /* HomeBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82A1228A6D68003F9C7C /* HomeBannerModel.m */; };
 		459E82A5228A6D73003F9C7C /* HomeAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82A4228A6D73003F9C7C /* HomeAdModel.m */; };
 		459E82AD228A73DD003F9C7C /* FFBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 459E82A7228A73DD003F9C7C /* FFBannerView.m */; };
@@ -227,6 +255,56 @@
 		45241BDE227EC8A900D68947 /* NotificationListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationListCell.xib; sourceTree = "<group>"; };
 		45241BE1227ECDC000D68947 /* NotificationDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationDetailViewController.h; sourceTree = "<group>"; };
 		45241BE2227ECDC000D68947 /* NotificationDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationDetailViewController.m; sourceTree = "<group>"; };
+		4531BFEB229B880C00CD20D3 /* TKAliapy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKAliapy.h; sourceTree = "<group>"; };
+		4531BFEC229B880C00CD20D3 /* TKAliapy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKAliapy.m; sourceTree = "<group>"; };
+		4531C047229BB5CA00CD20D3 /* ListenListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListenListModel.h; sourceTree = "<group>"; };
+		4531C048229BB5CA00CD20D3 /* ListenListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListenListModel.m; sourceTree = "<group>"; };
+		4531C04A229BB7D200CD20D3 /* ListenListViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListenListViewCell.h; sourceTree = "<group>"; };
+		4531C04B229BB7D200CD20D3 /* ListenListViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListenListViewCell.m; sourceTree = "<group>"; };
+		4531C04C229BB7D200CD20D3 /* ListenListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListenListViewCell.xib; sourceTree = "<group>"; };
+		4531C04F229BBA8100CD20D3 /* ListenSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListenSectionHeaderView.h; sourceTree = "<group>"; };
+		4531C050229BBA8100CD20D3 /* ListenSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListenSectionHeaderView.m; sourceTree = "<group>"; };
+		4531C053229BE05A00CD20D3 /* TabsKeepersApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TabsKeepersApp.entitlements; sourceTree = "<group>"; };
+		4531C054229BFADF00CD20D3 /* AdapterLoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdapterLoginModel.h; sourceTree = "<group>"; };
+		4531C055229BFADF00CD20D3 /* AdapterLoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdapterLoginModel.m; sourceTree = "<group>"; };
+		4531C058229BFC9F00CD20D3 /* DHDataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHDataCenter.m; sourceTree = "<group>"; };
+		4531C059229BFC9F00CD20D3 /* DHHudPrecess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHHudPrecess.h; sourceTree = "<group>"; };
+		4531C05A229BFC9F00CD20D3 /* ZComBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZComBoxView.m; sourceTree = "<group>"; };
+		4531C05B229BFC9F00CD20D3 /* DHDataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHDataCenter.h; sourceTree = "<group>"; };
+		4531C05C229BFC9F00CD20D3 /* ZComBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZComBoxView.h; sourceTree = "<group>"; };
+		4531C05D229BFC9F00CD20D3 /* DHHudPrecess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHHudPrecess.m; sourceTree = "<group>"; };
+		4531C05F229BFC9F00CD20D3 /* DHLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHLoginManager.m; sourceTree = "<group>"; };
+		4531C060229BFC9F00CD20D3 /* DHPlaybackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHPlaybackManager.h; sourceTree = "<group>"; };
+		4531C061229BFC9F00CD20D3 /* DHDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHDeviceManager.m; sourceTree = "<group>"; };
+		4531C062229BFC9F00CD20D3 /* DHTVWallManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHTVWallManager.m; sourceTree = "<group>"; };
+		4531C063229BFC9F00CD20D3 /* DHPlaybackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPlaybackManager.m; sourceTree = "<group>"; };
+		4531C064229BFC9F00CD20D3 /* DHLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHLoginManager.h; sourceTree = "<group>"; };
+		4531C065229BFC9F00CD20D3 /* DHTVWallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHTVWallManager.h; sourceTree = "<group>"; };
+		4531C066229BFC9F00CD20D3 /* DHDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHDeviceManager.h; sourceTree = "<group>"; };
+		4531C06E229BFF4300CD20D3 /* ListenSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListenSelectViewController.h; sourceTree = "<group>"; };
+		4531C06F229BFF4300CD20D3 /* ListenSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListenSelectViewController.m; sourceTree = "<group>"; };
+		4531C071229C01CB00CD20D3 /* DHPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHPreviewViewController.h; sourceTree = "<group>"; };
+		4531C072229C01CB00CD20D3 /* DHPlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHPlaybackViewController.h; sourceTree = "<group>"; };
+		4531C073229C01CC00CD20D3 /* DHPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPreviewViewController.m; sourceTree = "<group>"; };
+		4531C074229C01CC00CD20D3 /* DHPlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPlaybackViewController.m; sourceTree = "<group>"; };
+		4531C078229C01ED00CD20D3 /* DSSPtzToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSSPtzToolBar.xib; sourceTree = "<group>"; };
+		4531C079229C01ED00CD20D3 /* DSSPtzToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSPtzToolBar.m; sourceTree = "<group>"; };
+		4531C07A229C01ED00CD20D3 /* DSSRealPtzControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSRealPtzControlView.m; sourceTree = "<group>"; };
+		4531C07B229C01ED00CD20D3 /* DHStreamSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHStreamSelectView.m; sourceTree = "<group>"; };
+		4531C07C229C01ED00CD20D3 /* DSSMainToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSMainToolBar.h; sourceTree = "<group>"; };
+		4531C07D229C01ED00CD20D3 /* DSSPlayWndToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSPlayWndToolBar.m; sourceTree = "<group>"; };
+		4531C07E229C01ED00CD20D3 /* DSSMainToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSSMainToolBar.xib; sourceTree = "<group>"; };
+		4531C07F229C01ED00CD20D3 /* DSSPtzToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSPtzToolBar.h; sourceTree = "<group>"; };
+		4531C080229C01ED00CD20D3 /* DSSPlayWndToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSSPlayWndToolBar.xib; sourceTree = "<group>"; };
+		4531C081229C01ED00CD20D3 /* DHStreamSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHStreamSelectView.h; sourceTree = "<group>"; };
+		4531C082229C01ED00CD20D3 /* DSSMainToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSMainToolBar.m; sourceTree = "<group>"; };
+		4531C083229C01ED00CD20D3 /* DSSRealPtzControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSRealPtzControlView.h; sourceTree = "<group>"; };
+		4531C084229C01ED00CD20D3 /* DHStreamSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DHStreamSelectView.xib; sourceTree = "<group>"; };
+		4531C085229C01ED00CD20D3 /* DSSPlayWndToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSPlayWndToolBar.h; sourceTree = "<group>"; };
+		4531C086229C01ED00CD20D3 /* DSSRealPtzControlView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSSRealPtzControlView.xib; sourceTree = "<group>"; };
+		4531C088229C01ED00CD20D3 /* PlaybackProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaybackProgress.m; sourceTree = "<group>"; };
+		4531C089229C01ED00CD20D3 /* PlaybackProgress.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaybackProgress.xib; sourceTree = "<group>"; };
+		4531C08A229C01ED00CD20D3 /* PlaybackProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaybackProgress.h; sourceTree = "<group>"; };
 		455EA640228BE5D70097E9CC /* NewPersonCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPersonCenterViewController.h; sourceTree = "<group>"; };
 		455EA641228BE5D70097E9CC /* NewPersonCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPersonCenterViewController.m; sourceTree = "<group>"; };
 		455EA643228BE6600097E9CC /* PersonCenterViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonCenterViewCell.h; sourceTree = "<group>"; };
@@ -264,7 +342,6 @@
 		45631C9F2270418000B90E8A /* TKDefinded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKDefinded.h; sourceTree = "<group>"; };
 		45631CA1227068CE00B90E8A /* NSString+Judge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Judge.h"; sourceTree = "<group>"; };
 		45631CA2227068CE00B90E8A /* NSString+Judge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Judge.m"; sourceTree = "<group>"; };
-		458292D22276A01F00CCA5ED /* 行驶证.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "行驶证.jpeg"; sourceTree = "<group>"; };
 		458292D42276ABEA00CCA5ED /* NewRepaireViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewRepaireViewController.h; sourceTree = "<group>"; };
 		458292D52276ABEA00CCA5ED /* NewRepaireViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewRepaireViewController.m; sourceTree = "<group>"; };
 		458292D72276CC4500CCA5ED /* HouseKeeperViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseKeeperViewCell.h; sourceTree = "<group>"; };
@@ -285,6 +362,8 @@
 		4588874A228AC69200AD9460 /* FeesDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeesDetailView.xib; sourceTree = "<group>"; };
 		4588874C228AE0CE00AD9460 /* WYFeesModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYFeesModel.h; sourceTree = "<group>"; };
 		4588874D228AE0CE00AD9460 /* WYFeesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYFeesModel.m; sourceTree = "<group>"; };
+		459B5B71229CC6B900DFBA24 /* DHQueryRecordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHQueryRecordsViewController.h; sourceTree = "<group>"; };
+		459B5B72229CC6B900DFBA24 /* DHQueryRecordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHQueryRecordsViewController.m; sourceTree = "<group>"; };
 		459E82A0228A6D68003F9C7C /* HomeBannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeBannerModel.h; sourceTree = "<group>"; };
 		459E82A1228A6D68003F9C7C /* HomeBannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeBannerModel.m; sourceTree = "<group>"; };
 		459E82A3228A6D73003F9C7C /* HomeAdModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeAdModel.h; sourceTree = "<group>"; };
@@ -380,6 +459,75 @@
 			path = MCNavigationBar;
 			sourceTree = "<group>";
 		};
+		4531BFFA229B896F00CD20D3 /* alipay */ = {
+			isa = PBXGroup;
+			children = (
+				4531BFEB229B880C00CD20D3 /* TKAliapy.h */,
+				4531BFEC229B880C00CD20D3 /* TKAliapy.m */,
+			);
+			path = alipay;
+			sourceTree = "<group>";
+		};
+		4531C057229BFC9F00CD20D3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4531C058229BFC9F00CD20D3 /* DHDataCenter.m */,
+				4531C059229BFC9F00CD20D3 /* DHHudPrecess.h */,
+				4531C05A229BFC9F00CD20D3 /* ZComBoxView.m */,
+				4531C05B229BFC9F00CD20D3 /* DHDataCenter.h */,
+				4531C05C229BFC9F00CD20D3 /* ZComBoxView.h */,
+				4531C05D229BFC9F00CD20D3 /* DHHudPrecess.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4531C05E229BFC9F00CD20D3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4531C05F229BFC9F00CD20D3 /* DHLoginManager.m */,
+				4531C060229BFC9F00CD20D3 /* DHPlaybackManager.h */,
+				4531C061229BFC9F00CD20D3 /* DHDeviceManager.m */,
+				4531C062229BFC9F00CD20D3 /* DHTVWallManager.m */,
+				4531C063229BFC9F00CD20D3 /* DHPlaybackManager.m */,
+				4531C064229BFC9F00CD20D3 /* DHLoginManager.h */,
+				4531C065229BFC9F00CD20D3 /* DHTVWallManager.h */,
+				4531C066229BFC9F00CD20D3 /* DHDeviceManager.h */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4531C077229C01ED00CD20D3 /* PreviewView */ = {
+			isa = PBXGroup;
+			children = (
+				4531C078229C01ED00CD20D3 /* DSSPtzToolBar.xib */,
+				4531C079229C01ED00CD20D3 /* DSSPtzToolBar.m */,
+				4531C07A229C01ED00CD20D3 /* DSSRealPtzControlView.m */,
+				4531C07B229C01ED00CD20D3 /* DHStreamSelectView.m */,
+				4531C07C229C01ED00CD20D3 /* DSSMainToolBar.h */,
+				4531C07D229C01ED00CD20D3 /* DSSPlayWndToolBar.m */,
+				4531C07E229C01ED00CD20D3 /* DSSMainToolBar.xib */,
+				4531C07F229C01ED00CD20D3 /* DSSPtzToolBar.h */,
+				4531C080229C01ED00CD20D3 /* DSSPlayWndToolBar.xib */,
+				4531C081229C01ED00CD20D3 /* DHStreamSelectView.h */,
+				4531C082229C01ED00CD20D3 /* DSSMainToolBar.m */,
+				4531C083229C01ED00CD20D3 /* DSSRealPtzControlView.h */,
+				4531C084229C01ED00CD20D3 /* DHStreamSelectView.xib */,
+				4531C085229C01ED00CD20D3 /* DSSPlayWndToolBar.h */,
+				4531C086229C01ED00CD20D3 /* DSSRealPtzControlView.xib */,
+			);
+			path = PreviewView;
+			sourceTree = "<group>";
+		};
+		4531C087229C01ED00CD20D3 /* PlaybackView */ = {
+			isa = PBXGroup;
+			children = (
+				4531C088229C01ED00CD20D3 /* PlaybackProgress.m */,
+				4531C089229C01ED00CD20D3 /* PlaybackProgress.xib */,
+				4531C08A229C01ED00CD20D3 /* PlaybackProgress.h */,
+			);
+			path = PlaybackView;
+			sourceTree = "<group>";
+		};
 		455EA63F228BE5D70097E9CC /* newcenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +566,7 @@
 		45631C612270353600B90E8A /* TabsKeepersApp */ = {
 			isa = PBXGroup;
 			children = (
+				4531C053229BE05A00CD20D3 /* TabsKeepersApp.entitlements */,
 				45631C7822703C0300B90E8A /* Class */,
 				45631C9022703E0A00B90E8A /* Utils */,
 				45631C8F22703E0A00B90E8A /* Vendor */,
@@ -440,7 +589,6 @@
 		45631C7822703C0300B90E8A /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				458292D22276A01F00CCA5ED /* 行驶证.jpeg */,
 				45631C9222703EDD00B90E8A /* Base */,
 				45631C9122703EBE00B90E8A /* Login */,
 				45631C7922703C0300B90E8A /* HomePage */,
@@ -464,6 +612,8 @@
 		45631C7A22703C0300B90E8A /* models */ = {
 			isa = PBXGroup;
 			children = (
+				4531C057229BFC9F00CD20D3 /* Common */,
+				4531C05E229BFC9F00CD20D3 /* Manager */,
 				459E82A0228A6D68003F9C7C /* HomeBannerModel.h */,
 				459E82A1228A6D68003F9C7C /* HomeBannerModel.m */,
 				459E82A3228A6D73003F9C7C /* HomeAdModel.h */,
@@ -474,6 +624,10 @@
 				4588874D228AE0CE00AD9460 /* WYFeesModel.m */,
 				45BDA8D3228B0BAB00D789D4 /* ServerListModel.h */,
 				45BDA8D4228B0BAB00D789D4 /* ServerListModel.m */,
+				4531C047229BB5CA00CD20D3 /* ListenListModel.h */,
+				4531C048229BB5CA00CD20D3 /* ListenListModel.m */,
+				4531C054229BFADF00CD20D3 /* AdapterLoginModel.h */,
+				4531C055229BFADF00CD20D3 /* AdapterLoginModel.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -481,6 +635,8 @@
 		45631C7B22703C0300B90E8A /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4531C087229C01ED00CD20D3 /* PlaybackView */,
+				4531C077229C01ED00CD20D3 /* PreviewView */,
 				45143DC422714A140003202A /* TKHomePageViewController.h */,
 				45143DC522714A140003202A /* TKHomePageViewController.m */,
 				459E82B0228A9BA5003F9C7C /* HomeWYFeeViewController.h */,
@@ -491,10 +647,18 @@
 				459E82B7228A9C47003F9C7C /* HomeServiceViewController.m */,
 				459E82B9228A9C65003F9C7C /* HomeListenViewController.h */,
 				459E82BA228A9C65003F9C7C /* HomeListenViewController.m */,
+				4531C06E229BFF4300CD20D3 /* ListenSelectViewController.h */,
+				4531C06F229BFF4300CD20D3 /* ListenSelectViewController.m */,
 				459E82BF228A9DB8003F9C7C /* HomeParkViewController.h */,
 				459E82C0228A9DB8003F9C7C /* HomeParkViewController.m */,
 				459E82C2228A9EAB003F9C7C /* HomeShopViewController.h */,
 				459E82C3228A9EAB003F9C7C /* HomeShopViewController.m */,
+				4531C072229C01CB00CD20D3 /* DHPlaybackViewController.h */,
+				4531C074229C01CC00CD20D3 /* DHPlaybackViewController.m */,
+				4531C071229C01CB00CD20D3 /* DHPreviewViewController.h */,
+				4531C073229C01CC00CD20D3 /* DHPreviewViewController.m */,
+				459B5B71229CC6B900DFBA24 /* DHQueryRecordsViewController.h */,
+				459B5B72229CC6B900DFBA24 /* DHQueryRecordsViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -534,6 +698,11 @@
 				45BDA8D0228B023D00D789D4 /* ServiceListViewCell.xib */,
 				45BDA8D6228B0D7300D789D4 /* ServiceTopView.h */,
 				45BDA8D7228B0D7300D789D4 /* ServiceTopView.m */,
+				4531C04A229BB7D200CD20D3 /* ListenListViewCell.h */,
+				4531C04B229BB7D200CD20D3 /* ListenListViewCell.m */,
+				4531C04C229BB7D200CD20D3 /* ListenListViewCell.xib */,
+				4531C04F229BBA8100CD20D3 /* ListenSectionHeaderView.h */,
+				4531C050229BBA8100CD20D3 /* ListenSectionHeaderView.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -745,6 +914,7 @@
 		45631C8F22703E0A00B90E8A /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				4531BFFA229B896F00CD20D3 /* alipay */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -876,6 +1046,11 @@
 				TargetAttributes = {
 					45631C5E2270353600B90E8A = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -905,27 +1080,33 @@
 				455EA647228BE6600097E9CC /* PersonCenterViewCell.xib in Resources */,
 				459E82C9228AA103003F9C7C /* FeesListViewCell.xib in Resources */,
 				451300DF22891037009D053B /* FamilyTableViewCell.xib in Resources */,
+				4531C08B229C01EE00CD20D3 /* DSSPtzToolBar.xib in Resources */,
 				45241BD0227E73B900D68947 /* PhotoCollectionCell.xib in Resources */,
 				45631C6F2270353700B90E8A /* LaunchScreen.storyboard in Resources */,
 				4588874B228AC69200AD9460 /* FeesDetailView.xib in Resources */,
 				45D700B72275AF3E00EA6FEF /* HomeAdvertiseCell.xib in Resources */,
 				455EA64F228BE68F0097E9CC /* PersonHeaderView.xib in Resources */,
+				4531C096229C01EE00CD20D3 /* PlaybackProgress.xib in Resources */,
 				45D700B22275AAA100EA6FEF /* HomeNotificationCell.xib in Resources */,
 				451300FF228950B1009D053B /* WYTableViewCell.xib in Resources */,
 				459E82CE228AA113003F9C7C /* FeesHistoryCell.xib in Resources */,
 				45631C6C2270353700B90E8A /* Assets.xcassets in Resources */,
 				458292E72278416100CCA5ED /* TKEvaluateView.xib in Resources */,
+				4531C093229C01EE00CD20D3 /* DHStreamSelectView.xib in Resources */,
 				45631C6A2270353600B90E8A /* Main.storyboard in Resources */,
-				458292D32276A01F00CCA5ED /* 行驶证.jpeg in Resources */,
 				45241BE0227EC8A900D68947 /* NotificationListCell.xib in Resources */,
 				458292DB2276CC4500CCA5ED /* HouseKeeperViewCell.xib in Resources */,
+				4531C091229C01EE00CD20D3 /* DSSPlayWndToolBar.xib in Resources */,
 				4513011E22897027009D053B /* BillTableViewCell.xib in Resources */,
 				45888749228AC68700AD9460 /* ZhifuView.xib in Resources */,
+				4531C04E229BB7D200CD20D3 /* ListenListViewCell.xib in Resources */,
+				4531C094229C01EE00CD20D3 /* DSSRealPtzControlView.xib in Resources */,
 				45130104228950C0009D053B /* WaterFeeTableViewCell.xib in Resources */,
 				45BDA8D2228B023D00D789D4 /* ServiceListViewCell.xib in Resources */,
 				4514C511227BDB250075EE32 /* NewRepairCell1.xib in Resources */,
 				455EA659228CF7E70097E9CC /* NormalNotiCell.xib in Resources */,
 				4514C519227BDB480075EE32 /* NewRepairCell3.xib in Resources */,
+				4531C090229C01EE00CD20D3 /* DSSMainToolBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -963,6 +1144,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TabsKeepersApp/Pods-TabsKeepersApp-resources.sh",
+				"${PODS_ROOT}/AlipaySDK-iOS/AlipaySDK.bundle",
 				"${PODS_ROOT}/../../AdapterSDK/DataAdapterSDK/Depend/sdk_output/Bundle/MobileMediaPlayFramework.bundle",
 				"${PODS_ROOT}/../../AdapterSDK/DataAdapterSDK/Depend/sdk_output/Bundle/MobileMediaPlayUI.bundle",
 				"${PODS_ROOT}/../../AdapterSDK/DataAdapterSDK/Depend/sdk_output/Bundle/OAStackView.bundle",
@@ -977,6 +1159,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AlipaySDK.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MobileMediaPlayFramework.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MobileMediaPlayUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/OAStackView.bundle",
@@ -998,19 +1181,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459B5B73229CC6B900DFBA24 /* DHQueryRecordsViewController.m in Sources */,
 				45130103228950C0009D053B /* WaterFeeTableViewCell.m in Sources */,
 				45143DCA22714AC30003202A /* MCNavigationBarView.m in Sources */,
 				4513011622896BD7009D053B /* NotiViewController.m in Sources */,
+				4531C08F229C01EE00CD20D3 /* DSSPlayWndToolBar.m in Sources */,
 				4514C510227BDB250075EE32 /* NewRepairCell1.m in Sources */,
+				4531C067229BFC9F00CD20D3 /* DHDataCenter.m in Sources */,
 				459E82AF228A73DD003F9C7C /* FFBannerFlowLayout.m in Sources */,
 				455EA65F228D5FD20097E9CC /* ImageDisplayViewController.m in Sources */,
 				451300F422894260009D053B /* TKSelectedView.m in Sources */,
 				455EA64A228BE67B0097E9CC /* PersonHeaderView.m in Sources */,
+				4531C056229BFADF00CD20D3 /* AdapterLoginModel.m in Sources */,
 				451300EE2289226F009D053B /* TKRefreshFooter.m in Sources */,
+				4531C04D229BB7D200CD20D3 /* ListenListViewCell.m in Sources */,
 				45241BD6227EBA3600D68947 /* TKKeyValueModel.m in Sources */,
 				45F65FE922744B62009F6F6B /* HouseKeeperViewController.m in Sources */,
 				4514C50C227BDA130075EE32 /* RepairedViewController.m in Sources */,
 				4513011322896BCB009D053B /* BillViewController.m in Sources */,
+				4531C08D229C01EE00CD20D3 /* DSSRealPtzControlView.m in Sources */,
 				451300DA228905F2009D053B /* ContactsUsViewController.m in Sources */,
 				4513010D22895AC6009D053B /* WYSectionView.m in Sources */,
 				45D700A722757A5500EA6FEF /* TKTableView.m in Sources */,
@@ -1022,21 +1211,30 @@
 				451300CB2286C8FB009D053B /* TKUserModel.m in Sources */,
 				455EA658228CF7E70097E9CC /* NormalNotiCell.m in Sources */,
 				451300D1228905C2009D053B /* MyFamilyViewController.m in Sources */,
+				4531C092229C01EE00CD20D3 /* DSSMainToolBar.m in Sources */,
 				45BDA8D1228B023D00D789D4 /* ServiceListViewCell.m in Sources */,
 				459E82C1228A9DB8003F9C7C /* HomeParkViewController.m in Sources */,
 				45631C722270353700B90E8A /* main.m in Sources */,
+				4531C06D229BFC9F00CD20D3 /* DHPlaybackManager.m in Sources */,
 				45241BCF227E73B900D68947 /* PhotoCollectionCell.m in Sources */,
 				45241BDF227EC8A900D68947 /* NotificationListCell.m in Sources */,
 				45F65FE0227437AE009F6F6B /* UIFont+PingFangSC.m in Sources */,
+				4531BFED229B880C00CD20D3 /* TKAliapy.m in Sources */,
 				45D700B62275AF3E00EA6FEF /* HomeAdvertiseCell.m in Sources */,
+				4531C095229C01EE00CD20D3 /* PlaybackProgress.m in Sources */,
 				4513012422897BE8009D053B /* BaoxiuModel.m in Sources */,
 				45888744228AC66B00AD9460 /* ZhiFuView.m in Sources */,
 				459E82B5228A9BAE003F9C7C /* HomeWaterFeeViewController.m in Sources */,
+				4531C068229BFC9F00CD20D3 /* ZComBoxView.m in Sources */,
+				4531C06C229BFC9F00CD20D3 /* DHTVWallManager.m in Sources */,
 				45F65FF222744C21009F6F6B /* UIColor+Theme.m in Sources */,
 				4588873E228ABD5200AD9460 /* FeesSectionHeaderView.m in Sources */,
+				4531C06A229BFC9F00CD20D3 /* DHLoginManager.m in Sources */,
 				45143DC622714A140003202A /* TKHomePageViewController.m in Sources */,
 				4514C518227BDB480075EE32 /* NewRepairCell3.m in Sources */,
 				45143DC3227148D40003202A /* TKRegisterViewController.m in Sources */,
+				4531C049229BB5CA00CD20D3 /* ListenListModel.m in Sources */,
+				4531C070229BFF4300CD20D3 /* ListenSelectViewController.m in Sources */,
 				458292E82278416100CCA5ED /* TKEvaluateView.m in Sources */,
 				451300EB22892254009D053B /* TKRefreshHeader.m in Sources */,
 				451300CE2286C9CD009D053B /* TKCycleData.m in Sources */,
@@ -1045,6 +1243,7 @@
 				45241BE3227ECDC000D68947 /* NotificationDetailViewController.m in Sources */,
 				459E82B2228A9BA5003F9C7C /* HomeWYFeeViewController.m in Sources */,
 				451300C02286720D009D053B /* MCNetworking.m in Sources */,
+				4531C069229BFC9F00CD20D3 /* DHHudPrecess.m in Sources */,
 				459E82B8228A9C47003F9C7C /* HomeServiceViewController.m in Sources */,
 				45631C9E2270403000B90E8A /* TKUtils.m in Sources */,
 				451300D4228905D0009D053B /* MyFeeManageViewController.m in Sources */,
@@ -1057,12 +1256,15 @@
 				451300C52286757F009D053B /* MCHUD.m in Sources */,
 				451300E822892052009D053B /* MyFamilyListModel.m in Sources */,
 				4513012122897550009D053B /* HouseNotificationModel.m in Sources */,
+				4531C051229BBA8100CD20D3 /* ListenSectionHeaderView.m in Sources */,
 				4513010722895267009D053B /* WYFeeModel.m in Sources */,
 				459E82C8228AA103003F9C7C /* FeesListViewCell.m in Sources */,
+				4531C08C229C01EE00CD20D3 /* DSSPtzToolBar.m in Sources */,
 				459E82C4228A9EAB003F9C7C /* HomeShopViewController.m in Sources */,
 				45888741228ABD8E00AD9460 /* HomeFeesTopView.m in Sources */,
 				459E82BB228A9C65003F9C7C /* HomeListenViewController.m in Sources */,
 				45631CA3227068CE00B90E8A /* NSString+Judge.m in Sources */,
+				4531C075229C01CC00CD20D3 /* DHPreviewViewController.m in Sources */,
 				45631C642270353600B90E8A /* TKAppDelegate.m in Sources */,
 				455EA646228BE6600097E9CC /* PersonCenterViewCell.m in Sources */,
 				451300FE228950B1009D053B /* WYTableViewCell.m in Sources */,
@@ -1074,12 +1276,14 @@
 				451300C82286C130009D053B /* ServiceProtocalViewController.m in Sources */,
 				45BDA8D5228B0BAB00D789D4 /* ServerListModel.m in Sources */,
 				4513011D22897027009D053B /* BillTableViewCell.m in Sources */,
+				4531C076229C01CC00CD20D3 /* DHPlaybackViewController.m in Sources */,
 				451300FA22894BE7009D053B /* WaterFeeViewController.m in Sources */,
 				455EA642228BE5D70097E9CC /* NewPersonCenterViewController.m in Sources */,
 				45D700AA22757E1800EA6FEF /* HomeHeaderCell.m in Sources */,
 				4513011922896F71009D053B /* BillModel.m in Sources */,
 				459E82AD228A73DD003F9C7C /* FFBannerView.m in Sources */,
 				459E82A5228A6D73003F9C7C /* HomeAdModel.m in Sources */,
+				4531C08E229C01EE00CD20D3 /* DHStreamSelectView.m in Sources */,
 				45F65FEC22744B70009F6F6B /* PersonCenterViewController.m in Sources */,
 				459E82CD228AA113003F9C7C /* FeesHistoryCell.m in Sources */,
 				451300F722894BDA009D053B /* WYFeeViewController.m in Sources */,
@@ -1088,6 +1292,7 @@
 				459E82D1228AA1C3003F9C7C /* FeesListModel.m in Sources */,
 				45241BDA227EBBE700D68947 /* TKDoubleLabelCell.m in Sources */,
 				4588874E228AE0CE00AD9460 /* WYFeesModel.m in Sources */,
+				4531C06B229BFC9F00CD20D3 /* DHDeviceManager.m in Sources */,
 				459E82AE228A73DD003F9C7C /* FFBannerViewCell.m in Sources */,
 				45F65FE32274436A009F6F6B /* PLCountBtn.m in Sources */,
 				451300E522891709009D053B /* AddFamilyViewController.m in Sources */,
@@ -1234,10 +1439,39 @@
 			baseConfigurationReference = 430F15464BD858151BD5ED8D /* Pods-TabsKeepersApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TabsKeepersApp/TabsKeepersApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZDEGVA8JT8;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = TabsKeepersApp/TK_PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/include/libxml2",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/AlipaySDK-iOS\"",
+					"\"${PODS_ROOT}/Headers/Public/DACircularProgress\"",
+					"\"${PODS_ROOT}/Headers/Public/DataAdapterSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/FDFullscreenPopGesture\"",
+					"\"${PODS_ROOT}/Headers/Public/HXPhotoPicker\"",
+					"\"${PODS_ROOT}/Headers/Public/IDMPhotoBrowser\"",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"\"${PODS_ROOT}/Headers/Public/KissXML\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/MQTTClient\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/OAStackView\"",
+					"\"${PODS_ROOT}/Headers/Public/SBJson\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/WMPageController\"",
+					"\"${PODS_ROOT}/Headers/Public/XMLDictionary\"",
+					"\"${PODS_ROOT}/Headers/Public/YYCache\"",
+					"\"${PODS_ROOT}/Headers/Public/YYImage\"",
+					"\"${PODS_ROOT}/Headers/Public/YYModel\"",
+					"\"${PODS_ROOT}/Headers/Public/YYWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/pop\"",
+				);
 				INFOPLIST_FILE = TabsKeepersApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1255,10 +1489,39 @@
 			baseConfigurationReference = 44A4B22BE0D8045B8E3ADA5E /* Pods-TabsKeepersApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TabsKeepersApp/TabsKeepersApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZDEGVA8JT8;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = TabsKeepersApp/TK_PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/include/libxml2",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/AlipaySDK-iOS\"",
+					"\"${PODS_ROOT}/Headers/Public/DACircularProgress\"",
+					"\"${PODS_ROOT}/Headers/Public/DataAdapterSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/FDFullscreenPopGesture\"",
+					"\"${PODS_ROOT}/Headers/Public/HXPhotoPicker\"",
+					"\"${PODS_ROOT}/Headers/Public/IDMPhotoBrowser\"",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"\"${PODS_ROOT}/Headers/Public/KissXML\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/MQTTClient\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/OAStackView\"",
+					"\"${PODS_ROOT}/Headers/Public/SBJson\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/WMPageController\"",
+					"\"${PODS_ROOT}/Headers/Public/XMLDictionary\"",
+					"\"${PODS_ROOT}/Headers/Public/YYCache\"",
+					"\"${PODS_ROOT}/Headers/Public/YYImage\"",
+					"\"${PODS_ROOT}/Headers/Public/YYModel\"",
+					"\"${PODS_ROOT}/Headers/Public/YYWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/pop\"",
+				);
 				INFOPLIST_FILE = TabsKeepersApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (

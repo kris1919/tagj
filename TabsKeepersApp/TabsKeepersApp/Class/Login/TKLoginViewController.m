@@ -13,6 +13,7 @@
 #import "ServiceProtocalViewController.h"
 #import "TKRegisterViewController.h"
 #import "TKUserDefault.h"
+#import "TKCycleData.h"
 
 @interface TKLoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneTF;
@@ -70,9 +71,10 @@
         return;
     }
     NSString *urlStr = [kTKApiConstantDomin stringByAppendingString:kTKApiConstantLogin];
+    NSString *jpushId = [TKCycleData shareInstance].jpushRegisterId;
     NSDictionary *param = @{@"phone":self.phoneTF.text,
-                          @"password":self.pwdTF.text,
-                          @"tsId":@"9999"
+                            @"password":self.pwdTF.text,
+                            @"tsId":jpushId?:@""
                           };
     WS(weakSelf);
     [MCNetworking POSTWithUrl:urlStr parameter:param success:^(NSDictionary * _Nonnull responseDic) {

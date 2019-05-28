@@ -10,7 +10,7 @@
 #import "FFBannerFlowLayout.h"
 #import "FFBannerViewCell.h"
 #import <AVFoundation/AVFoundation.h>
-#define kTimePadding 2
+#define kTimePadding 3
 
 @interface FFBannerView ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (nonatomic ,strong)UICollectionView *collectionView;
@@ -48,19 +48,6 @@
     _itemScale = 1;
     [self addSubview:self.collectionView];
     [self addSubview:self.pageControl];
-}
-
--(void)setAutoScroll:(BOOL)autoScroll{
-    _autoScroll = autoScroll;
-    if (autoScroll) {
-        if (self.images.count > 0) {
-            UIImage *firstImg = self.images.firstObject;
-            UIImage *lastImg = self.images.lastObject;
-            [self.images addObject:firstImg];
-            [self.images insertObject:lastImg atIndex:0];
-        }
-        [[NSRunLoop mainRunLoop] addTimer:self.myTimer forMode:NSRunLoopCommonModes];
-    }
 }
 
 - (void)timerAction{
@@ -122,7 +109,9 @@
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     if (self.didSelectedItemBlock) {
-        self.didSelectedItemBlock(indexPath.row);
+        NSInteger page = (int)self.collectionView.contentOffset.x / CGRectGetWidth(self.collectionView.bounds);
+        page = page == (self.images.count - 1) ? 0 : (page == 0) ? self.images.count - 1 : page - 1;
+        self.didSelectedItemBlock(page);
     }
 }
 
@@ -186,9 +175,19 @@
 }
 -(void)setImagesUrl:(NSArray<NSString *> *)imagesUrl{
     if (imagesUrl.count > 0) {
+        [self.myTimer invalidate];
+        self.myTimer = nil;
         self.images = imagesUrl.mutableCopy;
         self.pageControl.numberOfPages = imagesUrl.count;
-        self.autoScroll = self.autoScroll;
+        self.autoScroll = YES;
+        if (self.images.count > 0) {
+            UIImage *firstImg = self.images.firstObject;
+            UIImage *lastImg = self.images.lastObject;
+            [self.images addObject:firstImg];
+            [self.images insertObject:lastImg atIndex:0];
+        }
+        [self.collectionView setContentOffset:CGPointMake(self.collectionView.bounds.size.width, 0) animated:NO];
+        [[NSRunLoop mainRunLoop] addTimer:self.myTimer forMode:NSRunLoopCommonModes];
         [self.collectionView reloadData];
     }
 }

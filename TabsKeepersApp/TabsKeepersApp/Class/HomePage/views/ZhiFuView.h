@@ -12,7 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZhiFuView : UIView
 
+@property (nonatomic ,copy)void (^payBlock)(NSInteger type);
+
 - (void)show;
+
+- (void)hidde;
 
 @end
 

@@ -44,19 +44,19 @@
 - (void)setDataWithModel:(BaoxiuModel *)model{
     NSString *timeStr = [NSString stringWithFormat:@"维修时间: %@",model.pudate];
     NSMutableAttributedString *attributeStr = [[NSMutableAttributedString alloc] initWithString:timeStr];
-    [attributeStr addAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithR:51 G:51 B:51 A:1.0],NSFontAttributeName:[UIFont boldPingFangFontOfSize:12]} range:NSMakeRange(0, 5)];
+    [attributeStr addAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithR:51 G:51 B:51 A:1.0],NSFontAttributeName:[UIFont boldPingFangFontOfSize:14]} range:NSMakeRange(0, 5)];
     self.timeLabel.attributedText = attributeStr;
     
     NSString *statusStr = [NSString stringWithFormat:@"维修状态: %@",model.ztStr];
     NSMutableAttributedString *attributeStr2 = [[NSMutableAttributedString alloc] initWithString:statusStr];
-    [attributeStr2 addAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithR:51 G:51 B:51 A:1.0],NSFontAttributeName:[UIFont boldPingFangFontOfSize:12]} range:NSMakeRange(0, 5)];
+    [attributeStr2 addAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithR:51 G:51 B:51 A:1.0],NSFontAttributeName:[UIFont boldPingFangFontOfSize:14]} range:NSMakeRange(0, 5)];
     self.statusLabel.attributedText = attributeStr2;
     
     NSString *contentStr = [NSString stringWithFormat:@"报修描述: %@",model.describe];
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.lineSpacing = 5;
     NSMutableAttributedString *attributeStr3 = [[NSMutableAttributedString alloc] initWithString:contentStr attributes:@{NSParagraphStyleAttributeName:paragraphStyle}];
-    [attributeStr3 addAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithR:51 G:51 B:51 A:1.0],NSFontAttributeName:[UIFont boldPingFangFontOfSize:12]} range:NSMakeRange(0, 5)];
+    [attributeStr3 addAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithR:51 G:51 B:51 A:1.0],NSFontAttributeName:[UIFont boldPingFangFontOfSize:14]} range:NSMakeRange(0, 5)];
     self.contentLabel.attributedText = attributeStr3;
     
     self.statusLabel2.text = model.ztStr;

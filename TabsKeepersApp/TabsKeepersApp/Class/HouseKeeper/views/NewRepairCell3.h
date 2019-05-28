@@ -14,6 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic ,copy)void (^textFieldDidEndEditing)(NSString *text,NSInteger tag);
 
+@property (nonatomic ,strong)NSString *nameStr;
+
+@property (nonatomic ,strong)NSString *phoneStr;
+
+@property (nonatomic ,strong)NSString *addressStr;
+
 @end
 
 NS_ASSUME_NONNULL_END

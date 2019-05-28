@@ -11,6 +11,8 @@ pod 'WMPageController', '~> 2.5.2'  #分页控制器
 pod 'IQKeyboardManager', '~> 6.2.0' #键盘遮挡
 pod 'HXPhotoPicker', '~> 2.2.3' #相册选择
 pod 'IDMPhotoBrowser', :git => 'https://github.com/thiagoperes/IDMPhotoBrowser.git', :branch => 'master' #图片选择
+pod 'AlipaySDK-iOS'
+pod 'JPush', '~> 3.1.2'
 end
 
 pre_install do |installer|

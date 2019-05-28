@@ -149,7 +149,7 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ServiceProtocalViewController *pageVC = [[ServiceProtocalViewController alloc] init];
-    ServerListModel *model = [self.dataArr objectAtIndex:indexPath.section];
+    ServerListModel *model = [self.dataArr objectAtIndex:indexPath.row];
     pageVC.urlStr = model.url;
     pageVC.mc_navigationBar.title = @"便民服务";
     [self.navigationController pushViewController:pageVC animated:YES];

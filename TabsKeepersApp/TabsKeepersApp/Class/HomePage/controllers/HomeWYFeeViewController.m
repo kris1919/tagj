@@ -20,6 +20,8 @@
 #import "HomeFeesTopView.h"
 #import "ZhiFuView.h"
 #import "FeesDetailView.h"
+#import "TKAliapy.h"
+#import "MCHUD.h"
 
 @interface HomeWYFeeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong)TKTableView *tableView;
@@ -28,10 +30,16 @@
 @property (nonatomic ,copy)NSString *notiStr;
 @property (nonatomic ,assign)NSInteger currentPage;
 @property (nonatomic ,strong)HomeFeesTopView *topView;
+@property (nonatomic ,strong)ZhiFuView *zhifuView;
 
 @end
 
 @implementation HomeWYFeeViewController
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -49,6 +57,8 @@
     }];
     
     [self requestData];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(aliPayNoti:) name:kNotificationAppAliPayResult object:nil];
 }
 
 - (void)setNotiStr:(NSString *)notiStr{
@@ -108,6 +118,42 @@
         [self.tableView reloadData];
     });
 }
+- (void)readyAlipay:(NSInteger)index{
+    FeesListModel *model = [self.currentList objectAtIndex:index];
+    NSString *urlStr2 =[kTKApiConstantDomin stringByAppendingString:kTKApiConstantAPPPay];
+    NSDictionary *param2 = @{@"type":@"2",
+                             @"id":model.feeid,
+                             @"zffs":@"2"
+                             };
+    WS(weakSelf);
+    [MCNetworking POSTWithUrl:urlStr2 parameter:param2 success:^(NSDictionary * _Nonnull responseDic) {
+        NSDictionary *resDic = [responseDic objectForKey:kTKResponseResultData];
+        if ([resDic.allKeys containsObject:@"Parms"]) {
+            NSString *signStr = [resDic objectForKey:@"Parms"];
+            [TKAliapy alipayWithSign:signStr callBack:^(NSDictionary * _Nonnull resultDic) {
+                
+            }];
+        }
+    } failure:^(NSString * _Nonnull errorMsg) {
+        [MCHUD showTips:@"支付调用出错" view:weakSelf.view];
+    } showHUD:YES view:self.view];
+}
+- (void)aliPayNoti:(NSNotification *)noti{
+    NSDictionary *resultDic = noti.object;
+    if ([resultDic.allKeys containsObject:@"resultStatus"]) {
+        [self.zhifuView hidde];
+        NSInteger rsCode = [resultDic[@"resultStatus"] integerValue];
+        if (rsCode == 9000) {
+            [self.historyList removeAllObjects];
+            [self requestData];
+            [MCHUD showTips:@"订单支付成功" view:[UIApplication sharedApplication].keyWindow];
+        }else{
+            if ([resultDic.allKeys containsObject:@"memo"]) {
+                [MCHUD showTips:resultDic[@"memo"] view:[UIApplication sharedApplication].keyWindow];
+            }
+        }
+    }
+}
 #pragma mark - tableView delegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return (self.currentList.count > 0) + (self.historyList.count > 0);
@@ -140,8 +186,10 @@
                 [detailVeiw show];
             };
             cell.moneyButtonBlock = ^(NSInteger index) {
-                ZhiFuView *zhifuView = (ZhiFuView *)[TKUtils nibWithNibName:@"ZhifuView"];
-                [zhifuView show];
+                weakSelf.zhifuView.payBlock = ^(NSInteger type) {
+                    [weakSelf readyAlipay:index];
+                };
+                [weakSelf.zhifuView show];
             };
             return cell;
         }
@@ -246,6 +294,12 @@
         [self.view addSubview:_topView];
     }
     return _topView;
+}
+-(ZhiFuView *)zhifuView{
+    if (!_zhifuView) {
+        _zhifuView = (ZhiFuView *)[TKUtils nibWithNibName:@"ZhifuView"];
+    }
+    return _zhifuView;
 }
 /*
  #pragma mark - Navigation

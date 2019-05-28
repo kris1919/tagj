@@ -10,8 +10,6 @@
 #import "UIColor+Theme.h"
 
 @interface ZhiFuView ()
-
-@property (weak, nonatomic) IBOutlet UIButton *wechatBtn;
 @property (weak, nonatomic) IBOutlet UIButton *alipayBtn;
 @property (nonatomic ,strong)UIView *mask;
 
@@ -25,13 +23,7 @@
     CGRect rect = CGRectMake((kScreenWidth - 320) / 2, (kScreenHeight * 0.25), 320, 300);
     self.frame = rect;
 }
-
-- (IBAction)wechatBtnAction:(id)sender {
-    self.wechatBtn.selected = YES;
-    self.alipayBtn.selected = NO;
-}
 - (IBAction)alipayBtnAction:(id)sender {
-    self.wechatBtn.selected = NO;
     self.alipayBtn.selected = YES;
 }
 - (void)show{
@@ -43,6 +35,9 @@
 - (IBAction)hide:(id)sender{
     [self.mask removeFromSuperview];
     [self removeFromSuperview];
+}
+-(void)hidde{
+    [self hide:nil];
 }
 
 -(UIView *)mask{
@@ -60,7 +55,10 @@
     // Drawing code
 }
 */
-- (IBAction)closeBtnAction:(id)sender {
+- (IBAction)payBtnAction:(id)sender {
+    if (self.payBlock) {
+        self.payBlock(1);
+    }
 }
 
 @end

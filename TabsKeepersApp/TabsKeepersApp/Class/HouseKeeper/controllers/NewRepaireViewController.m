@@ -35,6 +35,7 @@
 @property (nonatomic ,copy)NSString *uploadImageUrls;
 @property (nonatomic ,strong)NSMutableArray *pics;
 @property (nonatomic ,strong)HXPhotoManager *photoManager;
+
 @end
 
 @implementation NewRepaireViewController
@@ -44,6 +45,11 @@
     self.mc_navigationBar.title = @"业主报修";
     // Do any additional setup after loading the view.
     self.selectedModel = self.relationArr.firstObject;
+    
+    TKUserModel *userModel = [TKCycleData shareInstance].userModel;
+    self.name = userModel.name;
+    self.phone = userModel.phone;
+    self.adress = userModel.address;
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsMake(kNavigationBar_Height, 0, 0, 0));
@@ -166,6 +172,9 @@
         return cell;
     }else{
         NewRepairCell3 *cell = [tableView dequeueReusableCellWithIdentifier:@"NewRepairCell3" forIndexPath:indexPath];
+        cell.nameStr = self.name;
+        cell.phoneStr = self.phone;
+        cell.addressStr = self.adress;
         WS(weakSelf);
         cell.textFieldDidEndEditing = ^(NSString * _Nonnull text, NSInteger tag) {
             if (0 == tag) {

@@ -107,7 +107,7 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NotificationListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NotificationListCell" forIndexPath:indexPath];
-    HouseNotificationModel *model = [self.dataArr objectAtIndex:indexPath.section];
+    HouseNotificationModel *model = [self.dataArr objectAtIndex:indexPath.row];
     cell.model = model;
     return cell;
 }
@@ -128,7 +128,7 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ServiceProtocalViewController *pageVC = [[ServiceProtocalViewController alloc] init];
-    HouseNotificationModel *model = [self.dataArr objectAtIndex:indexPath.section];
+    HouseNotificationModel *model = [self.dataArr objectAtIndex:indexPath.row];
     pageVC.urlStr = model.url;
     pageVC.mc_navigationBar.title = @"小区公告";
     [self.navigationController pushViewController:pageVC animated:YES];

@@ -109,7 +109,17 @@
             MyNotiManageViewController *vc = [[MyNotiManageViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
+    }else if (indexPath.section == 1){
+        if (indexPath.row == 0) {
+            [self call];
+        }
     }
+}
+
+- (void)call{
+    TKUserModel *userModel = [TKCycleData shareInstance].userModel;
+    NSMutableString* str=[[NSMutableString alloc] initWithFormat:@"telprompt://%@",userModel.phone];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
 }
 
 -(TKTableView *)tableView{

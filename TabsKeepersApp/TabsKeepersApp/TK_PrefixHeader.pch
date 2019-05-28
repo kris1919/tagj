@@ -17,4 +17,19 @@
 #import "TKUtils.h"
 #import "TKApiConstant.h"
 
+//国际化 指定bundle
+#define _T(str,bundle) [DSSLocalizedHelper localizedStringForKey:str table:@"Localizable" resourceBundle:bundle]
+
+//主线程运行
+#define RunOnMainThread(code)   {dispatch_async(dispatch_get_main_queue(), ^{code;});}
+
+#define MSG(title,msg,ok)  if(msg != nil && [msg length]>0) {\
+[[DHHudPrecess sharedInstance] ShowTips:msg delayTime:1.5  atView:nil];}\
+
+
+#ifdef __OBJC__
+@import UIKit;
+@import Foundation;
+#endif
+
 #endif /* TK_PrefixHeader_pch */

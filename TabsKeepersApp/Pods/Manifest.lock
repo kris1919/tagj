@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - AlipaySDK-iOS (15.5.9)
   - DACircularProgress (2.3.1)
   - DataAdapterSDK (0.1.0):
     - AFNetworking
@@ -32,6 +33,9 @@ PODS:
     - pop
     - SDWebImage
   - IQKeyboardManager (6.2.1)
+  - JCore (1.2.6)
+  - JPush (3.1.2):
+    - JCore (~> 1.2.6)
   - KissXML (5.2.3)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
@@ -62,11 +66,13 @@ PODS:
     - YYImage
 
 DEPENDENCIES:
+  - AlipaySDK-iOS
   - DataAdapterSDK (from `../AdapterSDK`)
   - FDFullscreenPopGesture
   - HXPhotoPicker (~> 2.2.3)
   - IDMPhotoBrowser (from `https://github.com/thiagoperes/IDMPhotoBrowser.git`, branch `master`)
   - IQKeyboardManager (~> 6.2.0)
+  - JPush (~> 3.1.2)
   - Masonry
   - MJRefresh
   - SDWebImage
@@ -76,10 +82,13 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - AlipaySDK-iOS
     - DACircularProgress
     - FDFullscreenPopGesture
     - HXPhotoPicker
     - IQKeyboardManager
+    - JCore
+    - JPush
     - KissXML
     - Masonry
     - MBProgressHUD
@@ -110,12 +119,15 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AlipaySDK-iOS: 1c5283b30977a24acecc0114662697f7dc78f618
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   DataAdapterSDK: 504e2f24ae2df486a11230a87200fcc7789efdd5
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   HXPhotoPicker: c8d59a00c93e248aa6ce7b5852a4e4394649ce5f
   IDMPhotoBrowser: c32a195808c6c8c39a54f5f69d79ae8a7eb23730
   IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
+  JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
+  JPush: d0cead70ba223a6a3b52749899ebda830dfbc49a
   KissXML: 09f88ff8161fd058d67b70740b8b516687b52823
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
@@ -132,6 +144,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 24b67c3aaebabb42ba1bc4b55428be13ccb3e052
+PODFILE CHECKSUM: 66222f0e0d17cf1fcb6fa9dc1ad7c650809bd1d1
 
 COCOAPODS: 1.5.3

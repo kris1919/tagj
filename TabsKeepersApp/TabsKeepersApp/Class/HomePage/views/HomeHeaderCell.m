@@ -32,8 +32,8 @@
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
         self.dataArr = [NSMutableArray arrayWithCapacity:0];
-        NSArray *icons = @[@"icon_home_waterfee",@"icon_home_note",@"icon_home_carfee",@"icon_home_repaire",@"icon_home_fee",@"icon_home_servce",@"icon_home_video",@"icon_home_store"];
-        NSArray *titles = @[@"水费代缴",@"小区公告",@"停车缴费",@"业主报修",@"物业缴费",@"便民服务",@"监控中心",@"商城"];
+        NSArray *icons = @[@"icon_home_waterfee",@"icon_home_note",@"icon_home_repaire",@"icon_home_fee",@"icon_home_servce",@"icon_home_video",@"icon_home_store"];
+        NSArray *titles = @[@"水费代缴",@"小区公告",@"业主报修",@"物业缴费",@"便民服务",@"监控中心",@"商城"];
         for (NSString *icon in icons) {
             NSInteger index = [icons indexOfObject:icon];
             NSString *title = [titles objectAtIndex:index];

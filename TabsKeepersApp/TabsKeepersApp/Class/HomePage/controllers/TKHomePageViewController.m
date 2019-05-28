@@ -26,6 +26,7 @@
 #import "HomeParkViewController.h"
 #import "NewRepaireViewController.h"
 #import "TKRefreshFooter.h"
+#import "TKRefreshHeader.h"
 
 @interface TKHomePageViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong)TKTableView *tableView;
@@ -56,9 +57,16 @@
     [self requestData];
     
     [self requstAdData];
+    
     WS(weakSelf);
     self.tableView.mj_footer = [TKRefreshFooter footerWithRefreshingBlock:^{
         weakSelf.currentPage++;
+        [weakSelf requstAdData];
+    }];
+    self.tableView.mj_header = [TKRefreshHeader headerWithRefreshingBlock:^{
+        [weakSelf.adDataArr removeAllObjects];
+        weakSelf.currentPage = 1;
+//        [weakSelf requestData];
         [weakSelf requstAdData];
     }];
 }
@@ -78,11 +86,13 @@
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf.tableView.mj_footer endRefreshing];
+            [weakSelf.tableView.mj_header endRefreshing];
             [weakSelf.tableView reloadData];
         });
     } failure:^(NSString * _Nonnull errorMsg) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf.tableView.mj_footer endRefreshing];
+            [weakSelf.tableView.mj_header endRefreshing];
         });
     } showHUD:NO view:self.view];
 }
@@ -121,13 +131,13 @@
             self.tabBarController.selectedIndex = 2;
         }
             break;
+//        case 2:
+//        {
+//            HomeParkViewController *vc = [[HomeParkViewController alloc] init];
+//            [self.navigationController pushViewController:vc animated:YES];
+//        }
+//            break;
         case 2:
-        {
-            HomeParkViewController *vc = [[HomeParkViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 3:
         {
             NewRepaireViewController *vc = [[NewRepaireViewController alloc] init];
             WS(weakSelf);
@@ -137,25 +147,25 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-        case 4:
+        case 3:
         {
             HomeWYFeeViewController *vc = [[HomeWYFeeViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-        case 5:
+        case 4:
         {
             HomeServiceViewController *vc = [[HomeServiceViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-        case 6:
+        case 5:
         {
             HomeListenViewController *vc = [[HomeListenViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-        case 7:
+        case 6:
         {
             HomeShopViewController *vc = [[HomeShopViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
@@ -209,6 +219,10 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 1) {
+        self.tabBarController.selectedIndex = 2;
+        return;
+    }
     if (indexPath.section != 2) {
         return;
     }

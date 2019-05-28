@@ -34,6 +34,23 @@
         self.textFieldDidEndEditing(textField.text, textField == self.nameLabel ? 0 : textField == self.phoneLabel ? 1 : 2);
     }
 }
+-(void)setNameStr:(NSString *)nameStr{
+    if (nameStr) {
+        self.nameLabel.text = nameStr;
+    }
+}
+
+-(void)setPhoneStr:(NSString *)phoneStr{
+    if (phoneStr) {
+        self.phoneLabel.text = phoneStr;
+    }
+}
+
+-(void)setAddressStr:(NSString *)addressStr{
+    if (addressStr) {
+        self.addressLabel.text = addressStr;
+    }
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

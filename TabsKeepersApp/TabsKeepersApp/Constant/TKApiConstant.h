@@ -20,6 +20,10 @@ static NSString *const kTKApiConstantHomeAD = @"json/getGg.aspx";
 static NSString *const kTKApiConstantCurrentWaterFee = @"json/getShuiFei.aspx";
 static NSString *const kTKApiConstantHistoryWaterFee = @"json/getShuiFeiLiShi.aspx";
 
+static NSString *const kTKApiConstantAPPPay = @"json/addZf.aspx";
+
+static NSString *const kTKApiConstantListenList = @"json/getJianKong.aspx";
+static NSString *const kTKApiConstantListenDetail = @"json/sbDetail.aspx";
 static NSString *const kTKApiConstantCurrentWYFee = @"json/getWuYeFei.aspx";
 static NSString *const kTKApiConstantHistoryWYFee = @"json/getWuYeFeiLiShi.aspx";
 
@@ -64,6 +68,7 @@ static NSString *const kTKResponseResultData = @"data";
 //notification
 static NSString *const kNotificationLoginSuccess = @"kNotificationLoginSuccess";
 static NSString *const kNotificationLogout = @"kNotificationLogout";
+static NSString *const kNotificationAppAliPayResult = @"kNotificationAppPayNotification";
 
 //other
 static NSString *const kFilePathBaoXiuImagePath = @"BaoXiu";

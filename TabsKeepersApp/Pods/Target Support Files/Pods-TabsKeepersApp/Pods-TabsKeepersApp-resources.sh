@@ -92,6 +92,7 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/AlipaySDK-iOS/AlipaySDK.bundle"
   install_resource "${PODS_ROOT}/../../AdapterSDK/DataAdapterSDK/Depend/sdk_output/Bundle/MobileMediaPlayFramework.bundle"
   install_resource "${PODS_ROOT}/../../AdapterSDK/DataAdapterSDK/Depend/sdk_output/Bundle/MobileMediaPlayUI.bundle"
   install_resource "${PODS_ROOT}/../../AdapterSDK/DataAdapterSDK/Depend/sdk_output/Bundle/OAStackView.bundle"
@@ -103,6 +104,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/OAStackView/OAStackView.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_ROOT}/AlipaySDK-iOS/AlipaySDK.bundle"
   install_resource "${PODS_ROOT}/../../AdapterSDK/DataAdapterSDK/Depend/sdk_output/Bundle/MobileMediaPlayFramework.bundle"
   install_resource "${PODS_ROOT}/../../AdapterSDK/DataAdapterSDK/Depend/sdk_output/Bundle/MobileMediaPlayUI.bundle"
   install_resource "${PODS_ROOT}/../../AdapterSDK/DataAdapterSDK/Depend/sdk_output/Bundle/OAStackView.bundle"
