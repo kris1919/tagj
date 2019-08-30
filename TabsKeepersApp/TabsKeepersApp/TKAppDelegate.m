@@ -25,7 +25,7 @@
 
 @end
 
-static NSString * const JpushAppKey = @"e17e885db69a445d3cbc7602";
+static NSString * const JpushAppKey = @"b5e1317ae26bd0007378f920";
 
 @implementation TKAppDelegate
 
@@ -70,6 +70,10 @@ static NSString * const JpushAppKey = @"e17e885db69a445d3cbc7602";
                           channel:@"App Store"
                  apsForProduction:isProduction
             advertisingIdentifier:nil];
+    
+    [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
+        [TKCycleData shareInstance].jpushRegisterId = registrationID;
+    }];
 }
 - (void)loginSuccessNoti{
     [TKUserDefault setIsLogin:YES];
@@ -95,7 +99,6 @@ static NSString * const JpushAppKey = @"e17e885db69a445d3cbc7602";
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     /// Required - 注册 DeviceToken
     [JPUSHService registerDeviceToken:deviceToken];
-    [TKCycleData shareInstance].jpushRegisterId = [JPUSHService registrationID];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

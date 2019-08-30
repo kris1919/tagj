@@ -10,7 +10,7 @@
 #define TKApiConstant_h
 
 //域名https://www.showdoc.cc/321034458440338
-static NSString *const kTKApiConstantDomin = @"http://wuye.gugangkf.cn/";
+static NSString *const kTKApiConstantDomin = @"https://app.anjiwuye.com/";
 
 
 //首页
