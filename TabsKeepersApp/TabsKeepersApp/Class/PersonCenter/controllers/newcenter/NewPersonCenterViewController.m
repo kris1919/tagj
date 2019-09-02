@@ -118,7 +118,7 @@
 
 - (void)call{
     TKUserModel *userModel = [TKCycleData shareInstance].userModel;
-    NSMutableString* str=[[NSMutableString alloc] initWithFormat:@"telprompt://%@",userModel.kefu];
+    NSMutableString* str=[[NSMutableString alloc] initWithFormat:@"telprompt://%@",userModel.phone];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
 }
 
