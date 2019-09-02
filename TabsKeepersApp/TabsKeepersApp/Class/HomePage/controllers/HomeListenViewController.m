@@ -15,17 +15,26 @@
 #import "ListenListViewCell.h"
 #import <Masonry.h>
 #import "ListenSectionHeaderView.h"
-#import <DSSPlatformDataAdapterUser.h>
+
+#if TARGET_OS_SIMULATOR
+
+#else
 #import "AdapterLoginModel.h"
 #import "DHLoginManager.h"
 #import "DHHudPrecess.h"
 #import "DHDataCenter.h"
 #import "ListenSelectViewController.h"
+
+#endif
+
 @interface HomeListenViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong)TKTableView *tableView;
 @property (nonatomic ,strong)NSMutableArray<ListenListModel *> *dataArr;
-@property (nonatomic ,strong)AdapterLoginModel *loginModel;
+#if TARGET_OS_SIMULATOR
 
+#else
+@property (nonatomic ,strong)AdapterLoginModel *loginModel;
+#endif
 @end
 
 @implementation HomeListenViewController
@@ -99,10 +108,18 @@
     return nil;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+#if TARGET_OS_SIMULATOR
+    
+#else
     ListenListModel *listModel = [self.dataArr objectAtIndex:indexPath.section];
     ListenDeviceModel *model = [listModel.shebei objectAtIndex:indexPath.row];
     [self requestDataForLogin:model.sbId];
+#endif
 }
+
+#if TARGET_OS_SIMULATOR
+
+#else
 - (void)requestDataForLogin:(NSString *)deviceId{
     if (!deviceId || deviceId.length == 0) {
         return;
@@ -125,6 +142,7 @@
         
     } showHUD:YES view:self.view];
 }
+
 - (void)login{
     [[DHHudPrecess sharedInstance] showWaiting:@"请求中..."
                                 WhileExecuting:@selector(loginServer)
@@ -150,8 +168,7 @@
         [self.navigationController pushViewController:selectVC animated:YES];
     });
 }
-
-
+#endif
 -(TKTableView *)tableView{
     if (!_tableView) {
         _tableView = [[TKTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
