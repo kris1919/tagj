@@ -73,10 +73,11 @@ static NSString * const JpushAppKey = @"b5e1317ae26bd0007378f920";
     
     [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
         [TKCycleData shareInstance].jpushRegisterId = registrationID;
-        [JPUSHService setAlias:registrationID completion:nil seq:0];
     }];
 }
 - (void)loginSuccessNoti{
+    NSString *registrationID = [TKCycleData shareInstance].jpushRegisterId;
+    [JPUSHService setAlias:registrationID completion:nil seq:0];
     [TKUserDefault setIsLogin:YES];
     [self setupRootVC];
 }
