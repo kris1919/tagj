@@ -157,11 +157,11 @@
         NewRepairCell2 *cell = [tableView dequeueReusableCellWithIdentifier:@"NewRepairCell2" forIndexPath:indexPath];
         cell.canEditing = YES;
         WS(weakSelf);
-        cell.selectedImg = ^(NSInteger index, BOOL show) {
+        cell.selectedImg = ^(NSInteger index, BOOL show,UICollectionViewCell *collectCell) {
             if (show) {
                 [weakSelf showImageWithIndex:index];
             }else{
-                [weakSelf selectPic];
+                [weakSelf selectPic:collectCell];
             }
         };
         cell.deleteImg = ^(NSInteger index) {
@@ -189,8 +189,15 @@
     }
 }
 
-- (void)selectPic{
+- (void)selectPic:(UICollectionViewCell *)cell{
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"选择" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        UIPopoverPresentationController *pop = [alertVC popoverPresentationController];
+        pop.permittedArrowDirections = UIPopoverArrowDirectionAny;
+        pop.sourceView = cell;
+        pop.sourceRect = cell.bounds;
+    }
+    
     UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self album];
     }];

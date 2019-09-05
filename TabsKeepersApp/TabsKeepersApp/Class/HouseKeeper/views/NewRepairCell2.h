@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic ,strong)NSMutableArray *imgs;
 
-@property (nonatomic ,copy)void (^selectedImg)(NSInteger index ,BOOL show);
+@property (nonatomic ,copy)void (^selectedImg)(NSInteger index ,BOOL show,UICollectionViewCell *collectCell);
 
 @property (nonatomic ,copy)void (^deleteImg)(NSInteger index);
 

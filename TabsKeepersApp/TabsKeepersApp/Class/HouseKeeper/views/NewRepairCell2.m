@@ -67,11 +67,12 @@
     return cell;
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
     if (self.selectedImg) {
         if (indexPath.row < self.imgs.count) {
-            self.selectedImg(indexPath.row, YES);
+            self.selectedImg(indexPath.row, YES,cell);
         }else{
-            self.selectedImg(0, NO);
+            self.selectedImg(0, NO,cell);
         }
     }
 }

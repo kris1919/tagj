@@ -94,7 +94,7 @@
         NewRepairCell2 *cell = [tableView dequeueReusableCellWithIdentifier:@"NewRepairCell2" forIndexPath:indexPath];
         cell.imgs = self.detailModel.imgList;
         WS(weakSelf);
-        cell.selectedImg = ^(NSInteger index, BOOL show) {
+        cell.selectedImg = ^(NSInteger index, BOOL show,UICollectionViewCell *cCell) {
             [weakSelf displayImageWithIndex:index];
         };
         return cell;
