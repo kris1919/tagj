@@ -180,9 +180,11 @@
             cell.model = [self.currentList objectAtIndex:indexPath.row];
             WS(weakSelf);
             cell.detailButtonBlock = ^(NSInteger index) {
-                FeesDetailView *detailVeiw = (FeesDetailView *)[TKUtils nibWithNibName:@"FeesDetailView"];
-                detailVeiw.model = [weakSelf.currentList objectAtIndex:index];
-                [detailVeiw show];
+                if (self.currentList.count > index) {
+                    FeesDetailView *detailVeiw = (FeesDetailView *)[TKUtils nibWithNibName:@"FeesDetailView"];
+                    detailVeiw.model = [weakSelf.currentList objectAtIndex:index];
+                    [detailVeiw show];
+                }
             };
             cell.moneyButtonBlock = ^(NSInteger index) {
                 weakSelf.zhifuView.payBlock = ^(NSInteger type) {

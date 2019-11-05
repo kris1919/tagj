@@ -17,16 +17,20 @@
 
 @interface MyNotiManageViewController ()
 @property (nonatomic ,strong)MCNavigationBarView *mc_navigationBar;
-
+@property (nonatomic ,assign)NSInteger billNotiNo;
+@property (nonatomic ,assign)NSInteger platformNotiNo;
+@property (nonatomic ,copy)NSString *title1;
+@property (nonatomic ,copy)NSString *title2;
 @end
 
 @implementation MyNotiManageViewController
 
 -(void)loadView{
     [super loadView];
-    
+    self.title1 = @"通知消息";
+    self.title2 = @"平台消息";
     self.viewControllerClasses = @[[BillViewController class],[NotiViewController class]];
-    self.titles = @[@"通知消息",@"平台消息"];
+    self.titles = @[self.title1,self.title2];
     self.menuItemWidth = kScreenWidth / 2;
     self.titleSizeNormal = 14;
     self.titleColorNormal = [UIColor labelColorLevel102];
@@ -82,25 +86,55 @@
     WS(weakSelf);
     [MCNetworking POSTWithUrl:urlStr parameter:param success:^(NSDictionary * _Nonnull responseDic) {
         NSDictionary *resultDic = [responseDic objectForKey:kTKResponseResultData];
-        NSInteger num1 = [[resultDic objectForKey:@"num1"] integerValue];
-        NSInteger num2 = [[resultDic objectForKey:@"num2"] integerValue];
-        NSString *title1 = @"通知消息";
-        NSString *title2 = @"平台消息";
-        if (num1 != 0) {
-            title1 = [NSString stringWithFormat:@"%@(%@)",title1,@(num1)];
-        }
-        if (num2 != 0) {
-            title2 = [NSString stringWithFormat:@"%@(%@)",title2,@(num2)];
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            weakSelf.titles = @[title1,title2];
-            [weakSelf.menuView reload];
-        });
+        weakSelf.billNotiNo = [[resultDic objectForKey:@"num1"] integerValue];
+        weakSelf.platformNotiNo = [[resultDic objectForKey:@"num2"] integerValue];
+        [weakSelf reloadHeaderIndex:0];
     } failure:^(NSString * _Nonnull errorMsg) {
         
     } showHUD:YES view:self.view];
 }
 
+-(void)pageController:(WMPageController *)pageController lazyLoadViewController:(__kindof UIViewController *)viewController withInfo:(NSDictionary *)info{
+    if ([viewController isKindOfClass:[BillViewController class]]) {
+        BillViewController *vc = viewController;
+        WS(weakSelf);
+        vc.notiDidReadBlock = ^{
+            weakSelf.billNotiNo--;
+            weakSelf.billNotiNo = weakSelf.billNotiNo > 0 ? weakSelf.billNotiNo : 0;
+            [weakSelf reloadHeaderIndex:1];
+            weakSelf.selectIndex = 0;
+        };
+    }else if ([viewController isKindOfClass:[NotiViewController class]]){
+        NotiViewController *vc = viewController;
+        WS(weakSelf);
+        vc.notiDidReadBlock = ^{
+            weakSelf.platformNotiNo--;
+            weakSelf.platformNotiNo = weakSelf.platformNotiNo > 0 ? weakSelf.platformNotiNo : 0;
+            [weakSelf reloadHeaderIndex:2];
+            weakSelf.selectIndex = 1;
+        };
+    }
+}
+
+- (void)reloadHeaderIndex:(int)index{
+    NSString *title1 = self.title1;
+    NSString *title2 = self.title2;
+    if (self.billNotiNo != 0) {
+        title1 = [NSString stringWithFormat:@"%@(%@)",self.title1,@(self.billNotiNo)];
+    }
+    if (self.platformNotiNo != 0) {
+        title2 = [NSString stringWithFormat:@"%@(%@)",self.title2,@(self.platformNotiNo)];
+    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.titles = @[title1,title2];
+        if (index == 0) {//刷新全部
+            [self.menuView reload];
+        }else{
+            //1:通知消息  2：平台消息
+            [self.menuView updateTitle:index == 1 ? title1 : title2 atIndex:index - 1 andWidth:NO];
+        }
+    });
+}
 /*
 #pragma mark - Navigation
 

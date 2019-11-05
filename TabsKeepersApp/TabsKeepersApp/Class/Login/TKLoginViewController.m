@@ -74,11 +74,13 @@
     NSString *jpushId = [TKCycleData shareInstance].jpushRegisterId;
     NSDictionary *param = @{@"phone":self.phoneTF.text,
                             @"password":self.pwdTF.text,
-                            @"tsId":jpushId.length != 0 ? jpushId : @"9999"
+                            @"tsId":jpushId.length != 0 ? jpushId : @"0"
                           };
     WS(weakSelf);
     [MCNetworking POSTWithUrl:urlStr parameter:param success:^(NSDictionary * _Nonnull responseDic) {
         [TKUserDefault setUserInfo:[responseDic objectForKey:kTKResponseResultData]];
+        [TKUserDefault setUsername:weakSelf.phoneTF.text];
+        [TKUserDefault setPassword:weakSelf.pwdTF.text];
         [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationLoginSuccess object:nil];
     } failure:^(NSString * _Nonnull errorMsg) {
        [MCHUD showTips:errorMsg view:weakSelf.view];

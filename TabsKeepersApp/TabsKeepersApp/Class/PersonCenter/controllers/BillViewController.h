@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BillViewController : UIViewController
 
+@property (nonatomic ,copy)void (^notiDidReadBlock)(void);
+
 @end
 
 NS_ASSUME_NONNULL_END

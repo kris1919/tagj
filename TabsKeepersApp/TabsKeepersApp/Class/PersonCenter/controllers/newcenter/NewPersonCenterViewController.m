@@ -20,6 +20,7 @@
 #import "MyFeeManageViewController.h"
 #import "MyNotiManageViewController.h"
 #import "ContactsUsViewController.h"
+#import "MCNetworking.h"
 
 @interface NewPersonCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong)TKTableView *tableView;
@@ -53,6 +54,28 @@
         [alertVC addAction:action2];
         [weakSelf presentViewController:alertVC animated:YES completion:nil];
     };
+    [self loginForServicePhoneNo];
+}
+
+///登录获取最新的客服号码？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？
+///13915039432
+- (void)loginForServicePhoneNo{
+    NSString *urlStr = [kTKApiConstantDomin stringByAppendingString:kTKApiConstantLogin];
+    NSString *jpushId = [TKCycleData shareInstance].jpushRegisterId;
+    NSString *phoneNo = [TKUserDefault username];
+    NSString *pwd = [TKUserDefault password];
+    if (phoneNo.length == 0 || pwd.length == 0) {
+        return;
+    }
+    NSDictionary *param = @{@"phone":phoneNo,
+                            @"password":pwd,
+                            @"tsId":jpushId.length != 0 ? jpushId : @"0"
+                          };
+    [MCNetworking POSTWithUrl:urlStr parameter:param success:^(NSDictionary * _Nonnull responseDic) {
+        [TKUserDefault setUserInfo:[responseDic objectForKey:kTKResponseResultData]];
+    } failure:^(NSString * _Nonnull errorMsg) {
+       
+    } showHUD:NO view:self.view];
 }
 
 -(PersonHeaderView *)headerView{

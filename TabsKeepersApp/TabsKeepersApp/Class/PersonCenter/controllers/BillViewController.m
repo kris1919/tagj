@@ -102,6 +102,36 @@
     return nil;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    BillModel *model = [self.dataArr objectAtIndex:indexPath.row];
+    if (model.zt.integerValue == 1) {
+        [self markReadRequest:indexPath model:model];
+    }
+}
+
+- (void)markReadRequest:(NSIndexPath *)indexPath model:(BillModel *)model{
+    if (model.billId.length == 0) {
+        return;
+    }
+    TKUserModel *userModel = [TKCycleData shareInstance].userModel;
+    NSString *urlStr =[kTKApiConstantDomin stringByAppendingString:kTKApiConstantNotiStatusChanged];
+    NSDictionary *param = @{@"customId":userModel.customId,
+                            @"id":model.billId
+                            };
+    WS(weakSelf);
+    [MCNetworking POSTWithUrl:urlStr parameter:param success:^(NSDictionary * _Nonnull responseDic) {
+        model.zt = @"2";
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        });
+        if (weakSelf.notiDidReadBlock) {
+            weakSelf.notiDidReadBlock();
+        }
+    } failure:^(NSString * _Nonnull errorMsg) {
+        
+    } showHUD:NO view:self.view];
+}
+
 -(TKTableView *)tableView{
     if (!_tableView) {
         _tableView = [[TKTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];

@@ -47,4 +47,27 @@
     return [userDefaults objectForKey:@"userDefault_tk_userInfo"];
 }
 
+/// 登录名密码
+/// @param username username
++ (void)setUsername:(NSString *)username{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:username forKey:@"userDefault_tk_username"];
+    [userDefaults synchronize];
+}
++ (NSString *)username{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    return [userDefaults objectForKey:@"userDefault_tk_username"];
+}
+
+/// @param password psd
++ (void)setPassword:(NSString *)password{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:password forKey:@"userDefault_tk_password"];
+    [userDefaults synchronize];
+}
++ (NSString *)password{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    return [userDefaults objectForKey:@"userDefault_tk_password"];
+}
+
 @end

@@ -122,6 +122,9 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         });
+        if (weakSelf.notiDidReadBlock) {
+            weakSelf.notiDidReadBlock();
+        }
     } failure:^(NSString * _Nonnull errorMsg) {
         
     } showHUD:NO view:self.view];

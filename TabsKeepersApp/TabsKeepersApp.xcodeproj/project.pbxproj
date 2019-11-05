@@ -1441,6 +1441,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TabsKeepersApp/TabsKeepersApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 110;
 				DEVELOPMENT_TEAM = W8UGB4HT5F;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = TabsKeepersApp/TK_PrefixHeader.pch;
@@ -1478,6 +1479,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsfa.wuyeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1491,6 +1493,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TabsKeepersApp/TabsKeepersApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 110;
 				DEVELOPMENT_TEAM = W8UGB4HT5F;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = TabsKeepersApp/TK_PrefixHeader.pch;
@@ -1528,6 +1531,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsfa.wuyeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

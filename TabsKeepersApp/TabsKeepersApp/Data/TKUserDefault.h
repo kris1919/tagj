@@ -31,6 +31,16 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)setUserInfo:(NSDictionary *)userInfo;
 + (NSDictionary *)getUserInfo;
 
+
+
+/// 登录名密码
+/// @param username username
++ (void)setUsername:(NSString *)username;
++ (NSString *)username;
+
+/// @param password psd
++ (void)setPassword:(NSString *)password;
++ (NSString *)password;
 @end
 
 NS_ASSUME_NONNULL_END
